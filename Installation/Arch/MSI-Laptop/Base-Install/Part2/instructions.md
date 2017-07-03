@@ -73,5 +73,4 @@
 	14. Finally, log in to the system! You are done!
 
 
-# This is the end of Part 2 of base system install. Next, we will install some other softwares and customize the system
-more.
+# This is the end of Part 2 of base system install. Next, we will install some other softwares and customize the system more.
