@@ -325,9 +325,12 @@ Installing Arch linux on an MSI laptop Part 1.
 
 		exit
 	
-	20. Reboot the system and when it starts, remove the usb drive:
+	20. Reboot the system:
 
 		reboot
 	
 
-# That will install the Base system. Now move on to the Base Install Part 2.
+	21. Remove the USB before the system starts. And you will be greeted by a prompt asking you for username and password.
+	
+
+# That's it for the Base System Part 1 install. Now move on to the Base Install Part 2.
