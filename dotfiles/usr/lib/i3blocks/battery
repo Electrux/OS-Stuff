@@ -70,5 +70,9 @@ if ($status eq 'Discharging') {
 		exit(33);
 	}
 }
+else {
+
+	print "#00F8F4\n";
+}
 
 exit(0);

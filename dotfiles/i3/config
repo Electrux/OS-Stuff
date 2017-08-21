@@ -176,5 +176,6 @@ bar {
 exec --no-startup-id compton -b
 exec --no-startup-id blueman-applet
 exec --no-startup-id xset -dpms s off
+exec --no-startup-id conky -c ~/.config/i3/conkyrc
 exec_always xrdb ~/.Xresources
 exec_always feh --bg-scale /data/Pictures/Wallpapers/battlefield-game.jpg
