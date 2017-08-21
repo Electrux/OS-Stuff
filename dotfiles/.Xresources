@@ -1,0 +1,69 @@
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+
+URxvt*depth:			32
+URxvt.internalBorder:		5
+URxvt.lineSpace:		0
+
+! Fonts
+URxvt.allow_bold:           true
+URxvt*font: xft:Hack:size=10
+URxvt*boldFont: xft:Hack-Bold:size=10
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          google-chrome-stable
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+! special
+*.foreground:   #91f097
+*.background:   [85]#000810
+*.cursorColor:  #91f097
+
+! black
+*.color0:       #3e3e3e
+*.color8:       #5b5b5b
+
+! red
+*.color1:       #f90000
+*.color9:       #f23e3e
+
+! green
+*.color2:       #daf000
+*.color10:      #e8f197
+
+! yellow
+*.color3:       #ed7624
+*.color11:      #f9a97a
+
+! blue
+*.color4:       #00eefb
+*.color12:      #79cde2
+
+! magenta
+*.color5:       #de2c97
+*.color13:      #ec73d7
+
+! cyan
+*.color6:       #00e6c8
+*.color14:      #7de6d7
+
+! white
+*.color7:       #797979
+*.color15:      #c5c8c6
