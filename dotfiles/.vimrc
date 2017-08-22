@@ -6,6 +6,8 @@ set noexpandtab
 set shiftwidth=8
 set tabstop=8
 set autoindent
+set relativenumber
+set number
 
 let g:ycm_global_ycm_extra_conf = '/home/electrux/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 

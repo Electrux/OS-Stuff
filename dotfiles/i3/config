@@ -1,17 +1,40 @@
 # Set Alt as mod key
 set $mod Mod1
 
-# Set workspace names by roles.
+# Set workspace names by roles
 set $ws1 "1: Main"
 set $ws2 "2: Alt"
-set $ws2 "3: Alt"
-set $ws2 "4: Alt"
-set $ws2 "5: Alt"
-set $ws2 "6: Alt"
-set $ws2 "7: Alt"
-set $ws2 "8: Alt"
-set $ws2 "9: Alt"
+set $ws3 "3: Alt"
+set $ws4 "4: Alt"
+set $ws5 "5: Alt"
+set $ws6 "6: Alt"
+set $ws7 "7: Alt"
+set $ws8 "8: Alt"
+set $ws9 "9: Alt"
 set $ws10 "10: VirtualBox"
+
+# Set various colors for i3 and i3status/i3blocks
+set $bg-focused		#00DDAA
+set $col-indicate	#CCCCFF
+set $bg-unfocused	#666688
+set $bg-urgent		#00FFFF
+set $text-focused 	#000000
+set $text-unfocused 	#CCCCCC
+set $client-backgr	#AAAAEE
+# i3status
+set $status-backgr 	#021232
+set $status-line 	#000000
+set $status-separator 	#FF2348
+set $bg-bind 		#00DDDD
+set $col-backgr 	#005588
+
+# Class				border		backgr		text		indicator	child_border
+client.focused 			$bg-focused 	#FFFFFF		$text-focused	$col-indicate	$bg-focused
+client.unfocused 		$bg-unfocused 	#FFFFFF		$text-unfocused	$col-indicate	$bg-unfocused
+client.focused_inactive 	$bg-unfocused 	#FFFFFF		$text-unfocused	$col-indicate	$bg-unfocused
+client.urgent			$bg-urgent 	#FFFFFF		$text-focused	$col-indicate	$bg-urgent
+client.placeholder		#000000		#FFFFFF		$text-focused	#000000		#0c0c0c
+client.background		$client-backgr
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -45,7 +68,7 @@ bindsym $mod+Control+l exec i3lock-fancy
 bindsym $mod+Return exec urxvt
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -font "Hack 12" -separator-style "solid" -hide-scrollbar -lines 10 -width 30 -padding 10 -show run
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -179,7 +202,20 @@ for_window [class="VirtualBox"] floating enable
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	colors {
+		background 	$status-backgr
+		statusline 	$status-line
+		separator 	$status-separator
+
+		# Class			border		background		text
+		focused_workspace	$col-backgr 	$bg-focused 		$text-focused
+		active_workspace	$col-backgr 	$bg-unfocused 		$text-focused
+		inactive_workspace	$col-backgr 	$bg-unfocused 		$text-unfocused
+		urgent_workspace	$col-backgr 	$bg-urgent 		$text-focused
+		binding_mode		$col-backgr	$bg-bind		$text-focused
+	}
 	position top
+	separator_symbol ""
 	font pango:Terminess Powerline 10
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
@@ -188,5 +224,5 @@ exec --no-startup-id compton -b
 exec --no-startup-id blueman-applet
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id conky -c ~/.config/i3/conkyrc
-exec_always xrdb ~/.Xresources
-exec_always feh --bg-scale /data/Pictures/Wallpapers/arch_grey.jpg
+exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id feh --bg-scale /data/Pictures/Wallpapers/arch_grey.jpg

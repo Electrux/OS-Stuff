@@ -6,6 +6,15 @@
 ! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
 !-------------------------------------------------------------------------------
 
+! Settings for Rofi colors
+! State:           'bg',       'fg',        'bgalt',    'hlbg',     'hlfg'
+rofi.color-normal: #000000FF,  #FF000000,  #000000FF,  #CC00AA55,  #FFFFFFFF
+rofi.color-urgent: #000000FF,  #AA000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
+rofi.color-active: #000000FF,  #FF000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
+! Window:          'background', 'border', 'separator'
+rofi.color-window: #BBAAAAEE,    #FF00DDAA,  #FF00DDAA
+
+! Core settings for Rxvt
 URxvt*depth:			32
 URxvt.internalBorder:		5
 URxvt.lineSpace:		0
