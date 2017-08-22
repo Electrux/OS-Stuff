@@ -23,8 +23,8 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 
 # fancy lock
 bindsym $mod+Control+l exec i3lock-fancy
@@ -178,4 +178,4 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id conky -c ~/.config/i3/conkyrc
 exec_always xrdb ~/.Xresources
-exec_always feh --bg-scale /data/Pictures/Wallpapers/battlefield-game.jpg
+exec_always feh --bg-scale /data/Pictures/Wallpapers/arch_grey.jpg
