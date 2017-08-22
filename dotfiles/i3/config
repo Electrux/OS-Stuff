@@ -15,7 +15,7 @@ set $ws10 "10: VirtualBox"
 
 # Set various colors for i3 and i3status/i3blocks
 set $bg-focused		#00DDAA
-set $col-indicate	#CCCCFF
+set $col-indicate	#00DDAA
 set $bg-unfocused	#666688
 set $bg-urgent		#00FFFF
 set $text-focused 	#000000
