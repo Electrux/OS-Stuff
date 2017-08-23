@@ -1,6 +1,9 @@
 # Set Alt as mod key
 set $mod Mod1
 
+# Wallpaper file
+set $wallpaper /data/Pictures/Wallpapers/arch-blue.jpg
+
 # Set workspace names by roles
 set $ws1 "1: Main"
 set $ws2 "2: Alt"
@@ -50,19 +53,19 @@ smart_gaps on
 new_window 1pixel
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2%+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Touchpad controls
-bindsym XF86TouchpadToggle exec ~/.config/i3/toggletouchpad.sh
+bindsym XF86TouchpadToggle exec --no-startup-id ~/.config/i3/toggletouchpad.sh
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
 
 # fancy lock
-bindsym $mod+Control+l exec i3lock-fancy
+bindsym $mod+Control+l exec --no-startup-id i3lock-fancy
 
 # start a terminal
 bindsym $mod+Return exec urxvt
@@ -198,6 +201,7 @@ bindsym $mod+Pause mode "$mode_system"
 # Per application settings for workspaces and styles
 assign [class="VirtualBox"] $ws10
 for_window [class="VirtualBox"] floating enable
+for_window [title="Android Emulator"] floating enable
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -216,7 +220,7 @@ bar {
 	}
 	position top
 	separator_symbol ""
-	font pango:Terminess Powerline 10
+	font pango:Hack 10
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
 
@@ -225,4 +229,4 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id conky -c ~/.config/i3/conkyrc
 exec_always --no-startup-id xrdb ~/.Xresources
-exec_always --no-startup-id feh --bg-scale /data/Pictures/Wallpapers/arch_grey.jpg
+exec_always --no-startup-id feh --bg-scale $wallpaper
