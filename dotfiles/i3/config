@@ -12,7 +12,7 @@ set $ws4 "4: Alt"
 set $ws5 "5: Alt"
 set $ws6 "6: Alt"
 set $ws7 "7: Alt"
-set $ws8 "8: Alt"
+set $ws8 "8: Communication"
 set $ws9 "9: Android Studio"
 set $ws10 "10: VirtualBox"
 
@@ -201,10 +201,13 @@ bindsym $mod+Pause mode "$mode_system"
 # Per application settings for workspaces and styles
 assign [class="VirtualBox"] $ws10
 assign [class="jetbrains-studio"] $ws9
+assign [class="TelegramDesktop"] $ws8
+assign [class="whatsapp-desktop"] $ws8
 
 for_window [title="Floating"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [title="Android Emulator"] floating enable
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
