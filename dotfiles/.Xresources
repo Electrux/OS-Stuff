@@ -41,7 +41,7 @@ URxvt.cursorUnderline:      false
 URxvt.pointerBlank:         true
 
 ! special
-*.foreground:   #91f097
+*.foreground:   #8ecfd3
 *.background:   [85]#000810
 *.cursorColor:  #91f097
 
@@ -58,21 +58,21 @@ URxvt.pointerBlank:         true
 *.color10:      #e8f197
 
 ! yellow
-*.color3:       #ed7624
-*.color11:      #f9a97a
+*.color3:       #ffac74
+*.color11:      #f5cab1
 
 ! blue
-*.color4:       #00eefb
-*.color12:      #79cde2
+*.color4:       #dfafff
+*.color12:      #efbeff
 
 ! magenta
 *.color5:       #de2c97
 *.color13:      #ec73d7
 
 ! cyan
-*.color6:       #00e6c8
-*.color14:      #7de6d7
+*.color6:       #00ff00
+*.color14:      #6eff47
 
 ! white
-*.color7:       #797979
+*.color7:       #9d9d9d
 *.color15:      #c5c8c6

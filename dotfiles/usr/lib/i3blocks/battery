@@ -56,9 +56,10 @@ print "$short_text\n";
 # consider color and urgent flag only on discharge
 if ($status eq 'Discharging') {
 
-	if ($percent < 20) {
+	if ($percent < 10) {
+		system( "notify-send \"Battery low!! - 10%\" -h string:bgcolor:#021232" );
 		print "#FF0000\n";
-	} elsif ($percent < 40) {
+	} elsif ($percent < 25) {
 		print "#FF75B0\n";
 	} elsif ($percent < 60) {
 		print "#00F8F4\n";
