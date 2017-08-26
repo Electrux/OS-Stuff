@@ -27,7 +27,7 @@ set $client-backgr	#AAAAEE
 # i3status
 set $status-backgr 	#021232
 set $status-line 	#000000
-set $status-separator 	#FF2348
+set $status-separator 	#FFCCCC
 set $bg-bind 		#00DDDD
 set $col-backgr 	#005588
 
