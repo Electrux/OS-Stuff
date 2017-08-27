@@ -57,7 +57,7 @@ print "$short_text\n";
 if ($status eq 'Discharging') {
 
 	if ($percent < 10) {
-		system( "notify-send \"Battery low!! - $percent%\" -h string:bgcolor:#021232" );
+		system( "notify-send \"Battery low!! - $percent%\"" );
 		print "#FF0000\n";
 	} elsif ($percent < 25) {
 		print "#FF75B0\n";
