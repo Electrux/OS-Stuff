@@ -2,7 +2,7 @@
 set $mod Mod1
 
 # Wallpaper file
-set $wallpaper /data/Pictures/Wallpapers/grid-earth.jpg
+set $wallpaper /data/Pictures/Wallpapers/night-stars.jpg
 
 # Set workspace names by roles
 set $ws1 "1: Main"
@@ -238,6 +238,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id conky -c ~/.config/i3/conkyrc
+exec --no-startup-id libinput-gestures
 
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id feh --bg-scale $wallpaper
