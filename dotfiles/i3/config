@@ -204,6 +204,7 @@ assign [class="jetbrains-studio"] $ws9
 assign [class="jetbrains-idea"] $ws8
 assign [class="TelegramDesktop"] $ws7
 assign [class="whatsapp-desktop"] $ws7
+assign [class="discord"] $ws7
 
 for_window [title="Floating"] floating enable
 for_window [class="VirtualBox"] floating enable
