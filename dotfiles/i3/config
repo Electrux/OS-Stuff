@@ -200,8 +200,12 @@ bindsym $mod+Pause mode "$mode_system"
 
 # Per application settings for workspaces and styles
 assign [class="VirtualBox"] $ws10
+
 assign [class="jetbrains-studio"] $ws9
+assign [title="Android Emulator"] $ws9
+
 assign [class="jetbrains-idea"] $ws8
+
 assign [class="TelegramDesktop"] $ws7
 assign [class="whatsapp-desktop"] $ws7
 assign [class="discord"] $ws7
@@ -239,7 +243,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id conky -c ~/.config/i3/conkyrc
-exec --no-startup-id libinput-gestures
+exec --no-startup-id libinput-gestures-setup start
 
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id feh --bg-scale $wallpaper
