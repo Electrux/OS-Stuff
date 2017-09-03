@@ -211,7 +211,7 @@ assign [class="whatsapp-desktop"] $ws7
 assign [class="discord"] $ws7
 
 for_window [title="Floating"] floating enable
-# for_window [class="VirtualBox"] floating enable
+for_window [class="VirtualBox"] layout tabbed
 for_window [title="Android Emulator"] floating enable
 for_window [class="Gimp"] floating enable
 
