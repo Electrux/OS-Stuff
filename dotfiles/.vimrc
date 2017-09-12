@@ -8,6 +8,7 @@ set tabstop=8
 set autoindent
 set relativenumber
 set number
+set backspace=indent,eol,start
 
 let g:ycm_global_ycm_extra_conf = '/Users/electrux/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
