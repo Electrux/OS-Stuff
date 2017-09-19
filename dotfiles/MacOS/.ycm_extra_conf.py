@@ -65,6 +65,10 @@ flags = [
 # harmful
 '/System/Library/Frameworks/Python.framework/Headers',
 '-isystem',
+'/Library/Frameworks/SDL2.framework/Headers',
+'-isystem',
+'/Library/Frameworks/SDL2_image.framework/Headers',
+'-isystem',
 '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include',
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/4.2.1',
