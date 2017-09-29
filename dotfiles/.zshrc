@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set path for new ViM
-alias vim='/usr/local/bin/vim'
+# alias vim='/usr/local/bin/vim'
 
 # Set zsh autosuggestions path
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
