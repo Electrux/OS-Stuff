@@ -15,7 +15,7 @@
  '(custom-safe-themes
    (quote
     ("4e63466756c7dbd78b49ce86f5f0954b92bf70b30c01c494b37c586639fa3f6f" default)))
- '(package-selected-packages (quote (exec-path-from-shell tangotango-theme))))
+ '(package-selected-packages (quote (multi-term company yasnippet flycheck eldoc ycmd flycheck-ycmd company-ycmd exec-path-from-shell tangotango-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -52,3 +52,75 @@
 ;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
 (toggle-frame-maximized)
 
+;; YCMD + Company + Yasnippet + FlyCheck setup.
+;; Snippets
+(use-package yasnippet
+  :ensure t
+  :diminish yas-minor-mode
+  :init (yas-global-mode t))
+
+;; Autocomplete
+(use-package company
+  :defer 10
+  :diminish company-mode
+  :bind (:map company-active-map
+              ("M-j" . company-select-next)
+              ("M-k" . company-select-previous))
+  :preface
+  ;; enable yasnippet everywhere
+  (defvar company-mode/enable-yas t
+    "Enable yasnippet for all backends.")
+  (defun company-mode/backend-with-yas (backend)
+    (if (or
+         (not company-mode/enable-yas)
+         (and (listp backend) (member 'company-yasnippet backend)))
+        backend
+      (append (if (consp backend) backend (list backend))
+              '(:with company-yasnippet))))
+
+  :init (global-company-mode t)
+  :config
+  ;; no delay no autocomplete
+  (setq-default
+   company-idle-delay 0
+   company-minimum-prefix-length 2
+   company-tooltip-limit 20)
+
+  (setq-default company-backends
+                 (mapcar #'company-mode/backend-with-yas company-backends)))
+
+
+;; Support for Multi Term - Terminal Emulation.
+(use-package multi-term
+  :config
+  (setq-default multi-term-program "/usr/local/bin/zsh"))
+
+;;; On-the-fly syntax checking
+(use-package flycheck
+  :ensure t
+  :diminish flycheck-mode
+  :init (global-flycheck-mode t))
+
+;; Show argument list in echo area
+(use-package eldoc
+  :diminish eldoc-mode
+  :init (add-hook 'ycmd-mode-hook 'ycmd-eldoc-setup))
+
+; Code-comprehension server
+(use-package ycmd
+  :ensure t
+  :init (add-hook 'c++-mode-hook #'ycmd-mode)
+  :config
+  (set-variable 'ycmd-server-command '("python3" "/Users/electrux/GitHub/ycmd/ycmd/"))
+  (set-variable 'ycmd-global-config (expand-file-name "~/GitHub/Linux-Stuff/dotfiles/.ycm_extra_conf.py"))
+
+  (set-variable 'ycmd-extra-conf-whitelist '("~/Programming/*" "~/GitHub/*"))
+
+  (use-package flycheck-ycmd
+    :commands (flycheck-ycmd-setup)
+    :init (add-hook 'ycmd-mode-hook 'flycheck-ycmd-setup))
+
+  (use-package company-ycmd
+    :ensure t
+    :init (company-ycmd-setup)
+    :config (add-to-list 'company-backends (company-mode/backend-with-yas 'company-ycmd))))
