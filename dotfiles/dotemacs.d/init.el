@@ -15,7 +15,9 @@
  '(custom-safe-themes
    (quote
     ("4e63466756c7dbd78b49ce86f5f0954b92bf70b30c01c494b37c586639fa3f6f" default)))
- '(package-selected-packages (quote (multi-term company yasnippet flycheck eldoc ycmd flycheck-ycmd company-ycmd exec-path-from-shell tangotango-theme))))
+ '(package-selected-packages
+   (quote
+    (yasnippet company company-ycmd eldoc-eval exec-path-from-shell flycheck flycheck-ycmd tangotango-theme ycmd))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -31,7 +33,7 @@
 (load-theme 'tangotango)
 
 ;; Set default style for C/C++ language.
-(setq-default c-default-style "linux")
+(setq-default c-default-style "stroustrup")
 
 ;; Set settings for editing.
 (global-linum-mode t)
@@ -88,12 +90,6 @@
 
   (setq-default company-backends
                  (mapcar #'company-mode/backend-with-yas company-backends)))
-
-
-;; Support for Multi Term - Terminal Emulation.
-(use-package multi-term
-  :config
-  (setq-default multi-term-program "/usr/local/bin/zsh"))
 
 ;;; On-the-fly syntax checking
 (use-package flycheck
