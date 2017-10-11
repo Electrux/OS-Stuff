@@ -33,7 +33,7 @@
 (load-theme 'tangotango)
 
 ;; Set default style for C/C++ language.
-(setq-default c-default-style "stroustrup")
+(setq-default c-default-style "bsd")
 
 ;; Set settings for editing.
 (global-linum-mode t)
