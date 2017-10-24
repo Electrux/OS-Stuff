@@ -14,10 +14,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("4e63466756c7dbd78b49ce86f5f0954b92bf70b30c01c494b37c586639fa3f6f" default)))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "4e63466756c7dbd78b49ce86f5f0954b92bf70b30c01c494b37c586639fa3f6f" default)))
  '(package-selected-packages
    (quote
-    (yasnippet company company-ycmd eldoc-eval exec-path-from-shell flycheck flycheck-ycmd tangotango-theme ycmd))))
+    (solarized-theme yasnippet company company-ycmd eldoc-eval exec-path-from-shell flycheck flycheck-ycmd tangotango-theme ycmd))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
