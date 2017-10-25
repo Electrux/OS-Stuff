@@ -46,6 +46,8 @@
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 
+;; Disable Auto Save feature. No more freaking '~' files!!
+(setq auto-save-default nil)
 
 ;; Set PATH variable for emacs.
 (when (memq window-system '(mac ns x))
