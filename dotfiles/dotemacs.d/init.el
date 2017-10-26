@@ -1,3 +1,16 @@
+;;; Package --- Summary
+
+;;; Commentary:
+;;    All the settings are here.
+;;    First is the required settings for package management,
+;;    which also contains packages.
+;;    Then there is custom settings for better customization.
+
+;;; Code:
+
+
+;; Required settings for package management.
+
 (require 'package) ;; You might already have this line
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -26,8 +39,10 @@
  )
 
 
-
 ;; Custom settings.
+
+;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
+(toggle-frame-maximized)
 
 ;; Set theme.
 (load-theme 'dracula)
@@ -46,17 +61,22 @@
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 
-;; Disable Auto Save feature. No more freaking '~' files!!
+;; Disable Auto Backup feature. No more freaking '~' files!!
 (setq auto-save-default nil)
+(setq make-backup-files nil)
+
+;; Set the backup and autosave file location to /tmp
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
 ;; Set PATH variable for emacs.
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
-;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
-(toggle-frame-maximized)
-
 ;; YCMD + Company + Yasnippet + FlyCheck setup.
+
 ;; Snippets
 (use-package yasnippet
   :ensure t
@@ -122,3 +142,6 @@
     :ensure t
     :init (company-ycmd-setup)
     :config (add-to-list 'company-backends (company-mode/backend-with-yas 'company-ycmd))))
+
+(provide 'init)
+;;; init.el ends here
