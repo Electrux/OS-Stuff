@@ -41,9 +41,6 @@
 
 ;; Custom settings.
 
-;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
-(toggle-frame-maximized)
-
 ;; Set theme.
 (load-theme 'dracula)
 
@@ -74,6 +71,9 @@
 ;; Set PATH variable for emacs.
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+
+;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
+(toggle-frame-maximized)
 
 ;; YCMD + Company + Yasnippet + FlyCheck setup.
 
