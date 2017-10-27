@@ -1,0 +1,130 @@
+###### Conky for Debian Gnu/Linux and derivatives - Version 2
+# For minimum resolution 1360x720
+# By Gustavo Valério
+# www.gustavovalerio.com
+# In 5 DE DEZEMBRO DE 2016
+# https://github.com/gustavovalerio/Conky
+
+##### LICENSE GPL V 2.1
+# Free for use and modification
+# Keep the credits
+
+##### DEPENDENCIES
+# Font Coda: https://github.com/gustavovalerio/Conky/blob/master/Fonts/Coda/Coda.ttf
+# Font Awesome: https://github.com/gustavovalerio/Conky/blob/master/Fonts/Awesome/FontAwesome.otf
+# Font Audiowide: https://github.com/gustavovalerio/Conky/blob/master/Fonts/Audiowide/Audiowide.ttf
+# Font Open 24 Display St: https://github.com/gustavovalerio/Conky/blob/master/Fonts/Open%2024%20display/Open24DisplaySt.ttf
+# Font ConkyWind: https://github.com/gustavovalerio/Conky/blob/master/Fonts/ConkyWind/ConkyWind.otf
+# Package conky-all (apt install conky-all)
+# Package lm-sensors (apt install lm-sensors)
+
+##### INSTALLATION
+# Install packages conky-all and lm-sensors (apt install conky-all lm-sensors -y).
+# Execute sensors-detect on root terminal and press ENTER until finished.
+# Choose the file according to your resolution
+# Rename the file for .conkyrc and move for your user folder on /home. 
+
+##### BASICS SETTINGS
+background no
+use_xft yes
+xftfont Coda:size=10
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale yes
+temperature_unit celsius
+default_color FFFFFF
+
+##### WINDOW SETTINGS
+own_window yes
+own_window_type desktop
+own_window_argb_visual yes
+own_window_argb_value 200
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 1340
+maximum_width 1920
+
+##### BORDERS AND SHADOWS
+default_shade_color black
+draw_shades 
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+
+##### ALIGNMENT
+alignment top_left
+gap_y 35
+gap_x 0
+
+TEXT
+
+# COLUMN PROCESSOR
+${goto 10}${font Audiowide:size=15}PROCESSOR$font ${goto 10}${voffset 5}______________________________________________${voffset 10}
+${goto 10}${font Fontawesome:size=10}$font CORES: ${execi 999999 sensors | grep -c Core}
+${goto 10}${font Fontawesome:size=10}$font THREADS: ${execi 999999 cat /proc/cpuinfo | grep -c "model name"}
+${goto 10}${font Fontawesome:size=10}$font TEMPERATURE: ${execi 5 sensors | grep id | awk '{ print $4 }' | sed 's#+##'}
+${goto 10}${font Fontawesome:size=10}$font FREQUENCY: $freq MHz
+${goto 10}${font Fontawesome:size=10}$font MODEL: ${execi 999999 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | cut -d" " -f2- | sed 's#Processor ##;s#CPU ##;s#@ ##'}
+${goto 10}${voffset 5}${cpugraph cpu1 60,320 555555 FFFFFF -t}
+${goto 106}CPU CORE USAGE
+${voffset 15}${font ConkyWind:size=114}$font${goto 58}${voffset -85}${font Open 24 Display St:size=40}${cpu cpu1}%$font
+${voffset -85}${goto 155}${font ConkyWind:size=119}$font ${goto 206}${voffset -85}${font Open 24 Display St:size=40}${cpu cpu2}%$font
+${voffset 50}${font ConkyWind:size=114}$font ${goto 58}${voffset -85}${font Open 24 Display St:size=40}${cpu cpu3}%$font
+${voffset -85}${goto 155}${font ConkyWind:size=119}$font ${goto 206}${voffset -85}${font Open 24 Display St:size=40}${cpu cpu4}%$font
+${voffset 50}${goto 116}TOP PROCESSES
+${goto 10}${voffset 10}NAME ${goto 165}PID ${goto 230}CPU ${goto 290}RAM ${voffset 5}
+${goto 10}1. ${top name 1}${goto 160}${top pid 1}${goto 220}${top cpu 1}%${goto 280}${top mem 1}%
+${goto 10}2. ${top name 2}${goto 160}${top pid 2}${goto 220}${top cpu 2}%${goto 280}${top mem 2}%
+${goto 10}3. ${top name 3}${goto 160}${top pid 3}${goto 220}${top cpu 3}%${goto 280}${top mem 3}%
+${goto 10}4. ${top name 4}${goto 160}${top pid 4}${goto 220}${top cpu 4}%${goto 280}${top mem 4}%
+${goto 10}5. ${top name 5}${goto 160}${top pid 5}${goto 220}${top cpu 5}%${goto 280}${top mem 5}%
+${goto 10}6. ${top name 6}${goto 160}${top pid 6}${goto 220}${top cpu 6}%${goto 280}${top mem 6}%
+${goto 10}7. ${top name 7}${goto 160}${top pid 7}${goto 220}${top cpu 7}%${goto 280}${top mem 7}%
+
+# COLUMN MEMORY
+${voffset 30}${goto 10}${font Audiowide:size=15}MEMORY$font ${goto 10}${voffset 5}______________________________________________${voffset 10}
+${goto 10}${font ConkyWind:size=114}$font ${goto 10}${voffset -90}${font Open 24 Display St:size=35}$memperc%$font${voffset -59}
+${goto 140}MEMORY USED: $mem
+${goto 143}MEMORY FREE: $memeasyfree
+${goto 145}MEMORY CACHED: $buffers
+${goto 143}MEMORY BUFFERS: $cached
+${goto 140}MEMORY TOTAL: $memmax
+${voffset 30}${goto 10}${membar 15,320}
+
+# COLUMN SYSTEM
+${goto 1840}${voffset -945}${font Audiowide:size=15}SYSTEM$font ${goto 1600}${voffset 5}______________________________________________${voffset 10}
+${goto 1570}${offset 10}${font FontAwesome:size=70} ${voffset -15}${font Open 24 Display St:size=80}${time %H:%M}$font
+${goto 1595}${voffset 12}${font FontAwesome:size=11} ${font Coda:size=11} ${time %A, %d %B of %Y}$font
+${goto 1600}${voffset 12}${font Fontawesome:size=10}$font KERNEL: $kernel
+${goto 1600}${voffset 12}${font Fontawesome:size=10}$font UPTIME: $uptime_short
+${goto 1600}${voffset 12}${font Fontawesome:size=10}$font PROCESSES: $processes
+${goto 1600}${voffset 12}${font Fontawesome:size=10}$font THREADS: $running_threads
+${goto 1600}${voffset 12}${font Fontawesome:size=10}$font MEMORY USAGE ON BOOT: ${execi 999999 free -m | grep -i mem |  awk '{print $3}'}MiB
+${goto 1600}${voffset 12}${font Fontawesome:size=10}$font DPMS: ${execi 300 xset -q | grep -i dpms | tail -1 | awk '{print $3}'}
+
+# COLUMN FILESYSTEM
+${goto 1795}${font Audiowide:size=15}FILESYSTEM$font ${goto 1600}${voffset 5}______________________________________________${voffset 10}
+${goto 1600}/EFI ${goto 1700}${fs_used /boot/efi} / ${fs_size /boot/efi}${goto 1870}(${fs_used_perc /boot/efi}%)
+${goto 1600}${fs_bar 10,320 /boot/efi}
+${voffset 6}${goto 1600}/TMP ${goto 1700}${fs_used /run} / ${fs_size /run}${goto 1870}(${fs_used_perc /run}%)
+${goto 1600}${fs_bar 10,320 /run}
+${voffset 6}${goto 1600}/ROOT ${goto 1700}${fs_used /} / ${fs_size /}${goto 1870}(${fs_used_perc /}%)
+${goto 1600}${fs_bar 10,320 /}
+${voffset 6}${goto 1600}/VAR ${goto 1700}${fs_used /var} / ${fs_size /var}${goto 1870}(${fs_used_perc /var}%)
+${goto 1600}${fs_bar 10,320 /var}
+${voffset 6}${goto 1600}/HOME ${goto 1700}${fs_used /home} / ${fs_size /home}${goto 1870}(${fs_used_perc /home}%)
+${goto 1600}${fs_bar 10,320 /home}
+${voffset 6}${goto 1600}/DATA ${goto 1700}${fs_used /data} / ${fs_size /data}${goto 1870}(${fs_used_perc /data}%)
+${goto 1600}${fs_bar 10,320 /data}
+${goto 1595}${voffset 15}${font Fontawesome:size=10}$font DISK INPUT / OUTPUT${goto 1860}(${diskio /dev/sda})
+${goto 1600}${diskiograph 60,320 555555 FFFFFF -t}
+${goto 1595}${font Fontawesome:size=10}$font DISK READ${goto 1860}(${diskio_read /dev/sda})
+${goto 1600}${diskiograph_read 60,320 555555 FFFFFF -t}
+${goto 1595}${font Fontawesome:size=10}$font DISK WRITE${goto 1860}(${diskio_write /dev/sda})
+${goto 1600}${diskiograph_write 60,320 555555 FFFFFF -t}
+
