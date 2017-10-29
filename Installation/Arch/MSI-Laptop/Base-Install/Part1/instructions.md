@@ -102,7 +102,7 @@ Installing Arch linux on an MSI laptop Part 1.
 	
 	9. Now, we install the base system along with the development (programming related softwares) packages. So use the following command to do the same (This will take a while depending on Internet):
 
-		pacstrap /mnt base base-devel python3 python2 tk
+		pacstrap /mnt base base-devel python3 python2
 	
 
 	10. Now, we will set the partition and mount info to be loaded when system starts. This will be done using fstab. So, enter this command:
@@ -141,7 +141,7 @@ Installing Arch linux on an MSI laptop Part 1.
 
 		14.e Now to set the locale.conf with our language, we enter the command:
 
-			echo "LANG=en_US.UTF-8" > /etc/locale.conf
+ 			echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 			The language locale you enter is based on your choice of the locale.
 
@@ -199,23 +199,27 @@ Installing Arch linux on an MSI laptop Part 1.
 
 		17.d Now create your account using the following command:
 
-			useradd -m -G wheel -s /bin/zsh <username>
+			useradd -m -G wheel -s /bin/zsh -c "<full name>" <username>
 
 		17.e Set the password for the new account:
 
 			passwd <username>
 
-		17.f Now enable the command "sudo" to be used by all the users in group "wheel":
+		17.f Now install and enable the command "sudo" to be used by all the users in group "wheel":
 
-			17.f.a Edit the file /etc/sudoers using nano:
+		     	17.f.a Install the sudo package using the following command:
+
+			        pacman -S sudo
+
+			17.f.b Edit the file /etc/sudoers using nano:
 			
 				nano /etc/sudoers
 
-			17.f.b Scroll down and remove the comment (#) from the line:
+			17.f.c Scroll down and remove the comment (#) from the line:
 
 				# %wheel ALL=(ALL) ALL
 
-			17.f.c Save and close the file.
+			17.f.d Save and close the file.
 
 		17.g Setup the pacman.conf file to enable yaourt repository and install yaourt:
 
@@ -244,7 +248,7 @@ Installing Arch linux on an MSI laptop Part 1.
 
 			17.g.e Install yaourt package manager to install applications from the Arch User Repository (AUR):
 
-				pacman -S yaourt
+				pacman -S yaourt customizepkg rsync
 	
 
 	18. Now we will install the systemd bootloader to enable the system to boot into our new install:

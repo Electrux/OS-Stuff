@@ -32,7 +32,7 @@
 	   hasstle free volume/brightness shortcuts and toggles.
 
 
-	6. OK, so to install Mate environment, we run the following command:
+	6. OK, so, to install Mate environment, we run the following command:
 
 		sudo pacman -S xorg mate mate-extra blueman mate-power-manager system-config-printer network-manager-applet
 		mate-media lightdm
