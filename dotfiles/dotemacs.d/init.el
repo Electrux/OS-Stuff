@@ -76,8 +76,10 @@
 (toggle-frame-maximized)
 
 ;; Rust auto format by default for rust-mode.
-;;(use-package rust-mode
-;;  :config (setq rust-format-on-save t))
+(use-package rust-mode
+  :config
+  ;;(setq rust-format-on-save t)
+  (setq rust-indent-offset 8))
 
 ;; YCMD + Company + Yasnippet + FlyCheck setup.
 
