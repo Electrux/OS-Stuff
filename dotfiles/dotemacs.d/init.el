@@ -75,12 +75,13 @@
 ;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
 (toggle-frame-maximized)
 
-;; Rust setup for rust-mode.
-(setq rust-format-on-save t)
+;; Rust auto format by default for rust-mode.
+;;(use-package rust-mode
+;;  :config (setq rust-format-on-save t))
 
 ;; YCMD + Company + Yasnippet + FlyCheck setup.
 
-;; Snippets
+;; YA - Snippets
 (use-package yasnippet
   :ensure t
   :diminish yas-minor-mode
@@ -120,7 +121,9 @@
 (use-package flycheck
   :ensure t
   :diminish flycheck-mode
-  :init (global-flycheck-mode t))
+  :init
+  (global-flycheck-mode t)
+  (add-hook 'rust-mode-hook #'flycheck-rust-setup))
 
 ;; Show argument list in echo area
 (use-package eldoc
