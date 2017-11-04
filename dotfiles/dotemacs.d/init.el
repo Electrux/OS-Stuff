@@ -141,10 +141,13 @@
   (set-variable 'ycmd-global-config (expand-file-name "~/GitHub/Linux-Stuff/dotfiles/.ycm_extra_conf.py"))
 
   (set-variable 'ycmd-extra-conf-whitelist '("~/Programming/*" "~/GitHub/*"))
-
+  
   (use-package flycheck-ycmd
     :commands (flycheck-ycmd-setup)
     :init (add-hook 'ycmd-mode-hook 'flycheck-ycmd-setup))
+    ;; Had to add indent-tabs-mode here because it was reset to nil for rust.
+    :config (setq indent-tabs-mode t))
+
 
   (use-package company-ycmd
     :ensure t
