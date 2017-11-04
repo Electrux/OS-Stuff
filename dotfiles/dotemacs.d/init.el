@@ -75,6 +75,12 @@
 ;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
 (toggle-frame-maximized)
 
+;; Need to add a hook to the cc-mode to reset the delete key to delete last character.
+;; This fixes the tab character treatment when pressing backspace.
+(defun c-reset-del nil "Reset the delete character to default."
+  (local-set-key (kbd "DEL") 'delete-backward-char))
+(add-hook 'c-mode-common-hook 'c-reset-del)
+
 ;; Need to add a hook to the rust-mode-hook for setting indent mode to tabs.
 (defun rust-indent-hook nil "Alters indentation to tabs for rust files."
   (setq-local indent-tabs-mode t))
