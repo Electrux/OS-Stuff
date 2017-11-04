@@ -75,6 +75,11 @@
 ;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
 (toggle-frame-maximized)
 
+;; Need to add a hook to the rust-mode-hook for setting indent mode to tabs.
+(defun rust-indent-hook nil "Alters indentation to tabs for rust files."
+  (setq-local indent-tabs-mode t))
+(add-hook 'rust-mode-hook #'rust-indent-hook)
+
 ;; Rust auto format by default for rust-mode.
 (use-package rust-mode
   :config
@@ -145,14 +150,12 @@
   (use-package flycheck-ycmd
     :commands (flycheck-ycmd-setup)
     :init (add-hook 'ycmd-mode-hook 'flycheck-ycmd-setup))
-    ;; Had to add indent-tabs-mode here because it was reset to nil for rust.
-    :config (setq indent-tabs-mode t)
-
-
+  
   (use-package company-ycmd
     :ensure t
     :init (company-ycmd-setup)
     :config (add-to-list 'company-backends (company-mode/backend-with-yas 'company-ycmd))))
+
 
 (provide 'init)
 ;;; init.el ends here
