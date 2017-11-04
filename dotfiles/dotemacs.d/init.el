@@ -152,7 +152,7 @@
   (use-package company-ycmd
     :ensure t
     :init (company-ycmd-setup)
-    :config (add-to-list 'company-backends (company-mode/backend-with-yas 'company-ycmd))))
+    :config (add-to-list 'company-backends (company-mode/backend-with-yas 'company-ycmd)))
 
 (provide 'init)
 ;;; init.el ends here
