@@ -27,16 +27,17 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "4e63466756c7dbd78b49ce86f5f0954b92bf70b30c01c494b37c586639fa3f6f" default)))
+    ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
  '(package-selected-packages
    (quote
-    (cargo flycheck-rust rust-mode dracula-theme solarized-theme yasnippet company company-ycmd eldoc-eval exec-path-from-shell flycheck flycheck-ycmd tangotango-theme ycmd))))
+    (cargo company company-ycmd eldoc-eval flycheck flycheck-rust flycheck-ycmd rust-mode yasnippet ycmd dracula-theme exec-path-from-shell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 
 
 ;; Custom settings.
