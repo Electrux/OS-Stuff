@@ -30,7 +30,7 @@
     ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
  '(package-selected-packages
    (quote
-    (cargo company company-ycmd eldoc-eval flycheck flycheck-rust flycheck-ycmd rust-mode yasnippet ycmd dracula-theme exec-path-from-shell))))
+    (racer cargo company company-ycmd eldoc-eval flycheck flycheck-rust flycheck-ycmd rust-mode yasnippet ycmd dracula-theme exec-path-from-shell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -89,6 +89,12 @@
 
 ;; Rust auto format by default for rust-mode.
 (use-package rust-mode
+  :init
+  (add-hook 'rust-mode-hook #'rust-indent-hook)
+  (add-hook 'rust-mode-hook #'racer-mode)
+  (add-hook 'racer-mode-hook #'eldoc-mode)
+  (add-hook 'racer-mode-hook #'company-mode)
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
   :config
   ;;(setq rust-format-on-save t)
   (setq rust-indent-offset 8))
