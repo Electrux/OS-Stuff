@@ -30,7 +30,7 @@
     ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
  '(package-selected-packages
    (quote
-    (racer cargo company company-ycmd eldoc-eval flycheck flycheck-rust flycheck-ycmd rust-mode yasnippet ycmd dracula-theme exec-path-from-shell))))
+    (neotree racer cargo company company-ycmd eldoc-eval flycheck flycheck-rust flycheck-ycmd rust-mode yasnippet ycmd dracula-theme exec-path-from-shell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -75,6 +75,12 @@
 
 ;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
 (toggle-frame-maximized)
+
+;; Setup the neotree directory viewer.
+(use-package neotree
+  :bind ([f8] . neotree-toggle)
+  :init (add-to-list 'load-path "~/")
+  :config (setq neo-smart-open t))
 
 ;; Need to add a hook to the cc-mode to reset the delete key to delete last character.
 ;; This fixes the tab character treatment when pressing backspace.
