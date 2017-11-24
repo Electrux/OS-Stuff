@@ -30,8 +30,8 @@ URxvt.lineSpace:		0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*font: xft:Fira Code Retina:size=24
-URxvt*boldFont: xft:Fira Code Bold:size=24
+URxvt*font: xft:Fira Code Retina:size=9
+URxvt*boldFont: xft:Fira Code Bold:size=10
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
