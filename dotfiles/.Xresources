@@ -1,12 +1,6 @@
-
-!-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
-!-------------------------------------------------------------------------------
-
+!---------------------------!
 ! Settings for Rofi colors
+!---------------------------!
 ! State:           'bg',       'fg',        'bgalt',    'hlbg',     'hlfg'
 rofi.color-normal: #000000FF,  #FF000000,  #000000FF,  #CC00AA55,  #FFFFFFFF
 rofi.color-urgent: #000000FF,  #AA000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
@@ -14,7 +8,9 @@ rofi.color-active: #000000FF,  #FF000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
 ! Window:          'background', 'border', 'separator'
 rofi.color-window: #BBAAAAEE,    #FF00DDAA,  #FF00DDAA
 
-! Settings for HiDPI
+!-----------------------------!
+! Settings for HiDPI displays
+!-----------------------------!
 Xft.dpi: 196
 Xft.autohint: 1
 Xft.lcdfilter: lcddefault
@@ -23,31 +19,47 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
+!---------------------------!
 ! Core settings for Rxvt
+!---------------------------!
 URxvt*depth:			32
 URxvt.internalBorder:		5
 URxvt.lineSpace:		0
 
-! Fonts
+!---------------------------!
+! Font settings for Rxvt
+!---------------------------!
 URxvt.allow_bold:           true
 URxvt*font: xft:Fira Code Retina:size=9
 URxvt*boldFont: xft:Fira Code Retina:size=10
 
-! Scrollbar
+!----------------------------!
+! Scrollbar settings for Rxvt
+!----------------------------!
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
-! Perl extensions
+!---------------------------------!
+! Perl extension settings for Rxvt
+!---------------------------------!
 URxvt.perl-ext-common:      default,matcher
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          google-chrome-stable
 
-! Cursor
+!----------------------------!
+! Cursor settings for Rxvt
+!----------------------------!
 URxvt.cursorBlink:          true
 URxvt.cursorUnderline:      false
 
-! Pointer
+!----------------------------!
+! Pointer settings for Rxvt
+!----------------------------!
 URxvt.pointerBlank:         true
+
+!----------------------------!
+! Color scheme for Rxvt
+!----------------------------!
 
 ! special
 *.foreground:   #ebebeb
