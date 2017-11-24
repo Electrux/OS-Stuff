@@ -14,6 +14,15 @@ rofi.color-active: #000000FF,  #FF000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
 ! Window:          'background', 'border', 'separator'
 rofi.color-window: #BBAAAAEE,    #FF00DDAA,  #FF00DDAA
 
+! Settings for HiDPI
+Xft.dpi: 196
+Xft.autohint: 1
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
 ! Core settings for Rxvt
 URxvt*depth:			32
 URxvt.internalBorder:		5
@@ -21,8 +30,8 @@ URxvt.lineSpace:		0
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt*font: xft:Hack:size=10
-URxvt*boldFont: xft:Hack-Bold:size=10
+URxvt*font: xft:Fira Code Retina:size=24
+URxvt*boldFont: xft:Fira Code Bold:size=24
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
