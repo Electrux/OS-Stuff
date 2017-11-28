@@ -150,7 +150,7 @@ Installing Arch linux on an MSI laptop Part 1.
 
 		15.a Enter the hostname in the /etc/hostname file:
 
-			echo "Electrux-MSI" > /etc/hostname
+			echo "Electrux-MBP" > /etc/hostname
 
 		15.b Open the file /etc/hosts:
 
@@ -162,130 +162,142 @@ Installing Arch linux on an MSI laptop Part 1.
 
 		15.d Enter the following in the new line:
 
-			127.0.1.1 Electrux-MSI.localdomain Electrux-MSI
+			127.0.1.1 Electrux-MBP.localdomain Electrux-MBP
 
 		15.e Save and close the file using Ctrl+x, y, enter.
 	
+	16. We also have to enable a couple of modules for MacBooks.
 	
-	16. Now we will remove a preinstalled software for network handling and install a better one:
+		16.a Open /etc/modules in nano as:
+		
+			nano /etc/modules
 
-		16.a Remove netctl package using the following command:
+		16.b Insert the following two lines:
+
+			coretemp
+			applesmc
+
+		16.c Save and close the file using Ctrl+x, y, enter.
+	
+	17. Now we will remove a preinstalled software for network handling and install a better one:
+
+		17.a Remove netctl package using the following command:
 
 			pacman -R netctl
 
-		16.b Install the packages - networkmanager, bluez, dialog:
+		17.b Install the packages - networkmanager, bluez, dialog:
 
 			pacman -S networkmanager bluez dialog
 
-		16.c Enable the network manager service to start at boot:
+		17.c Enable the network manager service to start at boot:
 
 			systemctl enable NetworkManager
 	
 
-	17 Now we will setup some final things before rebooting in our new OS:
+	18 Now we will setup some final things before rebooting in our new OS:
 
-		17.a Set the password for the root user. This password will govern everything on the computer so set it carefully, using the following command:
+		18.a Set the password for the root user. This password will govern everything on the computer so set it carefully, using the following command:
 
 			passwd
 
-		17.b It will prompt you to enter new UNIX password. Enter the new password and enter it again to confirm:
+		18.b It will prompt you to enter new UNIX password. Enter the new password and enter it again to confirm:
 		
 			Enter new UNIX password: <password>
 			Enter again to confirm: <password>
 
-		17.c Install some other important packages like the amazing z shell. Enter the command:
+		18.c Install some other important packages like the amazing z shell. Enter the command:
 
 			pacman -S intel-ucode zsh
 
-		17.d Now create your account using the following command:
+		18.d Now create your account using the following command:
 
 			useradd -m -G wheel -s /bin/zsh -c "<full name>" <username>
 
-		17.e Set the password for the new account:
+		18.e Set the password for the new account:
 
 			passwd <username>
 
-		17.f Now install and enable the command "sudo" to be used by all the users in group "wheel":
+		18.f Now install and enable the command "sudo" to be used by all the users in group "wheel":
 
-		     	17.f.a Install the sudo package using the following command:
+		     	18.f.a Install the sudo package using the following command:
 
 			        pacman -S sudo
 
-			17.f.b Edit the file /etc/sudoers using nano:
+			18.f.b Edit the file /etc/sudoers using nano:
 			
 				nano /etc/sudoers
 
-			17.f.c Scroll down and remove the comment (#) from the line:
+			18.f.c Scroll down and remove the comment (#) from the line:
 
 				# %wheel ALL=(ALL) ALL
 
-			17.f.d Save and close the file.
+			18.f.d Save and close the file.
 
-		17.g Setup the pacman.conf file to enable yaourt repository and install yaourt:
+		18.g Setup the pacman.conf file to enable yaourt repository and install yaourt:
 
-			17.g.a Edit /etc/pacman.conf file using nano:
+			18.g.a Edit /etc/pacman.conf file using nano:
 
 				nano /etc/pacman.conf
 
-			17.g.b Scroll through the file and find the line:
+			18.g.b Scroll through the file and find the line:
 
 				#[multilib]
 				#Include = /etc/pacman.d/mirrorlist
 
-			17.g.c Remove the comment (#) from both the lines. This will enable multilib repository for 32 bit libraries.
+			18.g.c Remove the comment (#) from both the lines. This will enable multilib repository for 32 bit libraries.
 
-			17.g.b Scroll to the end of the file, and in a new line, enter the following:
+			18.g.b Scroll to the end of the file, and in a new line, enter the following:
 
 				[archlinuxfr]
 				SigLevel = Never
 				Server = http://repo.archlinux.fr/$arch
 
-			17.g.c Save and close the file.
+			18.g.c Save and close the file.
 
-			17.g.d Update pacman database to enable the multilib and yaourt repository:
+			18.g.d Update pacman database to enable the multilib and yaourt repository:
 
 				pacman -Syu
 
-			17.g.e Install yaourt package manager to install applications from the Arch User Repository (AUR):
+			18.g.e Install yaourt package manager to install applications from the Arch User Repository (AUR):
 
 				pacman -S yaourt customizepkg rsync
 	
 
-	18. Now we will install the systemd bootloader to enable the system to boot into our new install:
+	19. Now we will install the systemd bootloader to enable the system to boot into our new install:
 
-		18.a Install systemd-boot using the following command:
+		19.a Install systemd-boot using the following command:
 
 			bootctl install
 
-		18.b It will install some files in /boot directory. Now we will setup the boot config:
+		19.b It will install some files in /boot directory. Now we will setup the boot config:
 
-			18.b.a Go to /boot/loader directory:
+			19.b.a Go to /boot/loader directory:
 
 				cd /boot/loader
 
-			18.b.b Edit the file loader.conf:
+			19.b.b Edit the file loader.conf:
 
 				nano loader.conf
 
-			18.b.c Edit the line default <...> and set it as follows:
+			19.b.c Edit the line default <...> and set it as follows:
 
 				default arch
 
-			18.b.d Add new line with the following content:
+			19.b.d Add new line with the following content:
 
 				editor 0
 
-			18.b.e Save the file and close it.
+			19.b.e Save the file and close it.
 
-			18.b.f Go to the entries directory:
+			19.b.f Go to the entries directory:
 
 				cd entries
 
-			18.b.g Create a new file named arch.conf using nano (since we used arch as the parameter for default entry in loader.conf:
+			19.b.g Create a new file named arch.conf using nano (since we used arch as the parameter for default entry in loader.conf:
 
 				nano arch.conf
 
-			18.b.h Enter the following in the file:
+			19.b.h Enter the following in the file:
 
 				Template:
 
@@ -304,37 +316,37 @@ Installing Arch linux on an MSI laptop Part 1.
                                         initrd          /initramfs-linux.img
                                         options         root=PARTLABEL=root resume=/dev/sda6 rw
 
-			18.b.i Save and close the file.
+			19.b.i Save and close the file.
 
-		18.c Now edit the mkinpitcpio.conf file:
+		19.c Now edit the mkinpitcpio.conf file:
 
 			nano /etc/mkinitcpio.conf
 
-		18.d Go to the line with:
+		19.d Go to the line with:
 
 			HOOKS="base udev autodetect modconf block..."
 
-		18.e Enter resume just after udev so that the line reads:
+		19.e Enter resume just after udev so that the line reads:
 
 			HOOKS="base udev resume autodetect modconf block..."
 
-		18.f Save and close file.
+		19.f Save and close file.
 
 		18.g Regenerate the boot image file for the system using the following command:
 
 			mkinitcpio -p linux
 	
 
-	19. Finally exit the chroot environment as follows:
+	20. Finally exit the chroot environment as follows:
 
 		exit
 	
-	20. Reboot the system:
+	21. Reboot the system:
 
 		reboot
 	
 
-	21. Remove the USB before the system starts. And you will be greeted by a prompt asking you for username and password.
+	22. Remove the USB before the system starts. And you will be greeted by a prompt asking you for username and password.
 	
 
 # That's it for the Base System Part 1 install. Now move on to the Base Install Part 2.
