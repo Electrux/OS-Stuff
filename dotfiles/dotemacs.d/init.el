@@ -20,6 +20,7 @@
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -30,7 +31,7 @@
     ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
  '(package-selected-packages
    (quote
-    (neotree racer cargo company company-ycmd eldoc-eval flycheck flycheck-rust flycheck-ycmd rust-mode yasnippet ycmd dracula-theme exec-path-from-shell))))
+    (cargo company company-ycmd dracula-theme eldoc-eval exec-path-from-shell flycheck flycheck-rust flycheck-ycmd neotree racer rust-mode yasnippet ycmd))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -192,15 +193,15 @@
   :ensure t
   :init (add-hook 'after-init-hook #'global-ycmd-mode)
   :config
-  (set-variable 'ycmd-server-command '("python3" "/Users/electrux/GitHub/ycmd/ycmd/"))
+  (set-variable 'ycmd-server-command '("python3" "~/GitHub/ycmd/ycmd/"))
   (set-variable 'ycmd-global-config (expand-file-name "~/GitHub/Linux-Stuff/dotfiles/.ycm_extra_conf.py"))
 
   (set-variable 'ycmd-extra-conf-whitelist '("~/Programming/*" "~/GitHub/*"))
-  
+
   (use-package flycheck-ycmd
     :commands (flycheck-ycmd-setup)
     :init (add-hook 'ycmd-mode-hook 'flycheck-ycmd-setup))
-  
+
   (use-package company-ycmd
     :ensure t
     :init (company-ycmd-setup)
