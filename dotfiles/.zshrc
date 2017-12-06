@@ -101,5 +101,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Show the tasks which I have to do...
 echo ''
 echo 'Tasks'
-echo ''
-task show
+task list
