@@ -309,7 +309,7 @@ Installing Arch linux on an MSI laptop Part 1.
 
 
 				For me, this is:
-				
+
 					title           Electrux Arch Linux
                                         linux           /vmlinuz-linux
                                         initrd          /intel-ucode.img
