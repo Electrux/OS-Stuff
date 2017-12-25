@@ -117,7 +117,7 @@ Installing Arch linux on an MSI laptop Part 1.
 	
 	12. Now we will setup our time zone to match our real life area. For me, the timezone will be the Indian Standard Time - Kolkata. The timezones are divided by continents with all the timezones for each continent existing in the directory with the name of continent. We will setup a symbolic link to our timezone to /etc/localtime. The command to do so is:
 
-		ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+		ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 	
 
 	13. Now we will generate /etc/adjtime. This will set the hardware clock date and time. We do this using the following command:
@@ -129,7 +129,7 @@ Installing Arch linux on an MSI laptop Part 1.
 
 		14.a Open the /etc/locales.gen file using nano:
 		
-			nano /etc/locales.gen
+			nano /etc/locale.gen
 
 		14.b Find the locale of choice by scrolling through the text. Uncomment the locale by removing the '#' symbol preceding it.
 
@@ -309,7 +309,7 @@ Installing Arch linux on an MSI laptop Part 1.
 
 
 				For me, this is:
-				
+
 					title           Electrux Arch Linux
                                         linux           /vmlinuz-linux
                                         initrd          /intel-ucode.img
