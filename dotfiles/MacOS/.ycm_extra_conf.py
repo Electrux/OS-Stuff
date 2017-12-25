@@ -72,6 +72,8 @@ flags = [
 '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include',
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/4.2.1',
+'-isystem',
+'/usr/local/include',
 '-I',
 '.',
 ]

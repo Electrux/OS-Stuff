@@ -1,0 +1,23 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Dracula",
+    "editor.fontSize": 11,
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 8,
+    "editor.insertSpaces": false,
+    "ycmd.enabled_languages": [
+        "cpp",
+        "c",
+        "rs"
+    ],
+    "ycmd.global_extra_config": "/Users/electrux/GitHub/Linux-Stuff/dotfiles/.ycm_extra_conf.py",
+    "ycmd.path": "/Users/electrux/GitHub/ycmd",
+    "ycmd.python": "/usr/local/bin/python3",
+    "rust.rustup": {
+        "toolchain": "stable-x86_64-apple-darwin"
+    },
+    "rust.mode": "legacy",
+    "rust.rustLangSrcPath": "/Users/electrux/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src",
+    "rust.rls": "rls",
+}
