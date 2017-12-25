@@ -18,6 +18,5 @@
         "toolchain": "stable-x86_64-apple-darwin"
     },
     "rust.mode": "legacy",
-    "rust.rustLangSrcPath": "/Users/electrux/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src",
-    "rust.rls": "rls",
+    "rust.rustLangSrcPath": "/Users/electrux/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 }
