@@ -127,3 +127,7 @@ export LESS_TERMCAP_so=$purple
 export LESS_TERMCAP_ue=$default
 # Begin underline
 export LESS_TERMCAP_us=$green
+
+# Make output of make colorized.
+# Need colormake for this though
+alias make='/usr/local/bin/colormake'
