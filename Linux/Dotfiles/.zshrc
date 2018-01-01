@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/Users/electrux/.oh-my-zsh
+  export ZSH=/home/electrux/.oh-my-zsh
 
 # MacOS thingy for fpath
   fpath=(/usr/local/share/zsh-completions $fpath)
@@ -91,12 +91,10 @@ source $ZSH/oh-my-zsh.sh
 # alias vim='/usr/local/bin/vim'
 
 # Set zsh autosuggestions path
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set zsh syntax highlighting path
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Show the tasks which I have to do...
 echo ''
@@ -130,4 +128,4 @@ export LESS_TERMCAP_us=$green
 
 # Make output of make colorized.
 # Need colormake for this though
-alias make='/usr/local/bin/colormake'
+alias make='/usr/bin/colormake'
