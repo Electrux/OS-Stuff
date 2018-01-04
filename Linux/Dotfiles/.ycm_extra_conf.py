@@ -61,6 +61,8 @@ flags = [
     '-I/usr/include',
     '-I/usr/include/c++/7.1.1',
     '-I/usr/local/include',
+    # For CCP4M
+    '-I/home/electrux/.ccp4mpkgs/installed/include',
 ]
 
 
