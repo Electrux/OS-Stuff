@@ -30,7 +30,7 @@
     ("ff7625ad8aa2615eae96d6b4469fcc7d3d20b2e1ebc63b761a349bebbb9d23cb" default)))
  '(package-selected-packages
    (quote
-    (use-package cargo company company-ycmd dracula-theme eldoc-eval exec-path-from-shell flycheck flycheck-rust flycheck-ycmd neotree racer rust-mode yasnippet ycmd))))
+    (markdown-preview-mode markdown-mode markdown-mode+ markdownfmt polymode use-package cargo company company-ycmd dracula-theme eldoc-eval exec-path-from-shell flycheck flycheck-rust flycheck-ycmd neotree racer rust-mode yasnippet ycmd))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -81,6 +81,17 @@
 
 ;; Use either toggle-frame-fullscreen or toggle-frame-maximized as required.
 (toggle-frame-maximized)
+
+;; R mode using polymode
+(use-package polymode
+  :init
+  ;; MARKDOWN
+  (add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+  ;; R modes
+  (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+  (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+  (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode)))
 
 ;; Setup the neotree directory viewer.
 (use-package neotree
