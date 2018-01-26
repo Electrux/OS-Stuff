@@ -132,6 +132,9 @@ export LESS_TERMCAP_us=$green
 # Need colormake for this though
 # alias make='/usr/local/bin/colormake'
 
+# Alias vim to neovim
+alias vim='/usr/local/bin/nvim'
+
 # ZSH Pure Prompt
 autoload -U promptinit; promptinit
 prompt pure
