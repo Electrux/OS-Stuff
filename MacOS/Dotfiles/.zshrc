@@ -10,7 +10,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -130,4 +130,8 @@ export LESS_TERMCAP_us=$green
 
 # Make output of make colorized.
 # Need colormake for this though
-alias make='/usr/local/bin/colormake'
+# alias make='/usr/local/bin/colormake'
+
+# ZSH Pure Prompt
+autoload -U promptinit; promptinit
+prompt pure

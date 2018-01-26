@@ -10,7 +10,11 @@ set relativenumber
 set number
 set backspace=indent,eol,start
 
-let g:ycm_global_ycm_extra_conf = '/Users/electrux/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/Users/electrux/GitHub/OS-Stuff/MacOS/DotFiles/.ycm_extra_conf.py'
+
+" Remove cursor change in nvim
+set guicursor=
+
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " set the runtime path to include Vundle and initialize
