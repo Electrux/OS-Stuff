@@ -30,7 +30,7 @@
     ("d5b121d69e48e0f2a84c8e4580f0ba230423391a78fcb4001ccb35d02494d79e" default)))
  '(package-selected-packages
    (quote
-    (auctex auctex-latexmk blackboard-theme company exec-path-from-shell flycheck markdown-mode markdown-mode+ markdown-preview-mode markdownfmt neotree polymode use-package yasnippet yasnippet-snippets))))
+    (company-auctex latex-extra auctex auctex-latexmk blackboard-theme company exec-path-from-shell flycheck markdown-mode markdown-mode+ markdown-preview-mode markdownfmt neotree polymode use-package yasnippet yasnippet-snippets))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -172,7 +172,9 @@ abort completely with `C-g'."
       (append (if (consp backend) backend (list backend))
               '(:with company-yasnippet))))
 
-  :init (global-company-mode t)
+  :init
+  (global-company-mode t)
+
   :config
   ;; no delay no autocomplete
   (setq-default
@@ -198,6 +200,9 @@ abort completely with `C-g'."
   ;;(add-hook 'emacs-lisp-mode-hook 'flyspell-prog-mode); Enable Flyspell program mode for emacs lisp mode, which highlights all misspelled words in comments and strings.
   (add-hook 'TeX-mode-hook
 	    (lambda () (TeX-fold-mode 1))); Automatically activate TeX-fold-mode.
+  ;; Enable LaTeX extra mode
+  (add-hook 'TeX-mode-hook #'latex-extra-mode)
+
   (setq LaTeX-babel-hyphen nil); Disable language-specific hyphen insertion.
 
   ;; I shall only use PDF mode
@@ -215,7 +220,6 @@ abort completely with `C-g'."
   ;; Turn on RefTeX for AUCTeX http://www.gnu.org/s/auctex/manual/reftex/reftex_5.html
   (add-hook 'TeX-mode-hook 'turn-on-reftex)
 
-  :config
   ;; Autosave
   (setq TeX-auto-save t))
 
