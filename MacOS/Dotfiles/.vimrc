@@ -15,6 +15,9 @@ let g:ycm_global_ycm_extra_conf = '/Users/electrux/GitHub/OS-Stuff/MacOS/DotFile
 " Remove cursor change in nvim
 set guicursor=
 
+" Enable python3 support ( for YCM ) in nvim
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " set the runtime path to include Vundle and initialize
