@@ -30,7 +30,7 @@
     ("d5b121d69e48e0f2a84c8e4580f0ba230423391a78fcb4001ccb35d02494d79e" default)))
  '(package-selected-packages
    (quote
-    (company-auctex latex-extra auctex auctex-latexmk blackboard-theme company exec-path-from-shell flycheck markdown-mode markdown-mode+ markdown-preview-mode markdownfmt neotree polymode use-package yasnippet yasnippet-snippets))))
+    (grandshell-theme company-auctex latex-extra auctex auctex-latexmk company exec-path-from-shell flycheck markdown-mode markdown-mode+ markdown-preview-mode markdownfmt neotree polymode use-package yasnippet yasnippet-snippets))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -43,7 +43,7 @@
 ;; Custom settings.
 
 ;; Set theme.
-(load-theme 'blackboard)
+(load-theme 'grandshell)
 
 ;; Fira code and its ligatures.
 (when (window-system)
