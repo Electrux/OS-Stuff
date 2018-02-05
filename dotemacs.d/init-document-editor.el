@@ -60,7 +60,7 @@
 (global-visual-line-mode 1); Proper line wrapping
 (global-hl-line-mode 1); Highlight current row
 (show-paren-mode 1); Matches parentheses and such in every mode
-(set-fringe-mode '(2 . 2)); Disable fringe because I use visual-line-mode
+(set-fringe-mode '(2 . 2)); Lower fringe because I use visual-line-mode
 
 ;; Settings to disable tool bar and scroll bar from
 ;; window for a clear and clean view.
@@ -190,10 +190,13 @@ abort completely with `C-g'."
   :defer t
   :ensure auctex
   :init
+  (add-hook 'LaTeX-mode-hook 'turn-off-auto-fill)
   ;; Required
   (setq TeX-parse-self t); Enable parse on load.
   (setq TeX-auto-save t); Enable parse on save.
   (setq-default TeX-master nil)
+  ;; Don't use large fonts for sections.
+  (setq font-latex-fontify-sectioning 1.0)
 
   ;; Spell check hooks
   (add-hook 'TeX-mode-hook 'flyspell-mode); Enable Flyspell mode for TeX modes such as AUCTeX. Highlights all misspelled words.
@@ -322,8 +325,6 @@ abort completely with `C-g'."
 	  ("renewlist" "{")
 	  ("setlistdepth" "{")
 	  ("restartlist" "{"))))
-
-
 
 (provide 'init)
 ;;; init.el ends here

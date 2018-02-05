@@ -41,6 +41,14 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Plugin for colors of files/folders in file management.
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+" Plugin for Lively Previewing LaTeX PDF Output
+Plugin 'xuhdev/vim-latex-live-preview'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+let g:livepreview_previewer = 'open -a Preview'
+let g:livepreview_engine = 'xelatex' . ' '
+
+autocmd Filetype tex setl updatetime=1
