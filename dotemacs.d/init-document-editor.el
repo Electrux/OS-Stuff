@@ -27,7 +27,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("d5b121d69e48e0f2a84c8e4580f0ba230423391a78fcb4001ccb35d02494d79e" default)))
+    ("e88abed2a39b47dfedb1272066f214cb2c9db28ee6aa1794bfb27948792f81c0" default)))
  '(package-selected-packages
    (quote
     (grandshell-theme company-auctex latex-extra auctex auctex-latexmk company exec-path-from-shell flycheck markdown-mode markdown-mode+ markdown-preview-mode markdownfmt neotree polymode use-package yasnippet yasnippet-snippets))))
