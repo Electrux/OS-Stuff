@@ -2,19 +2,19 @@
 set $mod Mod4
 
 # Wallpaper file
-set $wallpaper /data/Pictures/Wallpapers/night-stars.jpg
+set $wallpaper ~/Wallpapers/cyberpunk.jpg
 
 # Set workspace names by roles
-set $ws1 "1: Main"
-set $ws2 "2: Alt"
-set $ws3 "3: Alt"
-set $ws4 "4: Alt"
-set $ws5 "5: Alt"
-set $ws6 "6: Alt"
-set $ws7 "7: Communication"
-set $ws8 "8: IntelliJ Idea"
-set $ws9 "9: Android Studio"
-set $ws10 "10: VirtualBox"
+set $ws1 "1:Main"
+set $ws2 "2:Alt"
+set $ws3 "3:Alt"
+set $ws4 "4:Alt"
+set $ws5 "5:Alt"
+set $ws6 "6:Alt"
+set $ws7 "7:Communication"
+set $ws8 "8:IntelliJ Idea"
+set $ws9 "9:Android Studio"
+set $ws10 "10:VirtualBox"
 
 # Set various colors for i3 and i3status/i3blocks
 set $bg-focused		#00DDAA
@@ -41,7 +41,7 @@ client.background		$client-backgr
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:Fira Code Retina 9
+font xft:"mplus Nerd Font" 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -57,12 +57,13 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2%+ unmut
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
-# Touchpad controls
-bindsym XF86TouchpadToggle exec --no-startup-id ~/.config/i3/toggletouchpad.sh
-
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 # decrease screen brightness
+
+# Keyboard backlight brightness
+bindsym XF86KbdBrightnessUp exec --no-startup-id xbacklight -ctrl smc::kbd_backlight -inc 20
+bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -ctrl smc::kbd_backlight -dec 20
 
 # fancy lock
 bindsym $mod+Control+l exec --no-startup-id i3lock-fancy
@@ -71,7 +72,7 @@ bindsym $mod+Control+l exec --no-startup-id i3lock-fancy
 bindsym $mod+Return exec urxvt
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -font "Hack 12" -separator-style "solid" -hide-scrollbar -lines 10 -width 30 -padding 10 -show run
+bindsym $mod+d exec rofi -font "mplus Nerd Font 16" -separator-style "solid" -hide-scrollbar -lines 10 -width 30 -padding 10 -show run
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -165,16 +166,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 1 px or 1 ppt
+        bindsym k resize grow height 1 px or 1 ppt
+        bindsym l resize shrink height 1 px or 1 ppt
+        bindsym semicolon resize grow width 1 px or 1 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 1 px or 1 ppt
+        bindsym Down resize grow height 1 px or 1 ppt
+        bindsym Up resize shrink height 1 px or 1 ppt
+        bindsym Right resize grow width 1 px or 1 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -215,35 +216,17 @@ for_window [class="VirtualBox"] layout tabbed
 for_window [title="Android Emulator"] floating enable
 for_window [class="Gimp"] floating enable
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-	colors {
-		background 	$status-backgr
-		statusline 	$status-line
-		separator 	$status-separator
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-		# Class			border		background		text
-		focused_workspace	$col-backgr 	$bg-focused 		$text-focused
-		active_workspace	$col-backgr 	$bg-unfocused 		$text-focused
-		inactive_workspace	$col-backgr 	$bg-unfocused 		$text-unfocused
-		urgent_workspace	$col-backgr 	$bg-urgent 		$text-focused
-		binding_mode		$col-backgr	$bg-bind		$text-focused
-	}
-
-	position top
-	separator_symbol ""
-	font pango:Hack 10
-        
-	status_command i3blocks -c ~/.config/i3/i3blocks.conf
-}
-
-exec --no-startup-id compton -b
+exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id xset -dpms s off
-exec --no-startup-id conky -c ~/.config/i3/conkyrc
-exec --no-startup-id libinput-gestures-setup start
+exec --no-startup-id dunst
+#exec --no-startup-id conky -c ~/.config/i3/conkyrc
+exec --no-startup-id discord
+
+exec xbacklight 30
 
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id feh --bg-scale $wallpaper

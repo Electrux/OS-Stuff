@@ -5,12 +5,12 @@
   export ZSH=/home/electrux/.oh-my-zsh
 
 # MacOS thingy for fpath
-  fpath=(/usr/local/share/zsh-completions $fpath)
+#  fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -98,8 +98,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Show the tasks which I have to do...
 echo ''
-echo 'Tasks'
-task list
+task list 2>&1 | cowsay | lolcat
 
 # Make output of less command colorized.
 # Colors
@@ -129,3 +128,7 @@ export LESS_TERMCAP_us=$green
 # Make output of make colorized.
 # Need colormake for this though
 alias make='/usr/bin/colormake'
+
+# Pure Prompt
+autoload -U promptinit; promptinit
+prompt pure

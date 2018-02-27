@@ -10,6 +10,12 @@ set relativenumber
 set number
 set backspace=indent,eol,start
 
+" Remove cursor change in nvim
+set guicursor=
+
+" Enable python3 support ( for YCM ) in nvim
+let g:python3_host_prog = '/usr/bin/python3'
+
 let g:ycm_global_ycm_extra_conf = '/home/electrux/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 

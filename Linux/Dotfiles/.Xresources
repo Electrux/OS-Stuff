@@ -36,8 +36,8 @@ URxvt.lineSpace:		0
 ! Font settings for Rxvt
 !---------------------------!
 URxvt.allow_bold:           true
-URxvt*font: xft:Fira Code Retina:size=9
-URxvt*boldFont: xft:Fira Code Retina:size=10
+URxvt*font: xft:mplus Nerd Font:size=8
+URxvt*boldFont: xft:mplus Nerd Font:style=bold:size=8
 
 !----------------------------!
 ! Scrollbar settings for Rxvt
