@@ -1,8 +1,8 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Dracula",
-    "editor.fontSize": 11,
-    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Ariake Dark",
+    "editor.fontSize": 13,
+    "editor.fontFamily": "'iosevka', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.tabSize": 8,
     "editor.insertSpaces": false,
