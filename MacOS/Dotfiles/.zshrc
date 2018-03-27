@@ -100,7 +100,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Show the tasks which I have to do...
 echo ''
-task list | cowsay | lolcat
+task list 2>&1 | cowsay | lolcat
 
 # Make output of less command colorized.
 # Colors
