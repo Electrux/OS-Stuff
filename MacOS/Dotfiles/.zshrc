@@ -137,3 +137,6 @@ alias vim='/usr/local/bin/nvim'
 # ZSH Pure Prompt
 autoload -U promptinit; promptinit
 prompt pure
+
+# added by travis gem
+[ -f /Users/electrux/.travis/travis.sh ] && source /Users/electrux/.travis/travis.sh
