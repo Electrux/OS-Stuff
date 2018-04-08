@@ -10,7 +10,7 @@ set relativenumber
 set number
 set backspace=indent,eol,start
 
-let g:ycm_global_ycm_extra_conf = '/Users/electrux/GitHub/OS-Stuff/MacOS/DotFiles/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/Users/electrux/GitHub/Electrux/OS-Stuff/MacOS/DotFiles/.ycm_extra_conf.py'
 
 " Remove cursor change in nvim
 set guicursor=
