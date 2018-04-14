@@ -142,3 +142,5 @@ prompt pure
 [ -f /Users/electrux/.travis/travis.sh ] && source /Users/electrux/.travis/travis.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source ~/GitHub/emoji-cli/emoji-cli.zsh
