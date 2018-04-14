@@ -140,3 +140,5 @@ prompt pure
 
 # added by travis gem
 [ -f /Users/electrux/.travis/travis.sh ] && source /Users/electrux/.travis/travis.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

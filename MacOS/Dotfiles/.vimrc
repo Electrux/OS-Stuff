@@ -20,6 +20,8 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" add fzf in run time path
+set rtp+=/usr/local/opt/fzf
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
