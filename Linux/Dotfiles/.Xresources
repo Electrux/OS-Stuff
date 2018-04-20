@@ -11,7 +11,7 @@ rofi.color-window: #BBAAAAEE,    #FF00DDAA,  #FF00DDAA
 !-----------------------------!
 ! Settings for HiDPI displays
 !-----------------------------!
-Xft.dpi: 196
+!Xft.dpi: 196
 Xft.autohint: 1
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
@@ -36,8 +36,8 @@ URxvt.lineSpace:		0
 ! Font settings for Rxvt
 !---------------------------!
 URxvt.allow_bold:           true
-URxvt*font: xft:mplus Nerd Font:size=8
-URxvt*boldFont: xft:mplus Nerd Font:style=bold:size=8
+URxvt*font: xft:Iosevka Medium:size=10
+URxvt*boldFont: xft:Iosevka:style=bold:size=10
 
 !----------------------------!
 ! Scrollbar settings for Rxvt
