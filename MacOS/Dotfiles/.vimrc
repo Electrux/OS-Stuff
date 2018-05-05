@@ -46,6 +46,9 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plugin for Lively Previewing LaTeX PDF Output
 Plugin 'xuhdev/vim-latex-live-preview'
 
+" Plugin for elixir support
+Plugin 'elixir-editors/vim-elixir'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

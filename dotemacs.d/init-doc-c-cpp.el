@@ -27,10 +27,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("7527f3308a83721f9b6d50a36698baaedc79ded9f6d5bd4e9a28a22ab13b3cb1" default)))
+    ("c3d4af771cbe0501d5a865656802788a9a0ff9cf10a7df704ec8b8ef69017c68" "7527f3308a83721f9b6d50a36698baaedc79ded9f6d5bd4e9a28a22ab13b3cb1" default)))
  '(package-selected-packages
    (quote
-    (cargo company-ycmd eldoc-eval flycheck-rust flycheck-ycmd ycmd auctex auctex-latexmk company company-auctex exec-path-from-shell flycheck latex-extra markdown-mode markdown-mode+ markdown-preview-mode markdownfmt neotree nord-theme polymode use-package yasnippet yasnippet-snippets))))
+    (monokai-theme cargo company-ycmd eldoc-eval flycheck-rust flycheck-ycmd ycmd auctex auctex-latexmk company company-auctex exec-path-from-shell flycheck latex-extra markdown-mode markdown-mode+ markdown-preview-mode markdownfmt neotree nord-theme polymode use-package yasnippet yasnippet-snippets))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -43,7 +43,7 @@
 ;; Custom settings.
 
 ;; Set theme.
-(load-theme 'nord)
+(load-theme 'monokai)
 
 ;; Fira code and its ligatures.
 (when (window-system)
