@@ -10,7 +10,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -100,7 +100,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Show the tasks which I have to do...
 echo ''
-task list 2>&1 | cowsay | lolcat
+task list 2>&1 | cowsay -f vader | lolcat
 
 # Make output of less command colorized.
 # Colors
@@ -132,11 +132,22 @@ export LESS_TERMCAP_us=$green
 # alias make='/usr/local/bin/colormake'
 
 # Alias vim to neovim
-alias vim='/usr/local/bin/nvim'
+alias vim="/usr/local/bin/nvim"
 
 # ZSH Pure Prompt
-autoload -U promptinit; promptinit
-prompt pure
+#autoload -U promptinit; promptinit
+#prompt pure
+
+# ZSH spaceship prompt settings reconfigure
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+SPACESHIP_CHAR_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
+SPACESHIP_TIME_SHOW="true"
+SPACESHIP_USER_SHOW="always"
+SPACESHIP_HOST_PREFIX="on "
+SPACESHIP_HOST_SHOW="always"
+SPACESHIP_DIR_TRUNC="0"
+SPACESHIP_EXEC_TIME_ELAPSED="5"
+SPACESHIP_EXIT_CODE_SHOW="true"
 
 # added by travis gem
 [ -f /Users/electrux/.travis/travis.sh ] && source /Users/electrux/.travis/travis.sh
