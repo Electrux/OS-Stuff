@@ -47,6 +47,10 @@ Plug 'xuhdev/vim-latex-live-preview'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
+" Plugin for powerline via ViM-Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " ViM-Plug ends.
 call plug#end()
 
@@ -54,5 +58,7 @@ filetype plugin indent on    " required
 
 let g:livepreview_previewer = 'open -a Preview'
 let g:livepreview_engine = 'xelatex' . ' '
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'deus'
 
 autocmd Filetype tex setl updatetime=1
