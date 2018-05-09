@@ -98,10 +98,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Show the tasks which I have to do...
-echo ''
-task list 2>&1 | cowsay -f vader | lolcat
-
 # Make output of less command colorized.
 # Colors
 default=$(tput sgr0)
@@ -143,10 +139,10 @@ SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
 SPACESHIP_CHAR_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
 SPACESHIP_TIME_SHOW="true"
 SPACESHIP_USER_SHOW="always"
-SPACESHIP_HOST_PREFIX="on "
 SPACESHIP_HOST_SHOW="always"
 SPACESHIP_DIR_TRUNC="0"
 SPACESHIP_EXEC_TIME_ELAPSED="5"
+SPACESHIP_BATTERY_SHOW="charged"
 SPACESHIP_EXIT_CODE_SHOW="true"
 
 # added by travis gem
@@ -155,3 +151,15 @@ SPACESHIP_EXIT_CODE_SHOW="true"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/GitHub/emoji-cli/emoji-cli.zsh
+
+# Show the tasks which I have to do...
+echo ''
+fortune 2>&1 | cowsay -f dragon | lolcat
+
+# Go lang settings
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix go)/libexec"
+export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin"
+
+test -d "${GOPATH}" || mkdir "${GOPATH}"
+test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
