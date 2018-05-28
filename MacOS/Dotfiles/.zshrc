@@ -164,3 +164,6 @@ export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin"
 
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+# Nim lang settings
+export PATH="${PATH}:${HOME}/.nimble/bin"

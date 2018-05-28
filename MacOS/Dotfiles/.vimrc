@@ -47,7 +47,10 @@ Plug 'xuhdev/vim-latex-live-preview'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
-" Plugin for powerline via ViM-Airline
+" Plugin for nim support
+Plug 'zah/nim.vim'
+
+" Plugins for powerline via ViM-Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
