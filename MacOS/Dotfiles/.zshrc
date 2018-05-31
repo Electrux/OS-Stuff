@@ -167,3 +167,6 @@ test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 
 # Nim lang settings
 export PATH="${PATH}:${HOME}/.nimble/bin"
+
+# Use hub instead of directly git to reduce work
+alias git="/usr/local/bin/hub"

@@ -1,8 +1,8 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Ariake Dark",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     "editor.fontSize": 13,
-    "editor.fontFamily": "'iosevka', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Mononoki Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.tabSize": 8,
     "editor.insertSpaces": false,
@@ -11,7 +11,7 @@
         "c",
         "rs"
     ],
-    "ycmd.global_extra_config": "/Users/electrux/GitHub/OS-Stuff/MacOS/Dotfiles/.ycm_extra_conf.py",
+    "ycmd.global_extra_config": "/Users/electrux/GitHub/Electrux/OS-Stuff/MacOS/Dotfiles/.ycm_extra_conf.py",
     "ycmd.path": "/Users/electrux/GitHub/ycmd",
     "ycmd.python": "/usr/local/bin/python3",
     "rust.rustup": {
