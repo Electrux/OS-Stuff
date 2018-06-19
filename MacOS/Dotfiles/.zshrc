@@ -170,3 +170,10 @@ export PATH="${PATH}:${HOME}/.nimble/bin"
 
 # Use hub instead of directly git to reduce work
 alias git="/usr/local/bin/hub"
+
+# Use ls_extended instead of ls
+# use different font for non-ascii stuff
+# ( like overpass mono nerd font ) to ensure
+# that icon size is decent enough
+alias ls="/usr/local/bin/ls_extended"
+alias l="ls -lAsh"
