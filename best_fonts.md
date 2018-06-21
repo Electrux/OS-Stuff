@@ -14,6 +14,7 @@ Monoid Nerd Font Mono
 Mononoki Nerd Font Mono
 NovaMono for Powerline
 OverpassMono Nerd Font Mono
+ProFontllx Nerd Font Mono ( Try to find regular variant instead of book )
 ShureTechMono Nerd Font Mono
 Source Code Pro for Powerline
 
