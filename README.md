@@ -1,2 +1,2 @@
 # Linux-Stuff
-Everything about linux, installation, setup and so on.
+Everything linux, installation, setup, dotfiles and so on.
