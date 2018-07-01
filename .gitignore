@@ -26,6 +26,7 @@
 *.sqlite
 database
 log
+pid
 
 # OS generated files #
 ######################
