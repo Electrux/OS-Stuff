@@ -1,0 +1,22 @@
+{
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'mplus Nerd Font Mono', monospace",
+    "editor.fontLigatures": false,
+    "editor.tabSize": 8,
+    "editor.insertSpaces": false,
+    "ycmd.enabled_languages": [
+        "cpp",
+        "c"
+    ],
+    "ycmd.global_extra_config": "/home/electrux/GitHub/Electrux/OS-Stuff/Linux/Dotfiles/.ycm_extra_conf.py",
+    "ycmd.path": "/home/electrux/GitHub/ycmd",
+    "ycmd.python": "/usr/bin/python3",
+
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "window.menuBarVisibility": "toggle",
+    "window.zoomLevel": -2
+}
