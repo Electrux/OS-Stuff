@@ -218,7 +218,7 @@ for_window [class="Gimp"] floating enable
 
 exec --no-startup-id compton -bc --config ~/.config/compton/compton.conf
 
-exec --no-startup-id polybar example
+exec_always --no-startup-id killall polybar; polybar example
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id xset -dpms s off
