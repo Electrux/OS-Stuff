@@ -10,7 +10,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -98,7 +98,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Show the tasks which I have to do...
 echo ''
-task list 2>&1 | cowsay | lolcat
+fortune 2>&1 | cowsay -f dragon | lolcat
 
 # Make output of less command colorized.
 # Colors
@@ -129,6 +129,3 @@ export LESS_TERMCAP_us=$green
 # Need colormake for this though
 alias make='/usr/bin/colormake'
 
-# Pure Prompt
-autoload -U promptinit; promptinit
-prompt pure

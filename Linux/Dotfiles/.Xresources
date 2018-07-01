@@ -33,13 +33,15 @@ URxvt.shading: 30
 URxvt*depth:			32
 URxvt.internalBorder:		5
 URxvt.lineSpace:		0
+URxvt.backend: xrender
+URxvt.buffered: false
 
 !---------------------------!
 ! Font settings for Rxvt
 !---------------------------!
 URxvt.allow_bold:           true
-URxvt*font: xft:mplus Nerd Font Mono:size=8
-URxvt*boldFont: xft:mplus Nerd Font Mono:style=bold:size=8
+URxvt*font: xft:mplus Nerd Font Mono:size=8, xft: Inconsolata for Powerline:style=Medium:size=8
+URxvt*boldFont: xft:mplus Nerd Font Mono:style=bold:size=8, xft: Inconsolata for Powerline:style=BoldForPowerline:size=8
 
 !----------------------------!
 ! Scrollbar settings for Rxvt

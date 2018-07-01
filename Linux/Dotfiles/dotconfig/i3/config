@@ -69,7 +69,7 @@ bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -ctrl smc::kbd_bac
 bindsym $mod+Control+l exec --no-startup-id i3lock-fancy
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec alacritty
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -font "mplus Nerd Font Mono 9" -separator-style "solid" -hide-scrollbar -lines 10 -width 30 -padding 10 -show run
@@ -216,9 +216,9 @@ for_window [class="VirtualBox"] layout tabbed
 for_window [title="Android Emulator"] floating enable
 for_window [class="Gimp"] floating enable
 
-exec --no-startup-id polybar example
+exec --no-startup-id compton -bc --config ~/.config/compton/compton.conf
 
-#exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
+exec --no-startup-id polybar example
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id xset -dpms s off
