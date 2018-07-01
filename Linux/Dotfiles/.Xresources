@@ -7,6 +7,8 @@ rofi.color-urgent: #000000FF,  #AA000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
 rofi.color-active: #000000FF,  #FF000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
 ! Window:          'background', 'border', 'separator'
 rofi.color-window: #BBAAAAEE,    #FF00DDAA,  #FF00DDAA
+! HiDPI
+rofi.dpi: 220
 
 !-----------------------------!
 ! Settings for HiDPI displays
