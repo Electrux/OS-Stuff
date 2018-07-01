@@ -326,7 +326,7 @@ Installing Arch linux on an MSI laptop Part 1.
 
 			HOOKS="base udev autodetect modconf block..."
 
-		19.e Enter resume just after udev so that the line reads:
+		19.e Enter resume and modconf after udev so that the line reads:
 
 			HOOKS="base udev resume autodetect modconf block..."
 

@@ -70,7 +70,43 @@
 		list. This is a one time process and lightdm will remember the choice of Desktop Environment now.
 	
 
-	14. Finally, log in to the system! You are done!
+	14. Log in to the system.
 
+	15. Install mpbfan-git AUR package and enable the mbpfan service to prevent laptop overheating.
+
+	16. Install xf86-input-mtrack-git AUR package for proper touchpad support, using the following config in /etc/X11/xorg.conf.d/00-touchpad.conf:
+		Section "InputClass"
+			MatchIsTouchpad "on"
+    			Identifier      "Touchpads"
+    			Driver          "mtrack"
+    			Option          "Sensitivity" "0.64"
+    			Option          "FingerHigh" "5"
+    			Option          "FingerLow" "1"
+    			Option          "IgnoreThumb" "true"
+    			Option          "IgnorePalm" "true"
+    			Option          "DisableOnPalm" "true"
+    			Option          "TapButton1" "1"
+   			Option          "TapButton2" "3"
+    			Option          "TapButton3" "2"
+    			Option          "TapButton4" "0"
+    			Option          "ClickFinger1" "1"
+    			Option          "ClickFinger2" "2"
+    			Option          "ClickFinger3" "3"
+    			Option          "ButtonMoveEmulate" "false"
+    			Option          "ButtonIntegrated" "true"
+    			Option          "ClickTime" "25"
+    			Option          "BottomEdge" "30"
+    			Option          "SwipeLeftButton" "8"
+    			Option          "SwipeRightButton" "9"
+    			Option          "SwipeUpButton" "0"
+    			Option          "SwipeDownButton" "0"
+    			Option          "ScrollDistance" "75"
+    			Option          "VertScrollDelta" "-111"
+    			Option          "HorizScrollDelta" "-111"
+		EndSection
+
+	17. Refer to https://wiki.archlinux.org/index.php/Apple_Keyboard for setting up the apple keyboard. Note that modprobe.d directory cannot (apparently) have symbolic links.
+
+	18. That's it! Done!!!
 
 # This is the end of Part 2 of base system install. Next, we will install some other softwares and customize the system more.
