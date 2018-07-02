@@ -197,7 +197,7 @@ mode "$mode_system" {
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+Ctrl+q mode "$mode_system"
 
 # Per application settings for workspaces and styles
 assign [class="VirtualBox"] $ws10
@@ -217,13 +217,16 @@ for_window [title="Android Emulator"] floating enable
 for_window [class="Gimp"] floating enable
 
 exec --no-startup-id compton -bc --config ~/.config/compton/compton.conf
-
 exec_always --no-startup-id killall polybar; polybar example
+
+exec_always --no-startup-id feh --bg-scale $wallpaper
+
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id dunst
 #exec --no-startup-id conky -c ~/.config/i3/conkyrc
 exec --no-startup-id discord
+exec --no-startup-id telegram-desktop
 
-exec_always --no-startup-id feh --bg-scale $wallpaper
+exec --no-startup-id ~/.config/i3/i3exit lock
