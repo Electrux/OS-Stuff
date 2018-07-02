@@ -6,3 +6,7 @@ export GDK_SCALE=2
 export GDK_DPI_SCALE=0.8
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+eval $(keychain --noask --eval --agents ssh $(ls ~/.ssh/id_rsa* | grep -v '.pub'))
+source $HOME/.keychain/$HOST-sh
+
