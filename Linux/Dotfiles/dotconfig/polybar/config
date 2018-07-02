@@ -49,11 +49,11 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = 
+modules-center = mpd
 modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery system-cpu-temppercore date powermenu
 
-tray-position = center
-tray-offset-x = -150
+tray-position = left
+tray-offset-x = 0
 ;tray-padding = 0
 ;tray-transparent = true
 ;tray-background = #0063ff
@@ -157,6 +157,8 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/mpd]
 type = internal/mpd
+host = 127.0.1.1
+
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
 icon-prev = 玲
