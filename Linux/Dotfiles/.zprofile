@@ -10,4 +10,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 eval $(keychain --eval --agents ssh $(ls ~/.ssh/id_rsa* | grep -v '.pub'))
 source $HOME/.keychain/$HOST-sh
 
-mpd
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi

@@ -107,6 +107,19 @@
 
 	17. Refer to https://wiki.archlinux.org/index.php/Apple_Keyboard for setting up the apple keyboard. Note that modprobe.d directory cannot (apparently) have symbolic links.
 
-	18. That's it! Done!!!
+	18. Install and enable cpupower, thermald, and powertop. The service for powertop is:
+		[Unit]
+		Description=Powertop Service
+
+		[Service]
+		Type=oneshot
+		ExecStart=/usr/bin/powertop --auto-tune
+
+		[Install]
+		WantedBy=multi-user.target
+
+	19. Set cpupower governer to powersave -
+
+		cpupower frequency-set -g powersave
 
 # This is the end of Part 2 of base system install. Next, we will install some other softwares and customize the system more.

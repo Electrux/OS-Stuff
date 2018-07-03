@@ -50,7 +50,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery system-cpu-temppercore date powermenu
+modules-right = filesystem xbacklight alsa xkeyboard memory cpu wlan eth battery system-cpu-temppercore date powermenu
 
 tray-position = left
 tray-offset-x = 0
@@ -260,8 +260,8 @@ format-underline = #0a6cf5
 
 label = %date% %time%
 
-[module/volume]
-type = internal/volume
+[module/alsa]
+type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = 

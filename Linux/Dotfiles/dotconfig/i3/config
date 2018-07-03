@@ -57,6 +57,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 2%+ unmut
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 2%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
+# MPD controls
+bindsym XF86AudioPrev exec mpc -h 127.0.1.1 prev
+bindsym XF86AudioNext exec mpc -h 127.0.1.1 next
+bindsym XF86AudioPlay exec mpc -h 127.0.1.1 toggle
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 # decrease screen brightness
@@ -166,10 +171,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 1 px or 1 ppt
-        bindsym k resize grow height 1 px or 1 ppt
-        bindsym l resize shrink height 1 px or 1 ppt
-        bindsym semicolon resize grow width 1 px or 1 ppt
+        bindsym h resize shrink width 1 px or 1 ppt
+        bindsym j resize grow height 1 px or 1 ppt
+        bindsym k resize shrink height 1 px or 1 ppt
+        bindsym l resize grow width 1 px or 1 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 1 px or 1 ppt
@@ -221,10 +226,12 @@ exec_always --no-startup-id killall polybar; polybar example
 
 exec_always --no-startup-id feh --bg-scale $wallpaper
 
-exec --no-startup-id blueman-applet
-exec --no-startup-id nm-applet
+#exec --no-startup-id blueman-applet
+#exec --no-startup-id nm-applet
 exec --no-startup-id xset -dpms s off
 exec --no-startup-id dunst
+# mpd starts using systemctl --user enable mpd
+#exec --no-startup-id mpd
 #exec --no-startup-id conky -c ~/.config/i3/conkyrc
 exec --no-startup-id discord
 exec --no-startup-id telegram-desktop
