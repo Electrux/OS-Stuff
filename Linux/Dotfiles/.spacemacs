@@ -139,7 +139,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("mplus Nerd Font Mono"
-                               :size 13
+                               :size 24
                                :weight normal
                                :width normal
                                :powerline-scale 1.0)
@@ -306,11 +306,10 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (require 'all-the-icons)
   (setq-default ispell-program-name "aspell")
   (setq-default ispell-dictionary "en_US-w_accents") ; this can obviously be set to any language your spell-checking program supports
   (setq-default ispell-extra-args '("--sug-mode=ultra"))
-  (setq-default ycmd-server-command '("/usr/local/bin/python3" "/Users/electrux/GitHub/ycmd/ycmd"))
-  (setq-default ycmd-global-config "/Users/electrux/GitHub/Electrux/OS-Stuff/MacOS/Dotfiles/.ycm_extra_conf.py")
   (setq-default ycmd-force-semantic-completion t)
   (add-hook 'python-mode-hook 'ycmd-mode)
   )
@@ -322,6 +321,8 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (setq-default ycmd-server-command '("/usr/bin/python3" "/home/electrux/GitHub/ycmd/ycmd"))
+  (setq-default ycmd-global-config "/home/electrux/GitHub/Electrux/OS-Stuff/Linux/Dotfiles/.ycm_extra_conf.py")
   ;; (setq-default powerline-default-separator 'arrow)
   (setq-default neo-theme (if (display-graphic-p) 'icons 'arrow))
   ;; Need this to avoid weird error on creating file with neotree ( or SPC f f )

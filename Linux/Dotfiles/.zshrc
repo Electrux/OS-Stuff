@@ -10,7 +10,9 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+export ALIEN_THEME="soft"
+export USE_NERD_FONT=1
+ZSH_THEME="alien/alien"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -129,3 +131,14 @@ export LESS_TERMCAP_us=$green
 # Need colormake for this though
 alias make='/usr/bin/colormake'
 
+# Set exa as the ls command
+alias ls='exa -s name -F'
+alias l='ls -la'
+
+# Set neovim as vim and default EDITOR
+alias vim="/usr/bin/nvim"
+export EDITOR="/usr/bin/nvim"
+
+# Go lang settings
+export GOPATH="${HOME}/.go"
+export PATH="${PATH}:${GOPATH}/bin"

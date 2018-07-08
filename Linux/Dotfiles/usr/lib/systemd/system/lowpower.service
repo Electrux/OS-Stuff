@@ -1,0 +1,5 @@
+[Unit]
+Description=Low power notify and suspend
+
+[Service]
+ExecStart=/usr/bin/lowpower.sh

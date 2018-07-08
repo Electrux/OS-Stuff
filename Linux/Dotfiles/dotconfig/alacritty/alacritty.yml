@@ -111,34 +111,38 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
-# Colors (Dracula)
+# Colors (IR Black)
 colors:
   # Default colors
   primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
+    background: '0x000000'
+    foreground: '0xffffff'
+
+  cursor:
+    text: '0xffffff'
+    cursor: '0xffffff'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xff5555'
-    green:   '0x50fa7b'
-    yellow:  '0xf1fa8c'
-    blue:    '0xcaa9fa'
-    magenta: '0xff79c6'
-    cyan:    '0x8be9fd'
-    white:   '0xbfbfbf'
+    black:   '0x4e4e4e'
+    red:     '0xff6c60'
+    green:   '0xa8ff60'
+    yellow:  '0xffffb6'
+    blue:    '0x96cbfe'
+    magenta: '0xff73fd'
+    cyan:    '0xc6c5fe'
+    white:   '0xeeeeee'
 
   # Bright colors
   bright:
-    black:   '0x8aaaaa'
-    red:     '0xff6e67'
-    green:   '0x5af78e'
-    yellow:  '0xf4f99d'
-    blue:    '0xcaa9fa'
-    magenta: '0xff92d0'
-    cyan:    '0x9aedfe'
-    white:   '0xe6e6e6'
+    black:   '0x7c7c7c'
+    red:     '0xffb6b0'
+    green:   '0xceffab'
+    yellow:  '0xffffcb'
+    blue:    '0xb5dcfe'
+    magenta: '0xff9cfe'
+    cyan:    '0xdfdffe'
+    white:   '0xffffff'
 
 # Visual Bell
 #
