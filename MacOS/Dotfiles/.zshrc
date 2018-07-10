@@ -10,7 +10,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="spaceship-prompt/spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -175,5 +175,9 @@ alias git="/usr/local/bin/hub"
 # use different font for non-ascii stuff
 # ( like overpass mono nerd font ) to ensure
 # that icon size is decent enough
-alias ls="/usr/local/bin/ls_extended"
-alias l="ls -lAsh"
+#alias ls="/usr/local/bin/ls_extended"
+#alias l="ls -lAsh"
+
+# Set exa as the ls command
+alias ls='exa -s name -F'
+alias l='ls -la'
