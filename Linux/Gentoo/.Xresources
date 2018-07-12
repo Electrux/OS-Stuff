@@ -1,0 +1,109 @@
+!---------------------------!
+! Settings for Rofi colors
+!---------------------------!
+! State:           'bg',       'fg',        'bgalt',    'hlbg',     'hlfg'
+rofi.color-normal: #000000FF,  #FF000000,  #000000FF,  #CC00AA55,  #FFFFFFFF
+rofi.color-urgent: #000000FF,  #AA000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
+rofi.color-active: #000000FF,  #FF000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
+! Window:          'background', 'border', 'separator'
+rofi.color-window: #BBAAAAEE,    #FF00DDAA,  #FF00DDAA
+! HiDPI
+rofi.dpi: 220
+
+!-----------------------------!
+! Settings for HiDPI displays
+!-----------------------------!
+!Xft.dpi: 220
+Xft.autohint: 1
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+!-----------------------------!
+! Transparency settings
+!-----------------------------!
+URxvt.transparent: true
+URxvt.shading: 30
+
+!---------------------------!
+! Core settings for Rxvt
+!---------------------------!
+URxvt*depth:			32
+URxvt.internalBorder:		5
+URxvt.lineSpace:		0
+URxvt.backend: xrender
+URxvt.buffered: false
+
+!---------------------------!
+! Font settings for Rxvt
+!---------------------------!
+URxvt.allow_bold:           true
+URxvt*font: xft:mplus Nerd Font Mono:size=8, xft: Inconsolata for Powerline:style=Medium:size=8
+URxvt*boldFont: xft:mplus Nerd Font Mono:style=bold:size=8, xft: Inconsolata for Powerline:style=BoldForPowerline:size=8
+
+!----------------------------!
+! Scrollbar settings for Rxvt
+!----------------------------!
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+!---------------------------------!
+! Perl extension settings for Rxvt
+!---------------------------------!
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          google-chrome-stable
+
+!----------------------------!
+! Cursor settings for Rxvt
+!----------------------------!
+URxvt.cursorBlink:          true
+URxvt.cursorUnderline:      false
+
+!----------------------------!
+! Pointer settings for Rxvt
+!----------------------------!
+URxvt.pointerBlank:         true
+
+!----------------------------!
+! Color scheme for Rxvt
+!----------------------------!
+
+! special
+*.foreground:   #ebebeb
+*.background:   #2c2e3c
+*.cursorColor:  #ebebeb
+
+! black
+*.color0:       #000000
+*.color8:       #686868
+
+! red
+*.color1:       #ff6e67
+*.color9:       #ff6e67
+
+! green
+*.color2:       #5af78e
+*.color10:      #5af78e
+
+! yellow
+*.color3:       #f4f99d
+*.color11:      #f4f99d
+
+! blue
+*.color4:       #caa9fa
+*.color12:      #caa9fa
+
+! magenta
+*.color5:       #ff92d0
+*.color13:      #ff92d0
+
+! cyan
+*.color6:       #9aedfe
+*.color14:      #9aedfe
+
+! white
+*.color7:       #c7c7c7
+*.color15:      #ffffff
