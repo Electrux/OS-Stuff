@@ -24,8 +24,9 @@ Xft.rgba: rgb
 !-----------------------------!
 ! Transparency settings
 !-----------------------------!
-URxvt.transparent: true
-URxvt.shading: 30
+! Will cause background to go black
+URxvt.transparent: false
+URxvt.shading: 0
 
 !---------------------------!
 ! Core settings for Rxvt
@@ -72,38 +73,38 @@ URxvt.pointerBlank:         true
 !----------------------------!
 
 ! special
-*.foreground:   #ebebeb
-*.background:   #2c2e3c
-*.cursorColor:  #ebebeb
+*.foreground:   #c7ccd1
+*.background:   #1c2023
+*.cursorColor:  #c7ccd1
 
 ! black
-*.color0:       #000000
-*.color8:       #686868
+*.color0:       #1c2023
+*.color8:       #747c84
 
 ! red
-*.color1:       #ff6e67
-*.color9:       #ff6e67
+*.color1:       #c7ae95
+*.color9:       #c7ae95
 
 ! green
-*.color2:       #5af78e
-*.color10:      #5af78e
+*.color2:       #95c7ae
+*.color10:      #95c7ae
 
 ! yellow
-*.color3:       #f4f99d
-*.color11:      #f4f99d
+*.color3:       #aec795
+*.color11:      #aec795
 
 ! blue
-*.color4:       #caa9fa
-*.color12:      #caa9fa
+*.color4:       #ae95c7
+*.color12:      #ae95c7
 
 ! magenta
-*.color5:       #ff92d0
-*.color13:      #ff92d0
+*.color5:       #c795ae
+*.color13:      #c795ae
 
 ! cyan
-*.color6:       #9aedfe
-*.color14:      #9aedfe
+*.color6:       #95aec7
+*.color14:      #95aec7
 
 ! white
-*.color7:       #c7c7c7
-*.color15:      #ffffff
+*.color7:       #c7ccd1
+*.color15:      #f3f4f5

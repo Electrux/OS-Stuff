@@ -93,9 +93,6 @@ source $ZSH/oh-my-zsh.sh
 # Set zsh autosuggestions path
 source /usr/share/zsh/site-contrib/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Set zsh syntax highlighting path
-source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Show the tasks which I have to do...
 echo ''
 fortune 2>&1 | cowsay -f dragon | lolcat
@@ -140,3 +137,7 @@ export EDITOR="/usr/bin/nvim"
 # Go lang settings
 export GOPATH="${HOME}/.go"
 export PATH="${PATH}:${GOPATH}/bin"
+
+# Set zsh syntax highlighting path
+# Must be last in file
+source /usr/share/zsh/site-contrib/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
