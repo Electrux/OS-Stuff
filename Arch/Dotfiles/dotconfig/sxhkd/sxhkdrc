@@ -119,3 +119,45 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# media keys
+#
+
+# audio
+
+XF86AudioRaiseVolume
+	amixer -q set Master 5%+
+
+XF86AudioLowerVolume
+	amixer -q set Master 5%-
+
+XF86AudioMute
+	amixer -q set Master toggle
+
+XF86AudioPrev
+	mpc -h 127.0.1.1 prev
+
+XF86AudioNext
+	mpc -h 127.0.1.1 next
+
+XF86AudioPlay
+	mpc -h 127.0.1.1 toggle
+
+# visual
+
+# sreen brightness controls
+
+XF86MonBrightnessUp
+	xbacklight -inc 5
+
+XF86MonBrightnessDown
+	xbacklight -dec 5
+
+# apple keyboard
+
+XF86KbdBrightnessUp
+	xbacklight -ctrl smc::kbd_backlight -inc 20
+
+XF86KbdBrightnessDown
+	xbacklight -ctrl smc::kbd_backlight -dec 20

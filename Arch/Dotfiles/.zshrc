@@ -125,10 +125,6 @@ export LESS_TERMCAP_ue=$default
 # Begin underline
 export LESS_TERMCAP_us=$green
 
-# Make output of make colorized.
-# Need colormake for this though
-alias make='/usr/bin/colormake'
-
 # Set exa as the ls command
 alias ls='exa -s name -F'
 alias l='ls -la'
