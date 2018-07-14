@@ -1,14 +1,17 @@
 #! /bin/sh
 
 feh --bg-scale ~/Pictures/Wallpapers/abstract-hexagon-teal.jpg
+polybar example &
 sxhkd &
 compton -bc --config ~/.config/compton/compton.conf
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
+# Widths and stuff
 bspc config border_width         2
-bspc config window_gap          35
-bspc config top_padding		50
+bspc config window_gap          30
+# top padding is set automatically according to window_gap and size of polybar
+bspc config top_padding		70
 
 # Colors
 bspc config focused_border_color "#ccffff"

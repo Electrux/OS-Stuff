@@ -61,13 +61,13 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: mplus Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: SauceCodePro Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: mplus Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: SauceCodePro Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: bold
 
@@ -102,7 +102,7 @@ font:
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # Should display the render timer
 render_timer: false
@@ -111,38 +111,34 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
-# Colors (IR Black)
+# Color scheme: Ashes Dark
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xffffff'
-
-  cursor:
-    text: '0xffffff'
-    cursor: '0xffffff'
+    background: '0x1c2023'
+    foreground: '0xc7ccd1'
 
   # Normal colors
   normal:
-    black:   '0x4e4e4e'
-    red:     '0xff6c60'
-    green:   '0xa8ff60'
-    yellow:  '0xffffb6'
-    blue:    '0x96cbfe'
-    magenta: '0xff73fd'
-    cyan:    '0xc6c5fe'
-    white:   '0xeeeeee'
+    black:   '0x1c2023'
+    red:     '0xc7ae95'
+    green:   '0x95c7ae'
+    yellow:  '0xaec795'
+    blue:    '0xae95c7'
+    magenta: '0xc795ae'
+    cyan:    '0x95aec7'
+    white:   '0xc7ccd1'
 
   # Bright colors
   bright:
-    black:   '0x7c7c7c'
-    red:     '0xffb6b0'
-    green:   '0xceffab'
-    yellow:  '0xffffcb'
-    blue:    '0xb5dcfe'
-    magenta: '0xff9cfe'
-    cyan:    '0xdfdffe'
-    white:   '0xffffff'
+    black:   '0x747c84'
+    red:     '0xc7ae95'
+    green:   '0x95c7ae'
+    yellow:  '0xaec795'
+    blue:    '0xae95c7'
+    magenta: '0xc795ae'
+    cyan:    '0x95aec7'
+    white:   '0xf3f4f5'
 
 # Visual Bell
 #
@@ -171,7 +167,7 @@ visual_bell:
   duration: 0
 
 # Background opacity
-background_opacity: 0.5
+background_opacity: 1.0
 
 # Mouse bindings
 #

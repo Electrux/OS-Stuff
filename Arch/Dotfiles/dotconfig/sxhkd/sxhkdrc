@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	alacritty
 
 # program launcher
 super + @space
@@ -23,7 +23,7 @@ super + shift + Escape
 	bspc quit
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }c
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
