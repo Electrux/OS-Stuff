@@ -126,8 +126,8 @@ export LESS_TERMCAP_ue=$default
 export LESS_TERMCAP_us=$green
 
 # Set exa as the ls command
-alias ls='exa -s name -F'
-alias l='ls -la'
+alias ls='ls_extended -s'
+alias l='ls -lAh'
 
 # Set neovim as vim and default EDITOR
 alias vim="/usr/bin/nvim"
