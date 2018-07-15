@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-border = #ccffff
+border = #aadddd
 background = #1c2023
 foreground = #c7ccd1
 
@@ -70,7 +70,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
 modules-center = mpd
-modules-right = filesystem xbacklight volume xkeyboard memory cpu wlan eth battery system-cpu-temppercore date powermenu
+modules-right = filesystem xbacklight volume memory cpu wlan eth battery system-cpu-avg-temp date powermenu
 
 tray-position = left
 tray-offset-x = 0
@@ -299,15 +299,15 @@ animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 750
 
-[module/system-cpu-temppercore]
+[module/system-cpu-avg-temp]
 type = custom/script
 
-exec = ~/.config/polybar/scripts/system-cpu-temppercore.sh
+exec = ~/.config/polybar/scripts/system-cpu-avg-temp.sh
 interval = 5
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-underline = ${colors.green}
+format-underline = ${colors.cyan}
 
 [module/powermenu]
 type = custom/menu

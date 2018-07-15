@@ -2,7 +2,7 @@
 !     Color Definitions     !
 !---------------------------!
 ! Special
-#define BORDER	 #ccffff
+#define BORDER	 #aadddd
 #define FG	 #c7ccd1
 #define BG	 #1c2023
 #define CURSOR	 #c7ccd1
