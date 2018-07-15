@@ -2,7 +2,7 @@
 
 feh --bg-scale ~/Pictures/Wallpapers/abstract-hexagon-teal.jpg
 #~/.config/bspwm/scripts/multi_monitors.sh
-polybar example &
+polybar --reload example &
 dunst &
 sxhkd &
 compton -bc --config ~/.config/compton/compton.conf
@@ -26,6 +26,7 @@ bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
+bspc rule -a VirtualBox desktop='^7'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
