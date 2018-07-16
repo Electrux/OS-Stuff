@@ -17,15 +17,15 @@ set $ws9 "9:Android Studio"
 set $ws10 "10:VirtualBox"
 
 # Set various colors for i3 and i3status/i3blocks
-set $bg-focused		#00DDAA
-set $col-indicate	#00DDAA
-set $bg-unfocused	#666688
-set $bg-urgent		#00FFFF
-set $text-focused 	#000000
-set $text-unfocused 	#CCCCCC
-set $client-backgr	#AAAAEE
+set $bg-focused		#AADDDD
+set $col-indicate	#C7AE95
+set $bg-unfocused	#1C2023
+set $bg-urgent		#C7AE95
+set $text-focused 	#C795AE
+set $text-unfocused 	#C7CCD1
+set $client-backgr	#F3F4F5
 # i3status
-set $status-backgr 	#021232
+set $status-backgr 	#1C2023
 set $status-line 	#000000
 set $status-separator 	#FFCCCC
 set $bg-bind 		#00DDDD
@@ -217,7 +217,6 @@ assign [title="Android Emulator"] $ws9
 assign [class="jetbrains-idea"] $ws8
 
 assign [class="TelegramDesktop"] $ws7
-assign [class="whatsapp-desktop"] $ws7
 assign [class="discord"] $ws7
 
 for_window [title="Floating"] floating enable

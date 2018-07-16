@@ -61,13 +61,13 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: SauceCodePro Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: mplus Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: SauceCodePro Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: mplus Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: bold
 
