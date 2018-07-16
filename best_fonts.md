@@ -5,7 +5,7 @@ Fantasque Sans Mono
 Fira Code ( and its Nerd Font Mono variant )
 Go Mono for Powerline
 Hasklug Nerd Fonts
-Hurmit Nerd Font Mono
+Hermit Nerd Font Mono
 Iosevka Term Mono (Nerd variant )
 M+ 1mn Nerd Font Mono ( From nerd font github )
 Menlo Nerd Font Mono
