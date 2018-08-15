@@ -19,8 +19,8 @@ window:
   # Falls back to size specified by window manager if set to 0x0.
   # (changes require restart)
   dimensions:
-    columns: 80
-    lines: 24
+    columns: 243
+    lines: 64
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
@@ -61,24 +61,24 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: mplus Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Regular
+    style: Book
 
   # The bold font face
   bold:
-    family: mplus Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    style: bold
+    style: Bold
 
   # The italic font face
   italic:
-    family: monospace # should be "Menlo" or something on macOS.
+    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Italic
+    style: Italic
 
   # Point size of the font
-  size: 8.0
+  size: 9.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
