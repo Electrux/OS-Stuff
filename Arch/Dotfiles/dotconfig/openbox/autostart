@@ -19,3 +19,4 @@
 xset -dpms s off
 compton -bc --config ~/.config/compton/compton.conf
 tint2 &
+feh --bg-scale ~/Downloads/wall.jpg

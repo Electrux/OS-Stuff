@@ -12,6 +12,15 @@
       </startupnotify>
     </action>
   </item>
+  <item label="VS Code">
+    <action name="Execute">
+      <command>code</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Code</wmclass>
+      </startupnotify>
+    </action>
+  </item>
 </menu>
 
 <menu id="apps-term-menu" label="Terminals">

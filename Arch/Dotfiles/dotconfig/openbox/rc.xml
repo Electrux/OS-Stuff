@@ -179,70 +179,70 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-    <keybind key="C-A-Left">
+    <keybind key="C-W-Left">
       <action name="GoToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Right">
+    <keybind key="C-W-Right">
       <action name="GoToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Up">
+    <keybind key="C-W-Up">
       <action name="GoToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-A-Down">
+    <keybind key="C-W-Down">
       <action name="GoToDesktop">
         <to>down</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <keybind key="S-W-Left">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="S-W-Right">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
+    <keybind key="S-W-Up">
       <action name="SendToDesktop">
         <to>up</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Down">
+    <keybind key="S-W-Down">
       <action name="SendToDesktop">
         <to>down</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-F1">
+    <keybind key="W-1">
       <action name="GoToDesktop">
         <to>1</to>
       </action>
     </keybind>
-    <keybind key="W-F2">
+    <keybind key="W-2">
       <action name="GoToDesktop">
         <to>2</to>
       </action>
     </keybind>
-    <keybind key="W-F3">
+    <keybind key="W-3">
       <action name="GoToDesktop">
         <to>3</to>
       </action>
     </keybind>
-    <keybind key="W-F4">
+    <keybind key="W-4">
       <action name="GoToDesktop">
         <to>4</to>
       </action>
@@ -251,10 +251,10 @@
       <action name="ToggleShowDesktop"/>
     </keybind>
     <!-- Keybindings for windows -->
-    <keybind key="A-F4">
+    <keybind key="W-F4">
       <action name="Close"/>
     </keybind>
-    <keybind key="A-Escape">
+    <keybind key="W-Escape">
       <action name="Lower"/>
       <action name="FocusToBottom"/>
       <action name="Unfocus"/>
@@ -265,7 +265,7 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
-    <keybind key="A-Tab">
+    <keybind key="W-Tab">
       <action name="NextWindow">
         <finalactions>
           <action name="Focus"/>
@@ -274,7 +274,7 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="A-S-Tab">
+    <keybind key="W-S-Tab">
       <action name="PreviousWindow">
         <finalactions>
           <action name="Focus"/>
@@ -283,7 +283,7 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="C-A-Tab">
+    <keybind key="C-W-Tab">
       <action name="NextWindow">
         <panels>yes</panels>
         <desktop>yes</desktop>
@@ -295,22 +295,22 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
+    <keybind key="W-Right">
       <action name="DirectionalCycleWindows">
         <direction>right</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Left">
+    <keybind key="W-Left">
       <action name="DirectionalCycleWindows">
         <direction>left</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Up">
+    <keybind key="W-Up">
       <action name="DirectionalCycleWindows">
         <direction>up</direction>
       </action>
     </keybind>
-    <keybind key="W-S-Down">
+    <keybind key="W-Down">
       <action name="DirectionalCycleWindows">
         <direction>down</direction>
       </action>
@@ -340,7 +340,7 @@
           <enabled>true</enabled>
           <name>Rofi</name>
         </startupnotify>
-        <command>rofi -font "SauceCodePro Nerd Font Mono 9" -separator-style "solid" -hide -scrollbar -lines 10 -width 30 -padding 10 -show run</command>
+        <command>rofi -font "FantasqueSansMono Nerd Font Mono 8" -separator-style "solid" -hide -scrollbar -lines 10 -width 30 -padding 10 -show run</command>
       </action>
     </keybind>
   </keyboard>
