@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>1977-Grey</name>
+    <name>1977-UltraPink</name>
     <titleLayout>LIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -341,6 +341,59 @@
           <name>Rofi</name>
         </startupnotify>
         <command>rofi -font "FantasqueSansMono Nerd Font Mono 8" -separator-style "solid" -hide -scrollbar -lines 10 -width 30 -padding 10 -show run</command>
+      </action>
+    </keybind>
+    <!-- Keybinds for Audio -->
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>amixer -q set Master 5%+</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>amixer -q set Master 5%-</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>amixer -q set Master toggle</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <command>mpc -h 127.0.1.1 prev</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <command>mpc -h 127.0.1.1 next</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>mpc -h 127.0.1.1 toggle</command>
+      </action>
+    </keybind>
+    <!-- Keybinds for Video -->
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>xbacklight -inc 5</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>xbacklight -dec 5</command>
+      </action>
+    </keybind>
+    <!-- Keybinds for Keyboard Light -->
+    <keybind key="XF86KbdBrightnessUp">
+      <action name="Execute">
+        <command>xbacklight -ctrl smc::kbd_backlight -inc 20</command>
+      </action>
+    </keybind>
+    <keybind key="XF86KbdBrightnessDown">
+      <action name="Execute">
+        <command>xbacklight -ctrl smc::kbd_backlight -dec 20</command>
       </action>
     </keybind>
   </keyboard>
