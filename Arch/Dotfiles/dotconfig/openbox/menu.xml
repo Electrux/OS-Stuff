@@ -54,6 +54,17 @@
   </item>
 </menu>
 
+<menu id="apps-emulators-menu" label="Emulators">
+  <item label="VirtualBox">
+    <action name="Execute">
+      <command>VirtualBox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+</menu>
+
 <menu id="apps-graphics-menu" label="Graphics">
   <item label="Gimp">
     <action name="Execute">
@@ -72,6 +83,12 @@
       <startupnotify><enabled>yes</enabled></startupnotify>
     </action>
   </item>
+  <item label="GTK Appearance">
+    <action name="Execute">
+      <command>lxappearance</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
  <separator />
   <item label="Reconfigure Openbox">
     <action name="Reconfigure" />
@@ -82,6 +99,7 @@
   <separator label="Applications" />
   <menu id="apps-accessories-menu"/>
   <menu id="apps-editors-menu"/>
+  <menu id="apps-emulators-menu"/>
   <menu id="apps-graphics-menu"/>
   <menu id="apps-net-menu"/>
   <menu id="apps-office-menu"/>

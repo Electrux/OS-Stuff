@@ -138,7 +138,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("mplus Nerd Font Mono"
+   dotspacemacs-default-font '("FantasqueSansMono Nerd Font Mono"
                                :size 24
                                :weight normal
                                :width normal
@@ -226,14 +226,14 @@ values."
    dotspacemacs-loading-progress-bar t
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup t
+   dotspacemacs-fullscreen-at-startup nil
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
    dotspacemacs-fullscreen-use-non-native nil
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -320,8 +320,8 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq-default ycmd-server-command '("/usr/bin/python3" "/home/electrux/GitHub/ycmd/ycmd"))
-  (setq-default ycmd-global-config "/home/electrux/GitHub/Electrux/OS-Stuff/Arch/Dotfiles/.ycm_extra_conf.py")
+  (setq-default ycmd-server-command '("/usr/bin/python3" "/home/electrux/Git/ycmd/ycmd"))
+  (setq-default ycmd-global-config "/home/electrux/Git/Electrux/OS-Stuff/Arch/Dotfiles/.ycm_extra_conf.py")
   ;; (setq-default powerline-default-separator 'arrow)
   (setq-default neo-theme (if (display-graphic-p) 'icons 'arrow))
   ;; Need this to avoid weird error on creating file with neotree ( or SPC f f )

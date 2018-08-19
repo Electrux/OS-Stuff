@@ -136,3 +136,6 @@ export EDITOR="/usr/bin/nvim"
 # Go lang settings
 export GOPATH="${HOME}/.go"
 export PATH="${PATH}:${GOPATH}/bin"
+
+# Emoji CLI
+source /usr/share/zsh/plugins/emoji-cli/emoji-cli.zsh

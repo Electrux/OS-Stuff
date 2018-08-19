@@ -17,6 +17,9 @@
 #xfce-mcs-manager &
 
 xset -dpms s off
+dunst &
 compton -bc --config ~/.config/compton/compton.conf
 tint2 &
-feh --bg-scale ~/Downloads/wall.jpg
+phwmon.py &
+volumeicon &
+feh --bg-scale ~/Pictures/Wallpapers/white-eye-ring-drip-blood-mouth-vampire-female.jpg
