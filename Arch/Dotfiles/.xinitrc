@@ -4,4 +4,4 @@ xrandr --dpi 220
 xset -dpms s off
 xbacklight -set 20
 xbacklight -ctrl smc::kbd_backlight -set 20
-exec openbox-session
+exec bspwm
