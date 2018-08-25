@@ -29,7 +29,7 @@ set rtp+=/usr/bin/fzf
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Plugin for code completion server - You complete me.
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer --system-libclang' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer --system-libclang --rust-completer' }
 
 " Plugin for file management.
 Plug 'scrooloose/nerdtree'

@@ -16,7 +16,6 @@
 #
 #xfce-mcs-manager &
 
-xset -dpms s off
 dunst &
 compton -bc --config ~/.config/compton/compton.conf
 tint2 &

@@ -344,6 +344,7 @@ you should place your code here."
   (defun c-reset-del nil "Reset the delete character to default."
 	 (local-set-key (kbd "DEL") 'delete-backward-char))
   (add-hook 'c-mode-common-hook 'c-reset-del)
+  (setq sp-autoescape-string-quote nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

@@ -1,18 +1,17 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Base16 Ashes Dark",
     "editor.fontSize": 13,
-    "editor.fontFamily": "'SauceCodePro Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
+    "editor.fontFamily": "'FantasqueSansMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": false,
     "editor.tabSize": 8,
     "editor.insertSpaces": false,
     "ycmd.enabled_languages": [
         "cpp",
-        "c",
-        "rs"
+        "c"
     ],
-    "ycmd.global_extra_config": "/Users/electrux/GitHub/Electrux/OS-Stuff/MacOS/Dotfiles/.ycm_extra_conf.py",
-    "ycmd.path": "/Users/electrux/GitHub/ycmd",
+    "ycmd.global_extra_config": "/Users/electrux/Git/Electrux/OS-Stuff/MacOS/Dotfiles/.ycm_extra_conf.py",
+    "ycmd.path": "/Users/electrux/Git/ycmd",
     "ycmd.python": "/usr/local/bin/python3",
     "rust.rustup": {
         "toolchain": "stable-x86_64-apple-darwin"
