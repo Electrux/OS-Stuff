@@ -1,53 +1,57 @@
 !---------------------------!
 !     Color Definitions     !
 !---------------------------!
-! Special
-#define BORDER	 #aadddd
-#define FG	 #c7ccd1
-#define BG	 #1c2023
-#define CURSOR	 #c7ccd1
+! border
+#define DEF_BORDER       #e68ef5
+#define DEF_BORDERNORM	 #b980ca
 
-! Black
-#define BLACK	 #1c2023
-#define BLACKB	 #747c84
+! special
+#define DEF_foreground   #e3cac6
+#define DEF_background   #150d0b
+#define DEF_cursorColor  #e3cac6
 
-! Red
-#define RED	 #c7ae95
-#define REDB	 #c7ae95
+! black
+#define DEF_color0       #150d0b
+#define DEF_color8       #9e8d8a
 
-! Green
-#define GREEN	 #95c7ae
-#define GREENB	 #95c7ae
+! red
+#define DEF_color1       #7878c1
+#define DEF_color9       #7878c1
 
-! Yellow
-#define YELLOW	 #aec795
-#define YELLOWB	 #aec795
+! green
+#define DEF_color2       #9076a2
+#define DEF_color10      #9076a2
 
-! Blue
-#define BLUE	 #ae95c7
-#define BLUEB	 #ae95c7
+! yellow
+#define DEF_color3       #bd7ca0
+#define DEF_color11      #bd7ca0
 
-! Magenta
-#define MAGENTA	 #c795ae
-#define MAGENTAB #c795ae
+! blue
+#define DEF_color4       #7f81bc
+#define DEF_color12      #7f81bc
 
-! Cyan
-#define CYAN	 #95aec7
-#define CYANB	 #95aec7
+! magenta
+#define DEF_color5       #a68ba7
+#define DEF_color13      #a68ba7
 
-! White
-#define WHITE	#c7ccd1
-#define WHITEB	#f3f4f5
+! cyan
+#define DEF_color6       #ad8fb1
+#define DEF_color14      #ad8fb1
+
+! white
+#define DEF_color7       #e3cac6
+#define DEF_color15      #e3cac6
+
 
 !---------------------------!
 ! Settings for Rofi colors  !
 !---------------------------!
-! State:           'bg',	'fg',	'bgalt',	'hlbg',	'hlfg'
-rofi.color-normal: BG,  	CYAN,	BG,		BG,	MAGENTA
-rofi.color-urgent: BG,  	GREEN,	BG,		BG,	YELLOW
-rofi.color-active: BG,  	MAGENTA,BG,		BG,	BLUE
-! Window:          'background',	'border',	'separator'
-rofi.color-window: BG,			BORDER,		BG
+! State:           'bg',		'fg',		'bgalt',	'hlbg',		'hlfg'
+rofi.color-normal: DEF_background,  	DEF_color6,	DEF_background,	DEF_background,	DEF_color5
+rofi.color-urgent: DEF_background,  	DEF_color2,	DEF_background,	DEF_background,	DEF_color3
+rofi.color-active: DEF_background,  	DEF_color5,	DEF_background,	DEF_background,	DEF_color4
+! Window:         'background',		'border',	'separator'
+rofi.color-window: DEF_background,	DEF_BORDER,	DEF_background
 ! HiDPI
 rofi.dpi: 220
 
@@ -109,43 +113,47 @@ URxvt.cursorUnderline:      false
 !----------------------------!
 URxvt.pointerBlank:         true
 
-!----------------------------!
-!    Color scheme for Rxvt   !
-!----------------------------!
+!----------------------------------------!
+!    Color scheme in Xresources format   !
+!----------------------------------------!
+
+! border
+*.border:	DEF_BORDER
+*.bordernorm:	DEF_BORDERNORM
 
 ! special
-*.foreground:	FG
-*.background:	BG
-*.cursorColor:  CURSOR
+*.foreground:	DEF_foreground
+*.background:	DEF_background
+*.cursorColor:  DEF_cursorColor
 
 ! black
-*.color0:       BLACK
-*.color8:       BLACKB
+*.color0:       DEF_color0
+*.color8:       DEF_color8
 
 ! red
-*.color1:       RED
-*.color9:       REDB
+*.color1:       DEF_color1
+*.color9:       DEF_color9
 
 ! green
-*.color2:       GREEN
-*.color10:      GREENB
+*.color2:       DEF_color2
+*.color10:      DEF_color10
 
 ! yellow
-*.color3:       YELLOW
-*.color11:      YELLOWB
+*.color3:       DEF_color3
+*.color11:      DEF_color11
 
 ! blue
-*.color4:       BLUE
-*.color12:      BLUEB
+*.color4:       DEF_color4
+*.color12:      DEF_color12
 
 ! magenta
-*.color5:       MAGENTA
-*.color13:      MAGENTAB
+*.color5:       DEF_color5
+*.color13:      DEF_color13
 
 ! cyan
-*.color6:       CYAN
-*.color14:      CYANB
+*.color6:       DEF_color6
+*.color14:      DEF_color14
 
 ! white
-*.color7:       WHITE
-*.color15:      WHITEB
+*.color7:       DEF_color7
+*.color15:      DEF_color15

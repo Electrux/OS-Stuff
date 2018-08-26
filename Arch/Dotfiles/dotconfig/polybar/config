@@ -8,42 +8,42 @@
 ;=====================================================
 
 [colors]
-border = #aadddd
-background = #1c2023
-foreground = #c7ccd1
+border =  ${xrdb:border:#222}
+background = ${xrdb:background:#222}
+foreground = ${xrdb:foreground:#222}
 
 ; black
-black = #1c2023
-blackb = #747c84
+black = ${xrdb:color0:#222}
+blackb = ${xrdb:color8:#222}
 
 ; red
-red = #c7ae95
+red = ${xrdb:color1:#222}
 
 ; green
-green = #95c7ae
+green = ${xrdb:color2:#222}
 
 ; yellow
-yellow = #aec795
+yellow = ${xrdb:color3:#222}
 
 ; blue
-blue = #ae95c7
+blue = ${xrdb:color4:#222}
 
 ; magenta
-magenta = #c795ae
+magenta = ${xrdb:color5:#222}
 
 ; cyan
-cyan = #95aec7
+cyan = ${xrdb:color6:#222}
 
 ; white
-white = #c7ccd1
-whiteb = #f3f4f5
+white = ${xrdb:color7:#222}
+whiteb = ${xrdb:color15:#222}
 
 [bar/example]
 monitor = ${env:MONITOR:eDP1}
-width = 98%
-height = 55
-offset-x = 1%
-offset-y = 1%
+width = 99%
+height = 50
+offset-x = 0.5%
+offset-y = 0.5%
 radius = 6.0
 fixed-center = false
 
@@ -70,7 +70,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
 modules-center = mpd
-modules-right = filesystem xbacklight volume memory cpu wlan eth battery system-cpu-avg-temp date powermenu
+modules-right = xbacklight volume cpu memory wlan eth battery system-cpu-avg-temp date powermenu
 
 tray-position = left
 tray-offset-x = 0
@@ -78,10 +78,10 @@ tray-offset-x = 0
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
-override-redirect = true
+override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -199,7 +199,7 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.magenta}
-label-connected = %essid%
+label-connected = %essid% 祝 %upspeed%  %downspeed%
 
 format-disconnected = 睊 <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
@@ -284,7 +284,7 @@ format-charging-underline = ${colors.yellow}
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground}
 format-full-underline = ${self.format-charging-underline}
 
@@ -293,9 +293,9 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 =  
+animation-charging-1 =  
+animation-charging-2 =  
 animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 750
 

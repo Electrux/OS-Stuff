@@ -111,34 +111,33 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
-# Color scheme: Ashes Dark
 colors:
   # Default colors
   primary:
-    background: '0x1c2023'
-    foreground: '0xc7ccd1'
+    background: '0x150d0b'
+    foreground: '0xe3cac6'
 
   # Normal colors
   normal:
-    black:   '0x1c2023'
-    red:     '0xc7ae95'
-    green:   '0x95c7ae'
-    yellow:  '0xaec795'
-    blue:    '0xae95c7'
-    magenta: '0xc795ae'
-    cyan:    '0x95aec7'
-    white:   '0xc7ccd1'
+    black:   '0x150d0b'
+    red:     '0x7878c1'
+    green:   '0x9076a2'
+    yellow:  '0xbd7ca0'
+    blue:    '0x7f81bc'
+    magenta: '0xa68ba7'
+    cyan:    '0xad8fb1'
+    white:   '0xe3cac6'
 
   # Bright colors
   bright:
-    black:   '0x747c84'
-    red:     '0xc7ae95'
-    green:   '0x95c7ae'
-    yellow:  '0xaec795'
-    blue:    '0xae95c7'
-    magenta: '0xc795ae'
-    cyan:    '0x95aec7'
-    white:   '0xf3f4f5'
+    black:   '0x9e8d8a'
+    red:     '0x7878c1'
+    green:   '0x9076a2'
+    yellow:  '0xbd7ca0'
+    blue:    '0x7f81bc'
+    magenta: '0xa68ba7'
+    cyan:    '0xad8fb1'
+    white:   '0xe3cac6'
 
 # Visual Bell
 #
