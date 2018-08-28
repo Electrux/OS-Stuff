@@ -64,13 +64,13 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = FantasqueSansMono Nerd Font Mono:pixelsize=9;1
+font-0 = FantasqueSansMono Nerd Font Mono:pixelsize=8;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm
+modules-left = bspwm xwindow
 modules-center = mpd
-modules-right = xbacklight volume cpu memory wlan eth battery system-cpu-avg-temp date powermenu
+modules-right = typespeed xbacklight volume cpu memory wlan eth battery system-cpu-avg-temp date powermenu
 
 tray-position = left
 tray-offset-x = 0
@@ -92,9 +92,14 @@ override-redirect = false
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+[module/typespeed]
+type = custom/script
+exec = ~/.config/polybar/scripts/typespeed.sh
+tail = true
+
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:15:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard

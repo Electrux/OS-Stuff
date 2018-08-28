@@ -10,7 +10,8 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="candy"
+PROMPT_GEOMETRY_COLORIZE_SYMBOL=true
+ZSH_THEME="geometry/geometry"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -96,9 +97,11 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set zsh syntax highlighting path
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Show the tasks which I have to do...
+# Jump around with z
+source ~/Git/z/z.sh
+
 echo ''
-fortune 2>&1 | cowsay -f dragon | lolcat
+neofetch
 
 # Make output of less command colorized.
 # Colors

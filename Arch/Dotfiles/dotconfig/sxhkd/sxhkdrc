@@ -19,7 +19,7 @@ super + Escape
 #
 
 # close and kill
-super + {_,shift + }c
+super + {w,q}
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
