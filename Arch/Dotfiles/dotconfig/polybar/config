@@ -64,7 +64,7 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = FantasqueSansMono Nerd Font Mono:pixelsize=8;1
+font-0 = Hack Nerd Font Mono:pixelsize=7;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
@@ -131,23 +131,34 @@ label-unmounted-foreground = ${colors.red}
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
+ws-icon-5 = VI;
+ws-icon-6 = VII;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;ﭮ
+ws-icon-9 = X;
+
+label-focused = 
 label-focused-foreground = ${colors.magenta}
 label-focused-background = ${colors.black}
 label-focused-underline= ${colors.yellow}
-label-focused-padding = 2
+label-focused-padding = 1
 
-label-occupied = %index%
-label-occupied-padding = 2
-label-occupied-foreground = ${colors.magenta}
+label-occupied = 
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.blue}
 
-label-urgent = %index%!
+label-urgent = !
 label-urgent-background = ${colors.red}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
-label-empty = %index%
+label-empty = 
 label-empty-foreground = ${colors.white}
-label-empty-padding = 2
+label-empty-padding = 1
 
 [module/mpd]
 type = internal/mpd

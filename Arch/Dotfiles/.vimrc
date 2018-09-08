@@ -55,7 +55,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Displays indentation level with thin line
-Plug 'yggdroot/indentLine'
+"Plug 'yggdroot/indentLine'
 
 " ViM-Plug ends.
 call plug#end()

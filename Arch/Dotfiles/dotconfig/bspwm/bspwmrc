@@ -7,7 +7,7 @@ polybar --reload example &
 dunst &
 sxhkd &
 compton -bc --config ~/.config/compton/compton.conf
-feh --bg-scale ~/Pictures/Wallpapers/Dreamy-Sword-Girl.jpg
+feh --bg-scale ~/Pictures/Wallpapers/minimal-ocean-whale.png
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 

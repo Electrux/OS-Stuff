@@ -2,46 +2,45 @@
 !     Color Definitions     !
 !---------------------------!
 ! border
-#define DEF_BORDER       #e68ef5
-#define DEF_BORDERNORM	 #b980ca
+#define DEF_BORDER		#6BBBE0
+#define DEF_BORDERNORM		#5891B7
 
 ! special
-#define DEF_foreground   #e3cac6
-#define DEF_background   #150d0b
-#define DEF_cursorColor  #e3cac6
+#define DEF_foreground   	#c0c5ce
+#define DEF_background   	#2b303b
+#define DEF_cursorColor  	#c0c5ce
 
 ! black
-#define DEF_color0       #150d0b
-#define DEF_color8       #9e8d8a
+#define DEF_color0       	#2b303b
+#define DEF_color8       	#65737e
 
 ! red
-#define DEF_color1       #7878c1
-#define DEF_color9       #7878c1
+#define DEF_color1       	#bf616a
+#define DEF_color9       	#bf616a
 
 ! green
-#define DEF_color2       #9076a2
-#define DEF_color10      #9076a2
+#define DEF_color2       	#a3be8c
+#define DEF_color10      	#a3be8c
 
 ! yellow
-#define DEF_color3       #bd7ca0
-#define DEF_color11      #bd7ca0
+#define DEF_color3       	#ebcb8b
+#define DEF_color11      	#ebcb8b
 
 ! blue
-#define DEF_color4       #7f81bc
-#define DEF_color12      #7f81bc
+#define DEF_color4       	#8fa1b3
+#define DEF_color12      	#8fa1b3
 
 ! magenta
-#define DEF_color5       #a68ba7
-#define DEF_color13      #a68ba7
+#define DEF_color5       	#b48ead
+#define DEF_color13      	#b48ead
 
 ! cyan
-#define DEF_color6       #ad8fb1
-#define DEF_color14      #ad8fb1
+#define DEF_color6       	#96b5b4
+#define DEF_color14      	#96b5b4
 
 ! white
-#define DEF_color7       #e3cac6
-#define DEF_color15      #e3cac6
-
+#define DEF_color7       	#c0c5ce
+#define DEF_color15      	#eff1f5
 
 !---------------------------!
 ! Settings for Rofi colors  !

@@ -61,24 +61,24 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: Hack Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: Hack Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: FantasqueSansMono Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: Hack Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Italic
 
   # Point size of the font
-  size: 8.0
+  size: 7.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -111,33 +111,40 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
+# Base16 Ocean 256 - alacritty color config
+# Chris Kempson (http://chriskempson.com)
 colors:
   # Default colors
   primary:
-    background: '0x150d0b'
-    foreground: '0xe3cac6'
+    background: '0x2b303b'
+    foreground: '0xc0c5ce'
+
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0x2b303b'
+    cursor: '0xc0c5ce'
 
   # Normal colors
   normal:
-    black:   '0x150d0b'
-    red:     '0x7878c1'
-    green:   '0x9076a2'
-    yellow:  '0xbd7ca0'
-    blue:    '0x7f81bc'
-    magenta: '0xa68ba7'
-    cyan:    '0xad8fb1'
-    white:   '0xe3cac6'
+    black:   '0x2b303b'
+    red:     '0xbf616a'
+    green:   '0xa3be8c'
+    yellow:  '0xebcb8b'
+    blue:    '0x8fa1b3'
+    magenta: '0xb48ead'
+    cyan:    '0x96b5b4'
+    white:   '0xc0c5ce'
 
   # Bright colors
   bright:
-    black:   '0x9e8d8a'
-    red:     '0x7878c1'
-    green:   '0x9076a2'
-    yellow:  '0xbd7ca0'
-    blue:    '0x7f81bc'
-    magenta: '0xa68ba7'
-    cyan:    '0xad8fb1'
-    white:   '0xe3cac6'
+    black:   '0x65737e'
+    red:     '0xbf616a'
+    green:   '0xa3be8c'
+    yellow:  '0xebcb8b'
+    blue:    '0x8fa1b3'
+    magenta: '0xb48ead'
+    cyan:    '0x96b5b4'
+    white:   '0xc0c5ce'
 
 # Visual Bell
 #

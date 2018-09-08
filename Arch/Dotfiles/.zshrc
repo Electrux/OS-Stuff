@@ -100,6 +100,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Jump around with z
 source ~/Git/z/z.sh
 
+# Source the dotfiles shortcut function
+source ~/Git/Electrux/OS-Stuff/Customization/scripts/editdots.sh
+
 echo ''
 neofetch
 
@@ -128,9 +131,13 @@ export LESS_TERMCAP_ue=$default
 # Begin underline
 export LESS_TERMCAP_us=$green
 
-# Set exa as the ls command
+# Set ls_extended as the ls command
 alias ls='ls_extended -s'
 alias l='ls -lAh'
+
+# Set rsync as the copy command
+alias cp='rsync -ah --info=progress2'
+alias cpna='rsync -h --info=progress2'
 
 # Set neovim as vim and default EDITOR
 alias vim="/usr/bin/nvim"
@@ -142,3 +149,33 @@ export PATH="${PATH}:${GOPATH}/bin"
 
 # Emoji CLI
 source /usr/share/zsh/plugins/emoji-cli/emoji-cli.zsh
+
+# Correct previous command if typo
+eval $(thefuck --alias fuck)
+
+# Compile + Run a source file
+run() {
+	filename="${1%%.*}"
+	ext="${1#*.}"
+	if [[ "$ext" == "c" ]]; then
+		gcc $@ -o "$filename"
+		./${filename}
+	elif [[ "$ext" == "cpp" ]]; then
+		g++ $@ -o "$filename"
+		./${filename}
+	elif [[ "$ext" == "py" ]]; then
+		python3 $@
+	elif [[ "$ext" == "java" ]]; then
+		javac $@
+		java ${filename}
+	fi
+}
+
+reload() {
+	prog="${1}"
+	if [[ "$prog" == "polybar" ]]; then
+		killall polybar
+		polybar --reload example &
+		disown %polybar
+	fi
+}
