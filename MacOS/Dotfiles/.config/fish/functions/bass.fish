@@ -1,0 +1,1 @@
+/Users/electrux/.config/fisherman/bass/functions/bass.fish

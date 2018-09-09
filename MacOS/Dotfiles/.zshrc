@@ -10,7 +10,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="spaceship-prompt/spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -151,7 +151,7 @@ SPACESHIP_EXIT_CODE_SHOW="true"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source ~/GitHub/emoji-cli/emoji-cli.zsh
+source ~/Git/emoji-cli/emoji-cli.zsh
 
 # Go lang settings
 export GOPATH="${HOME}/.go"
@@ -160,6 +160,9 @@ export PATH="${PATH}:${GOPATH}/bin:${GOROOT}/bin"
 
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+# Rust lang settings
+source ~/.cargo/env
 
 # Nim lang settings
 export PATH="${PATH}:${HOME}/.nimble/bin"

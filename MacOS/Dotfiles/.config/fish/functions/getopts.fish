@@ -1,0 +1,1 @@
+/Users/electrux/.config/fisherman/getopts/getopts.fish

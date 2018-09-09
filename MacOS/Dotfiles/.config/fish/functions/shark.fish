@@ -1,0 +1,1 @@
+/Users/electrux/.config/fisherman/shark/functions/shark.fish

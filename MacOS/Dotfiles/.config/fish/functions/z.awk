@@ -1,0 +1,1 @@
+/Users/electrux/.config/fisherman/z/functions/z.awk
