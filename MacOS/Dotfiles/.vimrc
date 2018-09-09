@@ -11,7 +11,7 @@ set relativenumber
 set number
 set backspace=indent,eol,start
 
-let g:ycm_global_ycm_extra_conf = '/Users/electrux/GitHub/Electrux/OS-Stuff/MacOS/DotFiles/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/Users/electrux/Git/Electrux/OS-Stuff/MacOS/DotFiles/.ycm_extra_conf.py'
 
 " Remove cursor change in nvim.
 set guicursor=
@@ -55,7 +55,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Displays indentation level with thin line
-Plug 'yggdroot/indentLine'
+"Plug 'yggdroot/indentLine'
 
 " ViM-Plug ends.
 call plug#end()

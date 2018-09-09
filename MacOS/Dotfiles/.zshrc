@@ -153,10 +153,6 @@ SPACESHIP_EXIT_CODE_SHOW="true"
 
 source ~/GitHub/emoji-cli/emoji-cli.zsh
 
-# Show the tasks which I have to do...
-echo ''
-fortune 2>&1 | cowsay -f dragon | lolcat
-
 # Go lang settings
 export GOPATH="${HOME}/.go"
 export GOROOT="$(brew --prefix go)/libexec"
@@ -172,12 +168,13 @@ export PATH="${PATH}:${HOME}/.nimble/bin"
 alias git="/usr/local/bin/hub"
 
 # Use ls_extended instead of ls
-# use different font for non-ascii stuff
-# ( like overpass mono nerd font ) to ensure
-# that icon size is decent enough
 #alias ls="/usr/local/bin/ls_extended"
 #alias l="ls -lAsh"
 
 # Set exa as the ls command
 alias ls='exa -s name -F'
 alias l='ls -la'
+
+# Neofetch at beginning
+echo ''
+neofetch

@@ -323,8 +323,8 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq-default ycmd-server-command '("/usr/local/bin/python3" "/Users/electrux/GitHub/ycmd/ycmd"))
-  (setq-default ycmd-global-config "/Users/electrux/GitHub/Electrux/OS-Stuff/MacOS/Dotfiles/.ycm_extra_conf.py")
+  (setq-default ycmd-server-command '("/usr/local/bin/python3" "/Users/electrux/Git/ycmd/ycmd"))
+  (setq-default ycmd-global-config "/Users/electrux/Git/Electrux/OS-Stuff/MacOS/Dotfiles/.ycm_extra_conf.py")
   ;; (setq-default racer-rust-src-path "/usr/local/share/rust/rust_src")
   ;; (setq-default powerline-default-separator 'arrow)
   (setq-default neo-theme (if (display-graphic-p) 'icons 'arrow))

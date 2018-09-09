@@ -137,7 +137,7 @@ alias l='ls -lAh'
 
 # Set rsync as the copy command
 alias cp='rsync -ah --info=progress2'
-alias cpna='rsync -h --info=progress2'
+alias scpna='sudo rsync -h --info=progress2'
 
 # Set neovim as vim and default EDITOR
 alias vim="/usr/bin/nvim"
