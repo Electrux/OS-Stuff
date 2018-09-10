@@ -1,8 +1,8 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Base16 Dark Ocean",
+    "workbench.colorTheme": "Ocean Dark Extended",
     "editor.fontSize": 13,
-    "editor.fontFamily": "'FantasqueSansMono Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'FuraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": false,
     "editor.tabSize": 8,
     "editor.insertSpaces": false,
