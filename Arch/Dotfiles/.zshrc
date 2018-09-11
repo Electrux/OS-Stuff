@@ -103,9 +103,6 @@ source ~/Git/z/z.sh
 # Source the dotfiles shortcut function
 source ~/Git/Electrux/OS-Stuff/Customization/scripts/editdots.sh
 
-echo ''
-neofetch
-
 # Make output of less command colorized.
 # Colors
 default=$(tput sgr0)
@@ -179,3 +176,17 @@ reload() {
 		disown %polybar
 	fi
 }
+
+# ZSH spaceship prompt settings reconfigure
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+SPACESHIP_CHAR_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
+SPACESHIP_TIME_SHOW="true"
+SPACESHIP_USER_SHOW="always"
+SPACESHIP_HOST_SHOW="always"
+SPACESHIP_DIR_TRUNC="0"
+SPACESHIP_EXEC_TIME_ELAPSED="5"
+SPACESHIP_BATTERY_SHOW="charged"
+SPACESHIP_EXIT_CODE_SHOW="true"
+
+echo ''
+neofetch
