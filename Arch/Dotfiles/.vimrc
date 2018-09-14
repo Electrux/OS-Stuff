@@ -29,7 +29,10 @@ set rtp+=/usr/bin/fzf
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Plugin for code completion server - You complete me.
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --clang-completer --system-libclang --rust-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py' }
+
+" Plugin for rainbow matching bracket colors
+Plug 'luochen1990/rainbow'
 
 " Plugin for file management.
 Plug 'scrooloose/nerdtree'
@@ -64,7 +67,10 @@ filetype plugin indent on    " required
 
 let g:livepreview_previewer = 'open -a Preview'
 let g:livepreview_engine = 'xelatex' . ' '
+
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'deus'
+
+let g:rainbow_active = 1
 
 autocmd Filetype tex setl updatetime=1

@@ -178,3 +178,10 @@ XF86KbdBrightnessUp
 
 XF86KbdBrightnessDown
 	xbacklight -ctrl smc::kbd_backlight -dec 20
+
+# Multiple Displays
+super + shift + m
+	~/.config/bspwm/scripts/multi-monitors.sh
+
+super + shift + s
+	~/.config/bspwm/scripts/single-monitor.sh
