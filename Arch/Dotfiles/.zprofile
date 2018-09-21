@@ -7,10 +7,8 @@ export GDK_DPI_SCALE=0.8
 # GTK disable overlay scrollbar
 export GTK_OVERLAY_SCROLLING=0
 
-export PATH="$HOME/.cargo/bin:$PATH"
-
-eval $(keychain --eval --agents ssh $(ls ~/.ssh/id_rsa* | grep -v '.pub'))
-source $HOME/.keychain/$HOST-sh
+eval $(keychain --eval --agents ssh $(/usr/bin/ls ~/.ssh/id_rsa* | grep -v '.pub'))
+source ~/.keychain/$HOST-sh
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx

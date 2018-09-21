@@ -7,8 +7,3 @@ if type "xrandr"; then
 else
   polybar --reload example &
 fi
-#!/bin/bash
-
-xrandr --auto --output HDMI3 --mode 1920x1080 --right-of eDP1
-/home/electrux/.config/polybar/scripts/monitor-mgmt.sh
-

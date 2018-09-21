@@ -1,9 +1,9 @@
 [Unit]
-Description=Runs lowpower.service every two minutes
+Description=Runs lowpower.service every minute
 
 [Timer]
 OnBootSec=1min
-OnUnitActiveSec=2min
+OnUnitActiveSec=1min
 Unit=lowpower.service
 
 [Install]

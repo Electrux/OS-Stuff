@@ -178,27 +178,34 @@ export EDITOR="/usr/bin/nvim"
 export GOPATH="${HOME}/.go"
 export PATH="${PATH}:${GOPATH}/bin"
 
+# Rust lang settings
+export PATH="${HOME}/.cargo/bin:${PATH}"
+
 # Emoji CLI
 source /usr/share/zsh/plugins/emoji-cli/emoji-cli.zsh
 
 # Correct previous command if typo
 eval $(thefuck --alias fuck)
 
+# muPDF set page color to black
+alias mupdf="mupdf -I"
+
+# Copy & Paste
+alias copy="xclip -sel clipboard"
+alias paste="xclip -sel clipboard -o 2>/dev/null"
+
 # Compile + Run a source file
 run() {
 	filename="${1%%.*}"
 	ext="${1#*.}"
 	if [[ "$ext" == "c" ]]; then
-		gcc $@ -o "$filename"
-		./${filename}
+		gcc $@ -o "$filename" && ./${filename}
 	elif [[ "$ext" == "cpp" ]]; then
-		g++ $@ -o "$filename"
-		./${filename}
+		g++ $@ -o "$filename" && ./${filename}
 	elif [[ "$ext" == "py" ]]; then
 		python3 $@
 	elif [[ "$ext" == "java" ]]; then
-		javac $@
-		java ${filename}
+		javac $@ && java ${filename}
 	fi
 }
 
