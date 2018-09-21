@@ -19,6 +19,9 @@ set guicursor=
 " Enable python3 support ( for YCM ) in nvim.
 let g:python3_host_prog = '/usr/local/bin/python3'
 
+" For vimtex with neovim
+let g:vimtex_compiler_progname = 'nvr'
+
 " NERDTree setting.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -49,6 +52,9 @@ Plug 'slashmili/alchemist.vim'
 
 " Plugin for nim support
 Plug 'zah/nim.vim'
+
+" Plugin for latex
+Plug 'lervag/vimtex'
 
 " Plugins for powerline via ViM-Airline
 Plug 'vim-airline/vim-airline'
