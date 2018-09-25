@@ -167,6 +167,11 @@ source ~/.cargo/env
 # Nim lang settings
 export PATH="${PATH}:${HOME}/.nimble/bin"
 
+# Set default gcc to be homebrew llvm
+export PATH="/usr/local/opt/llvm/bin:${PATH}"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+export LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
+
 # Use hub instead of directly git to reduce work
 alias git="/usr/local/bin/hub"
 
@@ -177,6 +182,21 @@ alias git="/usr/local/bin/hub"
 # Set exa as the ls command
 alias ls='exa -s name -F'
 alias l='ls -la'
+
+# Compile + Run a source file
+run() {
+        filename="${1%%.*}"
+        ext="${1#*.}"
+        if [[ "$ext" == "c" ]]; then
+                clang $@ -o "$filename" && ./${filename}
+        elif [[ "$ext" == "cpp" ]]; then
+                clang++ -std=c++14 $@ -o "$filename" && ./${filename}
+        elif [[ "$ext" == "py" ]]; then
+                python3 $@
+        elif [[ "$ext" == "java" ]]; then
+                javac $@ && java ${filename}
+        fi
+}
 
 # Neofetch at beginning
 echo ''

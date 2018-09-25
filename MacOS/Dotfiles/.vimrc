@@ -60,6 +60,9 @@ Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Base16 ViM themes
+Plug 'chriskempson/base16-vim'
+
 " Displays indentation level with thin line
 "Plug 'yggdroot/indentLine'
 
@@ -73,4 +76,23 @@ let g:livepreview_engine = 'xelatex' . ' '
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'deus'
 
+" Set ViM color scheme
+set termguicolors
+colorscheme base16-ocean
+
 autocmd Filetype tex setl updatetime=1
+
+" Customization
+
+set showcmd
+let mapleader = ' '
+
+" Split controls
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Split direction
+set splitbelow
+set splitright

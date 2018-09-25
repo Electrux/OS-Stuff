@@ -79828,3 +79828,7 @@
 
 
 # 0.0.0.0 example.com
+
+# Custom URLs
+
+0.0.0.0 insticator.com
