@@ -93,6 +93,17 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" YCM keys
+nnoremap <leader>yg :YcmCompleter GetType<CR>
+nnoremap <leader>yf :YcmCompleter FixIt<CR>
+nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
+nnoremap <leader>ydc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>ydf :YcmCompleter GoToDefinition<CR>
+
+" Other editing
+"clear highlight
+nnoremap <leader><leader> :noh<CR>
+
 " Split direction
 set splitbelow
 set splitright

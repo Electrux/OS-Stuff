@@ -58,10 +58,11 @@ flags = [
     # For a C project, you would set this to 'c' instead of 'c++'.
     '-x',
     'c++',
-    '-I/usr/include',
-    '-I/Library/Developer/CommandLineTools/usr/include/c++/v1',
-    '-I/usr/local/include',
     '-I/usr/local/opt/llvm/include/c++/v1',
+    '-I/usr/local/opt/qt/include',
+    '-I/usr/include',
+    '-I/usr/local/include',
+    '-I/Library/Developer/CommandLineTools/usr/include/c++/v1',
 ]
 
 
