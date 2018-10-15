@@ -7,6 +7,11 @@ export GDK_DPI_SCALE=0.8
 # GTK disable overlay scrollbar
 export GTK_OVERLAY_SCROLLING=0
 
+# Important variables
+export EDITOR="/usr/bin/nvim"
+export TERMINAL="/usr/bin/alacritty"
+export BROWSER="/usr/bin/google-chrome-stable"
+
 eval $(keychain --eval --agents ssh $(/usr/bin/ls ~/.ssh/id_rsa* | grep -v '.pub'))
 source ~/.keychain/$HOST-sh
 

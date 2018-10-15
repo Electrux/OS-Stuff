@@ -74,3 +74,30 @@ let g:airline_theme = 'deus'
 let g:rainbow_active = 1
 
 autocmd Filetype tex setl updatetime=1
+
+" Customization
+
+set showcmd
+let mapleader = ' '
+
+" Split controls
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" YCM keys
+nnoremap <leader>yg :YcmCompleter GetType<CR>
+nnoremap <leader>yf :YcmCompleter FixIt<CR>
+nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
+nnoremap <leader>ydc :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>ydf :YcmCompleter GoToDefinition<CR>
+
+" Other editing
+"clear highlight
+nnoremap <leader><leader> :noh<CR>
+nnoremap <leader>q :bd<CR>
+
+" Split direction
+set splitbelow
+set splitright

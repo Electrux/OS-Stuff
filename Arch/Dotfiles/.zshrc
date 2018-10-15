@@ -168,11 +168,11 @@ alias l='ls -lAh'
 
 # Set rsync as the copy command
 alias cp='rsync -ah --info=progress2'
+# Don't preserve permissions
 alias scpna='sudo rsync -h --info=progress2'
 
-# Set neovim as vim and default EDITOR
+# Set neovim as vim
 alias vim="/usr/bin/nvim"
-export EDITOR="/usr/bin/nvim"
 
 # Go lang settings
 export GOPATH="${HOME}/.go"
@@ -199,13 +199,13 @@ run() {
 	filename="${1%%.*}"
 	ext="${1#*.}"
 	if [[ "$ext" == "c" ]]; then
-		gcc $@ -o "$filename" && ./${filename}
+	        $(echo "gcc $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
 	elif [[ "$ext" == "cpp" ]]; then
-		g++ $@ -o "$filename" && ./${filename}
+	        $(echo "g++ -std=c++17 $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
 	elif [[ "$ext" == "py" ]]; then
-		python3 $@
+	        python3 $@
 	elif [[ "$ext" == "java" ]]; then
-		javac $@ && java ${filename}
+		javac $@ && echo "Executing ${filename}" && java ${filename}
 	fi
 }
 

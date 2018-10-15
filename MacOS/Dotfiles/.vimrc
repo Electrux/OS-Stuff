@@ -103,6 +103,7 @@ nnoremap <leader>ydf :YcmCompleter GoToDefinition<CR>
 " Other editing
 "clear highlight
 nnoremap <leader><leader> :noh<CR>
+nnoremap <leader>q :bd<CR>
 
 " Split direction
 set splitbelow
