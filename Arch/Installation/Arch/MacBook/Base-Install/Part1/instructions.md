@@ -102,7 +102,7 @@ Installing Arch linux on an MSI laptop Part 1.
 	
 	9. Now, we install the base system along with the development (programming related softwares) packages. So use the following command to do the same (This will take a while depending on Internet):
 
-		pacstrap /mnt base base-devel python3 python2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions intel-ucode noto-fonts ttf-inconsolata ttf-dejavu sudo vim neovim clang xorg xorg-xinit xf86-video-intel cmake git --needed
+		pacstrap /mnt base base-devel python3 python2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions intel-ucode noto-fonts ttf-inconsolata ttf-dejavu sudo vim neovim clang xorg xorg-xinit xf86-video-intel cmake git qt5 keychain --needed
 	
 
 	10. Now, we will set the partition and mount info to be loaded when system starts. This will be done using fstab. So, enter this command:
