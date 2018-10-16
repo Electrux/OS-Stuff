@@ -11,12 +11,12 @@ script_dir="${os_stuff_dir}/Arch/Dotfiles"
 mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts}
 
 ## Install other software
-sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv rxvt-unicode wget curl git rofi bspwm sxhkd networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl
+sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv rxvt-unicode wget curl git rofi bspwm sxhkd networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh
 
 # Clone git repositories
 
 git clone https://github.com/Electrux/OS-Stuff.git ${os_stuff_dir}
-git clone https://github.com/rupa/z.git ~/Git/
+git clone https://github.com/rupa/z.git ~/Git/z/
 
 # Core settings
 
@@ -83,24 +83,24 @@ sudo systemctl enable NetworkManager
 #sudo systemctl enable bluetooth
 sudo systemctl enable disable_gpe
 sudo systemctl enable hdmi_sound_toggle
-sudo systemctl start NetworkManager
+#sudo systemctl start NetworkManager
 #sudo systemctl start bluetooth
-sudo systemctl start disable_gpe
-sudo systemctl start hdmi_sound_toggle
+#sudo systemctl start disable_gpe
+#sudo systemctl start hdmi_sound_toggle
 
 ## User services
 systemctl --user enable lowpower.timer
-systemctl --user start lowpower.timer
+#systemctl --user start lowpower.timer
 
 systemctl --user enable syncthing
 systemctl --user enable mpd
-systemctl --user start syncthing
-systemctl --user start mpd
+#systemctl --user start syncthing
+#systemctl --user start mpd
 
 # Install trizen
 
 mkdir -p /tmp/trizen
-git clone https://aur.archlinux.org/packages/trizen-git /tmp/trizen
+git clone https://aur.archlinux.org/trizen-git.git /tmp/trizen
 cd /tmp/trizen
 makepkg -si --needed --noconfirm
 cd ~
@@ -118,7 +118,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 # Finally, install oh my zsh and its theme
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g')"
 git clone https://github.com/denysdovhan/spaceship-prompt.git "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt"
 rm -rf ~/.zshrc
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
