@@ -11,7 +11,7 @@ script_dir="${base_dir}/Arch/Dotfiles"
 mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts}
 
 ## Install other software
-sudo pacman -S --noconfirm --needed syncthing mpd ncmpcpp ranger neofetch mpv rxvt-unicode wget curl git rofi bspwm sxhkd networkmanager network-manager-applet acpi
+sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv rxvt-unicode wget curl git rofi bspwm sxhkd networkmanager network-manager-applet acpi
 
 # Clone git repositories
 
@@ -110,3 +110,10 @@ sudo rm -rf /tmp/trizen
 # Install AUR packages
 
 trizen -S --noconfirm powerline-fonts-git google-chrome acpilight
+
+# Finally, install oh my zsh and its theme
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/denysdovhan/spaceship-prompt.git "${ZSH_CUSTOM}/themes/spaceship-prompt"
+rm -rf ~/.zshrc
+mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
