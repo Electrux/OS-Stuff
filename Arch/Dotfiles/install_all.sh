@@ -1,9 +1,9 @@
 #!/bin/bash
 
 user="Electrux"
-base_dir="~/Git/${user}"
+base_dir="${HOME}/Git/${user}"
 os_stuff_dir="${base_dir}/OS-Stuff"
-script_dir="${base_dir}/Arch/Dotfiles"
+script_dir="${os_stuff_dir}/Arch/Dotfiles"
 
 # Base
 
@@ -37,7 +37,7 @@ sudo cp ${script_dir}/etc/makepkg.conf /etc/
 ### Auto-login and sleep on flap down
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
 sudo cp ${script_dir}/etc/systemd/system/getty@tty1.service.d/override.conf /etc/systemd/system/getty@tty1.service.d/
-sudo cp ${script_dir}/etc/systemd/system/logind.conf /etc/systemd/system/
+sudo cp ${script_dir}/etc/systemd/logind.conf /etc/systemd/
 
 ## Binaries
 sudo ln -sf ${script_dir}/usr/bin/* /usr/bin/
@@ -63,15 +63,15 @@ mkdir -p ~/.config/nvim/
 ln -sf ${script_dir}/.vimrc ~/.config/nvim/init.vim
 
 ## Install Fira code nerd fonts
-curl -fLo ~/.local/share/fonts/ \
+curl -fLo ~/.local/share/fonts/Fura\ Code\ Regular\ Nerd\ Font\ Complete\ Mono.otf \
 	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Regular/complete/Fura%20Code%20Regular%20Nerd%20Font%20Complete%20Mono.otf
-curl -fLo ~/.local/share/fonts/ \
+curl -fLo ~/.local/share/fonts/Fura\ Code\ Bold\ Nerd\ Font\ Complete\ Mono.otf \
 	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Bold/complete/Fura%20Code%20Bold%20Nerd%20Font%20Complete%20Mono.otf
-curl -fLo ~/.local/share/fonts/ \
+curl -fLo ~/.local/share/fonts/Fura\ Code\ Light\ Nerd\ Font\ Complete\ Mono.otf \
 	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Light/complete/Fura%20Code%20Light%20Nerd%20Font%20Complete%20Mono.otf
-curl -fLo ~/.local/share/fonts/ \
+curl -fLo ~/.local/share/fonts/Fura\ Code\ Medium\ Nerd\ Font\ Complete\ Mono.otf \
 	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Medium/complete/Fura%20Code%20Medium%20Nerd%20Font%20Complete%20Mono.otf
-curl -fLo ~/.local/share/fonts/ \
+curl -fLo ~/.local/share/fonts/Fura\ Code\ Retina\ Nerd\ Font\ Complete\ Mono.otf \
 	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Retina/complete/Fura%20Code%20Retina%20Nerd%20Font%20Complete%20Mono.otf
 
 fc-cache -f
@@ -102,7 +102,7 @@ systemctl --user start mpd
 mkdir -p /tmp/trizen
 git clone https://aur.archlinux.org/packages/trizen-git /tmp/trizen
 cd /tmp/trizen
-sudo makepkg -si --needed --noconfirm
+makepkg -si --needed --noconfirm
 cd ~
 sudo rm -rf /tmp/trizen
 
@@ -113,6 +113,6 @@ trizen -S --noconfirm powerline-fonts-git google-chrome acpilight
 # Finally, install oh my zsh and its theme
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/denysdovhan/spaceship-prompt.git "${ZSH_CUSTOM}/themes/spaceship-prompt"
+git clone https://github.com/denysdovhan/spaceship-prompt.git "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt"
 rm -rf ~/.zshrc
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
