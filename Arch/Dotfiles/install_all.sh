@@ -1,6 +1,23 @@
 #!/bin/bash
 
-script_dir=$(dirname "$0")
+user="Electrux"
+base_dir="~/Git/${user}"
+os_stuff_dir="${base_dir}/OS-Stuff"
+script_dir="${base_dir}/Arch/Dotfiles"
+
+# Base
+
+## Create directories
+mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts}
+
+## Install other software
+sudo pacman -S --noconfirm --needed syncthing mpd ncmpcpp ranger neofetch mpv rxvt-unicode wget curl git rofi bspwm sxhkd networkmanager network-manager-applet acpi
+
+# Clone git repositories
+
+git clone https://github.com/Electrux/OS-Stuff.git ${os_stuff_dir}
+git clone https://github.com/rupa/z.git ~/Git/
+
 
 # Core settings
 
@@ -46,11 +63,50 @@ ln -sf ${script_dir}/.{asoundrc,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshr
 mkdir -p ~/.config/nvim/
 ln -sf ${script_dir}/.vimrc ~/.config/nvim/init.vim
 
+## Install Fira code nerd fonts
+curl -fLo ~/.local/share/fonts/ \
+	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Regular/complete/Fura%20Code%20Regular%20Nerd%20Font%20Complete%20Mono.otf
+curl -fLo ~/.local/share/fonts/ \
+	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Bold/complete/Fura%20Code%20Bold%20Nerd%20Font%20Complete%20Mono.otf
+curl -fLo ~/.local/share/fonts/ \
+	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Light/complete/Fura%20Code%20Light%20Nerd%20Font%20Complete%20Mono.otf
+curl -fLo ~/.local/share/fonts/ \
+	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Medium/complete/Fura%20Code%20Medium%20Nerd%20Font%20Complete%20Mono.otf
+curl -fLo ~/.local/share/fonts/ \
+	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Retina/complete/Fura%20Code%20Retina%20Nerd%20Font%20Complete%20Mono.otf
+
+fc-cache -f
+
 # Enable systemd services
 
 ## System services
+sudo systemctl enable NetworkManager
+#sudo systemctl enable bluetooth
 sudo systemctl enable disable_gpe
 sudo systemctl enable hdmi_sound_toggle
+sudo systemctl start NetworkManager
+#sudo systemctl start bluetooth
+sudo systemctl start disable_gpe
+sudo systemctl start hdmi_sound_toggle
 
 ## User services
 systemctl --user enable lowpower.timer
+systemctl --user start lowpower.timer
+
+systemctl --user enable syncthing
+systemctl --user enable mpd
+systemctl --user start syncthing
+systemctl --user start mpd
+
+# Install trizen
+
+mkdir -p /tmp/trizen
+git clone https://aur.archlinux.org/packages/trizen-git /tmp/trizen
+cd /tmp/trizen
+sudo makepkg -si --needed --noconfirm
+cd ~
+sudo rm -rf /tmp/trizen
+
+# Install AUR packages
+
+trizen -S --noconfirm powerline-fonts-git google-chrome acpilight
