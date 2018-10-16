@@ -57,6 +57,9 @@ Plug 'zah/nim.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Base16 ViM themes
+Plug 'chriskempson/base16-vim'
+
 " Displays indentation level with thin line
 "Plug 'yggdroot/indentLine'
 
@@ -65,13 +68,17 @@ call plug#end()
 
 filetype plugin indent on    " required
 
-let g:livepreview_previewer = 'open -a Preview'
+let g:livepreview_previewer = 'zathura'
 let g:livepreview_engine = 'xelatex' . ' '
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'deus'
 
 let g:rainbow_active = 1
+
+" set ViM color scheme
+set termguicolors
+colorscheme base16-ocean
 
 autocmd Filetype tex setl updatetime=1
 
