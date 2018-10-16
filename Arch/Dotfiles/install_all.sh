@@ -18,7 +18,6 @@ sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting 
 git clone https://github.com/Electrux/OS-Stuff.git ${os_stuff_dir}
 git clone https://github.com/rupa/z.git ~/Git/
 
-
 # Core settings
 
 ## Bootloader
