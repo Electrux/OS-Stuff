@@ -110,7 +110,7 @@ sudo rm -rf /tmp/trizen
 
 # Install AUR packages
 
-trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git
+trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware
 
 # Install Vim Plug
 
@@ -125,3 +125,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/denysdovhan/spaceship-prompt.git "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt"
 rm -rf ~/.zshrc
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+
+sudo mkinitcpio -p linux
