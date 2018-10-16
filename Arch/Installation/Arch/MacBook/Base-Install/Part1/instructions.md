@@ -211,7 +211,7 @@ Installing Arch linux on an MSI laptop Part 1.
 
 		18.d Now create your account using the following command:
 
-			useradd -m -G wheel -s /bin/zsh -c "<full name>" <username>
+			useradd -m -G wheel,input,audio,video -s /bin/zsh -c "<full name>" <username>
 
 		18.e Set the password for the new account:
 
