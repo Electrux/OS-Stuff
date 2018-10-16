@@ -7,6 +7,8 @@ script_dir="${os_stuff_dir}/Arch/Dotfiles"
 
 # Base
 
+## In case one forgets this
+sudo locale-gen
 ## Create directories
 mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts,.config}
 
