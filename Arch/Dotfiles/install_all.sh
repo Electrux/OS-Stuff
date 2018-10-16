@@ -110,7 +110,7 @@ sudo rm -rf /tmp/trizen
 
 # Install AUR packages
 
-trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware
+trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git
 
 # Install Vim Plug
 
