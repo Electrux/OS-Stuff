@@ -8,7 +8,7 @@ script_dir="${os_stuff_dir}/Arch/Dotfiles"
 # Base
 
 ## Create directories
-mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts}
+mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts,.config}
 
 ## Install other software
 sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv rxvt-unicode wget curl git rofi bspwm sxhkd networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh
