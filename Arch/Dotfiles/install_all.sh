@@ -9,11 +9,15 @@ script_dir="${os_stuff_dir}/Arch/Dotfiles"
 
 ## In case one forgets this
 sudo locale-gen
+
 ## Create directories
 mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts,.config,.mpd}
 
+## Install Rust lang
+curl https://sh.rustup.rs -sSf | sh
+
 ## Install other software
-sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv rxvt-unicode wget curl git rofi bspwm sxhkd networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton
+sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git rofi bspwm sxhkd networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton
 
 # Clone git repositories
 
@@ -110,7 +114,7 @@ sudo rm -rf /tmp/trizen
 
 # Install AUR packages
 
-trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git
+trizen -S --noconfirm alacritty-scrollback-git powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git
 
 # Install Vim Plug
 
