@@ -179,7 +179,7 @@ export GOPATH="${HOME}/.go"
 export PATH="${PATH}:${GOPATH}/bin"
 
 # Rust lang settings
-export PATH="${HOME}/.cargo/bin:${PATH}"
+source ~/.cargo/env
 
 # Emoji CLI
 source /usr/share/zsh/plugins/emoji-cli/emoji-cli.zsh

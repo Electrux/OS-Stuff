@@ -14,10 +14,12 @@ sudo locale-gen
 mkdir -p ~/{Documents,Downloads,Movies,Git/${user},.local/share/fonts,.config,.mpd}
 
 ## Install Rust lang
-curl https://sh.rustup.rs -sSf | sh
+sudo pacman -S rustup
+rustup default nightly && rustup update
+source ~/.cargo/env
 
 ## Install other software
-sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git rofi bspwm sxhkd networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton
+sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi bspwm sxhkd networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh
 
 # Clone git repositories
 
@@ -114,14 +116,17 @@ sudo rm -rf /tmp/trizen
 
 # Install AUR packages
 
-trizen -S --noconfirm alacritty-scrollback-git powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git
+trizen -S --noconfirm alacritty-git powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git ttf-twemoji-color
 
-# Install Vim Plug
+# Install (Neo)Vim Plug
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install spacemacs
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # Finally, install oh my zsh and its theme
 
