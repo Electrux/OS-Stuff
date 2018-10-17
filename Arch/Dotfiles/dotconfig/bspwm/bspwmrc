@@ -10,6 +10,10 @@ blueman-applet &
 compton -bc --config ~/.config/compton/compton.conf
 feh --bg-scale ~/Pictures/Wallpapers/minimal-ocean-whale.png
 
+# For multimonitor
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+
 # Widths and stuff
 bspc config border_width          2
 bspc config window_gap            0
