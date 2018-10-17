@@ -61,7 +61,7 @@ sudo cp ${script_dir}/var/lib/alsa/* /var/lib/alsa/
 
 ## Core
 ln -sf ${script_dir}/dotncmpcpp ~/.ncmpcpp
-ln -sf ${script_dir}/dotconfig/{alacritty,bspwm,compton,dunst,mpd,polybar,ranger,sxhkd,libinput-gestures.conf} ~/.config/
+ln -sf ${script_dir}/dotconfig/{alacritty,bspwm,compton,dunst,mpd,polybar,ranger,sxhkd,zathura,libinput-gestures.conf} ~/.config/
 
 ## Others
 ln -sf ${script_dir}/.{asoundrc,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
@@ -116,7 +116,7 @@ sudo rm -rf /tmp/trizen
 
 # Install AUR packages
 
-trizen -S --noconfirm alacritty-git powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git ttf-twemoji-color
+trizen -S --noconfirm alacritty-git powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git ttf-twemoji-color bcwc-pcie-git
 
 # Install (Neo)Vim Plug
 
