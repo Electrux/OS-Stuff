@@ -11,5 +11,7 @@ bspc desktop VII -m HDMI3
 bspc desktop VIII -m HDMI3
 bspc desktop IX -m HDMI3
 bspc desktop X -m HDMI3
+
+feh --bg-scale $WALLPAPER
 #bspc monitor eDP1 -d I II III IV V
 #bspc monitor HDMI3 -d VI VII VIII IX X

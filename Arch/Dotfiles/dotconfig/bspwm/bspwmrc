@@ -8,7 +8,7 @@ dunst &
 sxhkd &
 blueman-applet &
 compton -bc --config ~/.config/compton/compton.conf
-feh --bg-scale ~/Pictures/Wallpapers/minimal-ocean-whale.png
+feh --bg-scale $WALLPAPER
 
 # For multimonitor
 bspc config remove_disabled_monitors true

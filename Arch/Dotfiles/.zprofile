@@ -14,6 +14,7 @@ export GTK_OVERLAY_SCROLLING=0
 export EDITOR="/usr/bin/nvim"
 export TERMINAL="/usr/bin/urxvt"
 export BROWSER="/usr/bin/google-chrome-stable"
+export WALLPAPER="~/Pictures/Wallpapers/minimal-ocean-whale.png"
 
 # TODO: Having autologin screws up with eval/source.
 

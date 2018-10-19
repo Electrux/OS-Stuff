@@ -85,8 +85,8 @@ URxvt.buffered: false
 !   Font settings for Rxvt  !
 !---------------------------!
 URxvt.allow_bold:           true
-URxvt*font: xft:FuraCode Nerd Font Mono:size=6,xft: Inconsolata for Powerline:size=6
-URxvt*boldFont: xft:FuraCode Nerd Font Mono:style=bold:size=6,xft: Inconsolata for Powerline:style=BoldForPowerline:size=6
+URxvt*font: xft:FuraCode Nerd Font Mono:size=7,xft: Inconsolata for Powerline:size=7
+URxvt*boldFont: xft:FuraCode Nerd Font Mono:style=bold:size=7,xft: Inconsolata for Powerline:style=BoldForPowerline:size=7
 
 !-----------------------------!
 ! Scrollbar settings for Rxvt !

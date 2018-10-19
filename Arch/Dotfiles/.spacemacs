@@ -341,6 +341,7 @@ you should place your code here."
   (setq-default evil-operator-state-cursor '(box "#aadddd"))
   ;; Set indentation mode for C-esque languages.
   (setq-default
+   c-default-style "stroustrup"
    c-basic-offset 8
    tab-width 8
    indent-tabs-mode t)
