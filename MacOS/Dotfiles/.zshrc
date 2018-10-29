@@ -177,6 +177,9 @@ export PATH="/usr/local/opt/qt/bin:${PATH}"
 export CPPFLAGS="-I/usr/local/opt/qt/include ${CPPFLAGS}"
 export LDFLAGS="-L/usr/local/opt/qt/lib ${LDFLAGS}"
 
+# Set path for haskell (stack)
+export PATH="${HOME}/.local/bin:${PATH}"
+
 # Use hub instead of directly git to reduce work
 alias git="/usr/local/bin/hub"
 
@@ -196,6 +199,10 @@ run() {
 	        $(echo "clang $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
 	elif [[ "$ext" == "cpp" ]]; then
 	        $(echo "clang++ -std=c++17 $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
+	elif [[ "$ext" == "rs" ]]; then
+		rustc $@ && ./${filename}
+	elif [[ "$ext" == "d" ]]; then
+		dmd $@ && ./${filename}
 	elif [[ "$ext" == "py" ]]; then
 	        python3 $@
 	elif [[ "$ext" == "java" ]]; then

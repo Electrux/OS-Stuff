@@ -53,6 +53,10 @@ Plug 'slashmili/alchemist.vim'
 " Plugin for nim support
 Plug 'zah/nim.vim'
 
+" Plugins for dlang
+Plug 'Sirsireesh/vim-dlang-phobos-highlighter'
+Plug 'idanarye/vim-dutyl'
+
 " Plugin for latex
 Plug 'lervag/vimtex'
 
@@ -80,7 +84,14 @@ let g:airline_theme = 'deus'
 set termguicolors
 colorscheme base16-ocean
 
+" For dlang
+let g:dutyl_stdImportPaths=['/usr/local/include/dlang/dmd']
+call dutyl#register#tool('dfmt','~/.dub/packages/dfmt-master/dfmt/bin/dfmt')
+call dutyl#register#tool('dscanner','~/.dub/packages/dscanner-0.5.11/dscanner/bin/dscanner')
+
 autocmd Filetype tex setl updatetime=1
+autocmd VimEnter d if exists(':DUDCDrestartServer') | DUDCDrestartServer | endif
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 " Customization
 

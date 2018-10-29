@@ -177,10 +177,10 @@
   :init (add-hook 'after-init-hook #'global-ycmd-mode)
   :config
   ;; Need absolute path in ycmd-server-command to work correctly.
-  (set-variable 'ycmd-server-command '("python3" "/Users/electrux/GitHub/ycmd/ycmd/"))
-  (set-variable 'ycmd-global-config (expand-file-name "~/GitHub/Linux-Stuff/dotfiles/.ycm_extra_conf.py"))
+  (set-variable 'ycmd-server-command '("python3" "/Users/electrux/Git/ycmd/ycmd/"))
+  (set-variable 'ycmd-global-config (expand-file-name "~/Git/OS-Stuff/MacOS/Dotfiles/.ycm_extra_conf.py"))
 
-  (set-variable 'ycmd-extra-conf-whitelist '("~/Programming/*" "~/GitHub/*"))
+  (set-variable 'ycmd-extra-conf-whitelist '("~/Programming/*" "~/Git/*"))
 
   (use-package flycheck-ycmd
     :commands (flycheck-ycmd-setup)
