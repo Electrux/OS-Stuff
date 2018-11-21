@@ -10,3 +10,9 @@ ln -sf ${script_dir}/.config/ranger ~/.config/
 
 # neovim
 ln -sf ${script_dir}/.vimrc ~/.config/nvim/init.vim
+
+# (neo)vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
