@@ -4,7 +4,7 @@
 set window-title-basename	"true"
 set selection-clipboard		"clipboard"
 
-set font			"FuraCode Nerd Font Mono 10"
+set font			"Source Code Pro for Powerline 10"
 
 set default-bg                  "#2b303b"
 set default-fg                  "#343d46"
