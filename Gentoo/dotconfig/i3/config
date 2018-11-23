@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Wallpaper file
-set $wallpaper ~/Pictures/Wallpapers/white-eye-ring-drip-blood-mouth-vampire-female.jpg
+set $wallpaper ~/Pictures/Wallpapers/sideways-scifi-city.jpg
 
 # Set workspace names by roles
 set $ws1 "1:Main"

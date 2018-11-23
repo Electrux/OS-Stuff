@@ -77,7 +77,12 @@ let g:airline_theme = 'deus'
 let g:rainbow_active = 1
 
 " set ViM color scheme
-set termguicolors
+" Transparency
+if has("termguicolors")     " set true colors
+    set t_8f=\[[38;2;%lu;%lu;%lum
+    set t_8b=\[[48;2;%lu;%lu;%lum
+    set termguicolors
+endif
 colorscheme base16-ocean
 
 autocmd Filetype tex setl updatetime=1

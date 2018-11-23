@@ -27,6 +27,7 @@ sudo cp ${script_dir}/boot/loader/entries/gentoo.conf /boot/loader/entries/
 sudo cp ${script_dir}/etc/bluetooth/*.conf /etc/bluetooth/
 sudo cp ${script_dir}/etc/dbus-1/system.d/*.conf /etc/dbus-1/system.d/
 sudo cp ${script_dir}/etc/modprobe.d/*.conf /etc/modprobe.d/
+sudo cp ${script_dir}/etc/conf.d/modules /etc/conf.d/
 sudo cp ${script_dir}/etc/pulse/*.pa /etc/pulse/
 sudo cp ${script_dir}/etc/sysctl.d/*.conf /etc/sysctl.d/
 sudo cp ${script_dir}/etc/udev/rules.d/*.rules /etc/udev/rules.d/
@@ -42,7 +43,7 @@ sudo cp ${script_dir}/etc/systemd/logind.conf /etc/systemd/
 sudo ln -sf ${script_dir}/usr/bin/* /usr/bin/
 
 ## Kernel files
-sudo cp ${script_dir}/usr/src/linux/.config /usr/src/linux/
+sudo ln -sf ${script_dir}/usr/src/linux/.config /usr/src/linux/
 
 ## Systemd services
 sudo cp ${script_dir}/etc/systemd/system/*.service /etc/systemd/system/
@@ -59,7 +60,7 @@ ln -sf ${script_dir}/dotncmpcpp ~/.ncmpcpp
 ln -sf ${script_dir}/dotconfig/{alacritty,i3,compton,dunst,mpd,polybar,ranger,zathura,libinput-gestures.conf} ~/.config/
 
 ## Others
-ln -sf ${script_dir}/.{asoundrc,spacemacs,vimrc,xinitrc,Xresources,bash_profile,bashrc} ~/
+ln -sf ${script_dir}/.{asoundrc,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
 
 ## For neovim
 mkdir -p ~/.config/nvim/
