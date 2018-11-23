@@ -65,7 +65,8 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = Source Code Pro for Powerline:pixelsize=7;1
-font-1 = Font Awesome 5 Free Solid:size=7;1
+font-1 = Font Awesome 5 Free:style=solid:size=7;1
+font-2 = Font Awesome 5 Free:style=Regular:size=7;1
 
 modules-left = i3 xwindow
 modules-center = mpd
@@ -137,9 +138,9 @@ ws-icon-3 = IV;
 ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
-ws-icon-7 = VIII;
-ws-icon-8 = IX;
-ws-icon-9 = X;
+ws-icon-7 = VIII;
+ws-icon-8 = IX;ﭮ
+ws-icon-9 = X;
 
 label-focused = 
 label-focused-foreground = ${colors.magenta}
@@ -178,11 +179,11 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
-ws-icon-7 = 8;
+ws-icon-7 = 8;
 ws-icon-8 = 9;
-ws-icon-9 = 10;
+ws-icon-9 = 10;
 
-format = <label-state> <label-mode>
+format = <label-mode> <label-state>
 
 label-mode = %mode%
 label-mode-padding = 1
@@ -195,6 +196,7 @@ label-focused-underline = ${colors.yellow}
 label-focused-padding = 1
 
 label-unfocused = %icon%
+label-unfocused-foreground = ${colors.blue}
 label-unfocused-padding = 1
 
 label-visible = %icon%
@@ -209,7 +211,7 @@ label-urgent-padding = 1
 ; Separator in between workspaces
 label-separator = |
 label-separator-padding = 1
-label-separator-foreground = ${colors.white}
+label-separator-foreground = ${colors.cyan}
 
 [module/mpd]
 type = internal/mpd
@@ -268,7 +270,7 @@ format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.magenta}
 label-connected = %ifname% %upspeed% %downspeed%
 
-format-disconnected = <label-disconnected>
+format-disconnected =  <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = disconnected
 label-disconnected-foreground = ${colors.red}
@@ -299,13 +301,13 @@ label-connected-foreground = ${colors.foreground}
 type = internal/date
 interval = 5
 
-date =
-date-alt = " %Y-%m-%d"
+date = " %Y-%m-%d"
+date-alt = 
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = 
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.blue}
 
@@ -376,7 +378,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/system-cpu-avg-temp.sh
 interval = 5
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.cyan}
 
@@ -394,19 +396,19 @@ label-close-foreground = ${colors.red}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
 
-menu-0-0 =  reboot
+menu-0-0 =  reboot
 menu-0-0-exec = menu-open-1
 menu-0-1 =  power off
 menu-0-1-exec = menu-open-2
 
-menu-1-0 =  cancel
+menu-1-0 = ﰸ cancel
 menu-1-0-exec = menu-open-0
-menu-1-1 =  reboot
+menu-1-1 = ﰇ reboot
 menu-1-1-exec = sudo reboot
 
 menu-2-0 =  power off
 menu-2-0-exec = sudo poweroff
-menu-2-1 =  cancel
+menu-2-1 = ﰸ cancel
 menu-2-1-exec = menu-open-0
 
 [settings]

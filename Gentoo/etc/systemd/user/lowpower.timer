@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs lowpower.service every minute
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=lowpower.service
+
+[Install]
+WantedBy=timers.target

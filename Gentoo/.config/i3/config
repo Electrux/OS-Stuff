@@ -1,0 +1,248 @@
+# Set Mac's right command as mod key since left command doesn't work by default. See xmodmap.
+set $mod Mod4
+
+# Wallpaper file
+set $wallpaper ~/Pictures/Wallpapers/white-eye-ring-drip-blood-mouth-vampire-female.jpg
+
+# Set workspace names by roles
+set $ws1 "1:Main"
+set $ws2 "2:Alt"
+set $ws3 "3:Alt"
+set $ws4 "4:Alt"
+set $ws5 "5:Alt"
+set $ws6 "6:Alt"
+set $ws7 "7:Communication"
+set $ws8 "8:IntelliJ Idea"
+set $ws9 "9:Android Studio"
+set $ws10 "10:VirtualBox"
+
+# Set various colors for i3 and i3status/i3blocks
+set $bg-focused		#AADDDD
+set $col-indicate	#C7AE95
+set $bg-unfocused	#1C2023
+set $bg-urgent		#C7AE95
+set $text-focused 	#C795AE
+set $text-unfocused 	#C7CCD1
+set $client-backgr	#F3F4F5
+# i3status
+set $status-backgr 	#1C2023
+set $status-line 	#000000
+set $status-separator 	#FFCCCC
+set $bg-bind 		#00DDDD
+set $col-backgr 	#005588
+
+# Class				border		backgr		text		indicator	child_border
+client.focused 			$bg-focused 	#FFFFFF		$text-focused	$col-indicate	$bg-focused
+client.unfocused 		$bg-unfocused 	#FFFFFF		$text-unfocused	$col-indicate	$bg-unfocused
+client.focused_inactive 	$bg-unfocused 	#FFFFFF		$text-unfocused	$col-indicate	$bg-unfocused
+client.urgent			$bg-urgent 	#FFFFFF		$text-focused	$col-indicate	$bg-urgent
+client.placeholder		#000000		#FFFFFF		$text-focused	#000000		#0c0c0c
+client.background		$client-backgr
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font xft:"Source Code Pro for Powerline Medium" 7
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# i3-gaps settings
+gaps outer 0
+gaps inner 5
+smart_gaps on
+new_window 1pixel
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse set Master 2%+ unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse set Master 2%- unmute
+bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master toggle
+
+# MPD controls
+bindsym XF86AudioPrev exec mpc -h 127.0.1.1 prev
+bindsym XF86AudioNext exec mpc -h 127.0.1.1 next
+bindsym XF86AudioPlay exec mpc -h 127.0.1.1 toggle
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 # decrease screen brightness
+
+# Keyboard backlight brightness
+bindsym XF86KbdBrightnessUp exec --no-startup-id xbacklight -ctrl smc::kbd_backlight -inc 20
+bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -ctrl smc::kbd_backlight -dec 20
+
+# fancy lock
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock-fancy
+
+# start a terminal
+bindsym $mod+Return exec alacritty
+
+# start rofi (a program launcher)
+bindsym $mod+space exec rofi -font "Source Code Pro for Powerline Medium 9" -separator-style "solid" -hide-scrollbar -lines 10 -width 30 -padding 10 -show run
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+semicolon split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+d focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# cycle workspace
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 1 px or 1 ppt
+        bindsym j resize grow height 1 px or 1 ppt
+        bindsym k resize shrink height 1 px or 1 ppt
+        bindsym l resize grow width 1 px or 1 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 1 px or 1 ppt
+        bindsym Down resize grow height 1 px or 1 ppt
+        bindsym Up resize shrink height 1 px or 1 ppt
+        bindsym Right resize grow width 1 px or 1 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+	bindsym l exec --no-startup-id ~/.config/i3/i3exit lock, mode "default"
+	bindsym e exec --no-startup-id ~/.config/i3/i3exit logout, mode "default"
+	bindsym s exec --no-startup-id ~/.config/i3/i3exit suspend, mode "default"
+	#bindsym h exec --no-startup-id ~/.config/i3/i3exit hibernate, mode "default"
+	bindsym r exec --no-startup-id ~/.config/i3/i3exit reboot, mode "default"
+	bindsym Shift+s exec --no-startup-id ~/.config/i3/i3exit shutdown, mode "default"
+
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+Ctrl+q mode "$mode_system"
+
+# i3 Blocks
+#bar {
+#	font pango:Source Code Pro for Powerline 7
+#	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#}
+
+# Per application settings for workspaces and styles
+assign [class="VirtualBox"] $ws10
+
+assign [class="jetbrains-studio"] $ws9
+assign [title="Android Emulator"] $ws9
+
+assign [class="jetbrains-idea"] $ws8
+
+assign [class="TelegramDesktop"] $ws7
+assign [class="discord"] $ws7
+
+for_window [title="Floating"] floating enable
+for_window [class="VirtualBox"] layout tabbed
+for_window [title="Android Emulator"] floating enable
+for_window [class="Gimp"] floating enable
+
+exec --no-startup-id compton -bc --config ~/.config/compton/compton.conf
+exec_always --no-startup-id killall polybar; polybar example
+
+exec_always --no-startup-id feh --bg-scale $wallpaper
+
+#exec --no-startup-id blueman-applet
+#exec --no-startup-id nm-applet
+exec --no-startup-id xset -dpms s off
+exec --no-startup-id dunst
+# mpd starts using systemctl --user enable mpd
+#exec --no-startup-id mpd
+#exec --no-startup-id conky -c ~/.config/i3/conkyrc
+exec --no-startup-id discord
+exec --no-startup-id telegram-desktop
+
+exec --no-startup-id ~/.config/i3/i3exit lock

@@ -1,19 +1,63 @@
 !---------------------------!
-! Settings for Rofi colors
+!     Color Definitions     !
 !---------------------------!
-! State:           'bg',       'fg',        'bgalt',    'hlbg',     'hlfg'
-rofi.color-normal: #000000FF,  #FF000000,  #000000FF,  #CC00AA55,  #FFFFFFFF
-rofi.color-urgent: #000000FF,  #AA000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
-rofi.color-active: #000000FF,  #FF000000,  #000000FF,  #00FFFF00,  #FFFFFFFF
-! Window:          'background', 'border', 'separator'
-rofi.color-window: #BBAAAAEE,    #FF00DDAA,  #FF00DDAA
+! border
+#define DEF_BORDER		#6BBBE0
+#define DEF_BORDERNORM		#5891B7
+
+! special
+#define DEF_foreground   	#c0c5ce
+#define DEF_background   	#2b303b
+#define DEF_cursorColor  	#c0c5ce
+
+! black
+#define DEF_color0       	#2b303b
+#define DEF_color8       	#65737e
+
+! red
+#define DEF_color1       	#bf616a
+#define DEF_color9       	#bf616a
+
+! green
+#define DEF_color2       	#a3be8c
+#define DEF_color10      	#a3be8c
+
+! yellow
+#define DEF_color3       	#ebcb8b
+#define DEF_color11      	#ebcb8b
+
+! blue
+#define DEF_color4       	#8fa1b3
+#define DEF_color12      	#8fa1b3
+
+! magenta
+#define DEF_color5       	#b48ead
+#define DEF_color13      	#b48ead
+
+! cyan
+#define DEF_color6       	#96b5b4
+#define DEF_color14      	#96b5b4
+
+! white
+#define DEF_color7       	#c0c5ce
+#define DEF_color15      	#eff1f5
+
+!---------------------------!
+! Settings for Rofi colors  !
+!---------------------------!
+! State:           'bg',		'fg',		'bgalt',	'hlbg',		'hlfg'
+rofi.color-normal: DEF_background,  	DEF_color6,	DEF_background,	DEF_background,	DEF_color5
+rofi.color-urgent: DEF_background,  	DEF_color2,	DEF_background,	DEF_background,	DEF_color3
+rofi.color-active: DEF_background,  	DEF_color5,	DEF_background,	DEF_background,	DEF_color4
+! Window:         'background',		'border',	'separator'
+rofi.color-window: DEF_background,	DEF_BORDER,	DEF_background
 ! HiDPI
 rofi.dpi: 220
 
 !-----------------------------!
-! Settings for HiDPI displays
+! Settings for HiDPI displays !
 !-----------------------------!
-!Xft.dpi: 220
+Xft.dpi: 220
 Xft.autohint: 1
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintfull
@@ -22,14 +66,14 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 !-----------------------------!
-! Transparency settings
+!    Transparency settings    !
 !-----------------------------!
 ! Will cause background to go black
 URxvt.transparent: false
 URxvt.shading: 0
 
 !---------------------------!
-! Core settings for Rxvt
+!  Core settings for Rxvt   !
 !---------------------------!
 URxvt*depth:			32
 URxvt.internalBorder:		5
@@ -38,73 +82,79 @@ URxvt.backend: xrender
 URxvt.buffered: false
 
 !---------------------------!
-! Font settings for Rxvt
+!   Font settings for Rxvt  !
 !---------------------------!
 URxvt.allow_bold:           true
-URxvt*font: xft:mplus Nerd Font Mono:size=8, xft: Inconsolata for Powerline:style=Medium:size=8
-URxvt*boldFont: xft:mplus Nerd Font Mono:style=bold:size=8, xft: Inconsolata for Powerline:style=BoldForPowerline:size=8
+URxvt*font: xft:Source Code Pro for Powerline:style=Medium:size=7,xft:FontAwesome:size=7
+URxvt*boldFont: xft:Source Code Pro for Powerline:style=Bold:size=7,xft:FontAwesome:size=7
 
-!----------------------------!
-! Scrollbar settings for Rxvt
-!----------------------------!
+!-----------------------------!
+! Scrollbar settings for Rxvt !
+!-----------------------------!
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
-!---------------------------------!
-! Perl extension settings for Rxvt
-!---------------------------------!
-URxvt.perl-ext-common:      default,matcher
+!----------------------------------!
+! Perl extension settings for Rxvt !
+!----------------------------------!
+URxvt.perl-ext-common:      default,selection-to-clipboard,matcher
+URxvt.keysym.C-S-C: perl:clipboard:copy
+URxvt.keysym.C-S-V: perl:clipboard:paste
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          google-chrome-stable
 
 !----------------------------!
-! Cursor settings for Rxvt
+!  Cursor settings for Rxvt  !
 !----------------------------!
 URxvt.cursorBlink:          true
 URxvt.cursorUnderline:      false
 
 !----------------------------!
-! Pointer settings for Rxvt
+!  Pointer settings for Rxvt !
 !----------------------------!
 URxvt.pointerBlank:         true
 
-!----------------------------!
-! Color scheme for Rxvt
-!----------------------------!
+!----------------------------------------!
+!    Color scheme in Xresources format   !
+!----------------------------------------!
+
+! border
+*.border:	DEF_BORDER
+*.bordernorm:	DEF_BORDERNORM
 
 ! special
-*.foreground:   #c7ccd1
-*.background:   #1c2023
-*.cursorColor:  #c7ccd1
+*.foreground:	DEF_foreground
+*.background:	DEF_background
+*.cursorColor:  DEF_cursorColor
 
 ! black
-*.color0:       #1c2023
-*.color8:       #747c84
+*.color0:       DEF_color0
+*.color8:       DEF_color8
 
 ! red
-*.color1:       #c7ae95
-*.color9:       #c7ae95
+*.color1:       DEF_color1
+*.color9:       DEF_color9
 
 ! green
-*.color2:       #95c7ae
-*.color10:      #95c7ae
+*.color2:       DEF_color2
+*.color10:      DEF_color10
 
 ! yellow
-*.color3:       #aec795
-*.color11:      #aec795
+*.color3:       DEF_color3
+*.color11:      DEF_color11
 
 ! blue
-*.color4:       #ae95c7
-*.color12:      #ae95c7
+*.color4:       DEF_color4
+*.color12:      DEF_color12
 
 ! magenta
-*.color5:       #c795ae
-*.color13:      #c795ae
+*.color5:       DEF_color5
+*.color13:      DEF_color13
 
 ! cyan
-*.color6:       #95aec7
-*.color14:      #95aec7
+*.color6:       DEF_color6
+*.color14:      DEF_color14
 
 ! white
-*.color7:       #c7ccd1
-*.color15:      #f3f4f5
+*.color7:       DEF_color7
+*.color15:      DEF_color15
