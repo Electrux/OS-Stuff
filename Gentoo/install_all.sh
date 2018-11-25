@@ -3,7 +3,7 @@
 user="Electrux"
 base_dir="${HOME}/Git/${user}"
 os_stuff_dir="${base_dir}/OS-Stuff"
-script_dir="${os_stuff_dir}/Arch/Dotfiles"
+script_dir="${os_stuff_dir}/Gentoo"
 
 # Base
 
@@ -95,4 +95,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install spacemacs
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d
+
+# Install Oh My ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g')"
+mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+git clone https://github.com/rupa/z.git

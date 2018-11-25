@@ -97,3 +97,6 @@ reload() {
 
 echo ''
 neofetch
+
+echo ''
+task next

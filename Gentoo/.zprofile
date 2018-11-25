@@ -16,7 +16,7 @@ export TERMINAL="/usr/bin/alacritty"
 export BROWSER="/usr/bin/google-chrome-stable"
 
 eval $(keychain --eval --agents ssh $(/bin/ls ~/.ssh/id_rsa* | grep -v '.pub'))
-source ~/.keychain/$HOSTNAME-sh
+source ~/.keychain/$HOST-sh
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   exec startx

@@ -79,6 +79,10 @@ bindsym $mod+Return exec alacritty
 # start rofi (a program launcher)
 bindsym $mod+space exec rofi -font "Source Code Pro for Powerline 9" -separator-style "solid" -hide-scrollbar -lines 10 -width 30 -padding 10 -show run
 
+# Single and multi monitor
+bindsym $mod+Shift+s exec xrandr --output HDMI3 --off
+bindsym $mod+Shift+m exec xrandr --output HDMI3 --auto --mode 1920x1080 --right-of eDP1
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
