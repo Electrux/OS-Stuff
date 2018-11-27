@@ -82,7 +82,7 @@ let g:airline_theme = 'deus'
 
 " Set ViM color scheme
 set termguicolors
-colorscheme base16-ocean
+colorscheme base16-chalk
 
 " For dlang
 let g:dutyl_stdImportPaths=['/usr/local/include/dlang/dmd']

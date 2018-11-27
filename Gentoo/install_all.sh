@@ -100,4 +100,4 @@ git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d
 # Install Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g')"
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
-git clone https://github.com/rupa/z.git
+git clone https://github.com/rupa/z.git ~/Git/z
