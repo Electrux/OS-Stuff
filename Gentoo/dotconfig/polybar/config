@@ -283,10 +283,10 @@ type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
 label-volume = 
-label-volume-foreground = ${colors.blue}
+label-volume-foreground = ${colors.cyan}
 
 format-muted-prefix = 
-format-muted-foreground = ${colors.blue}
+format-muted-foreground = ${colors.cyan}
 label-muted = sound muted
 
 bar-volume-width = 10
