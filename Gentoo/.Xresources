@@ -1,56 +1,37 @@
 !---------------------------!
 !     Color Definitions     !
 !---------------------------!
-! border
-#define DEF_BORDER		#6BBBE0
-#define DEF_BORDERNORM		#5891B7
 
-! special
-#define DEF_foreground   	#c0c5ce
-#define DEF_background   	#2b303b
-#define DEF_cursorColor  	#c0c5ce
+#define base00 #151515
+#define base01 #202020
+#define base02 #303030
+#define base03 #505050
+#define base04 #b0b0b0
+#define base05 #d0d0d0
+#define base06 #e0e0e0
+#define base07 #f5f5f5
+#define base08 #fb9fb1
+#define base09 #eda987
+#define base0A #ddb26f
+#define base0B #acc267
+#define base0C #12cfc0
+#define base0D #6fc2ef
+#define base0E #e1a3ee
+#define base0F #deaf8f
 
-! black
-#define DEF_color0       	#2b303b
-#define DEF_color8       	#65737e
-
-! red
-#define DEF_color1       	#bf616a
-#define DEF_color9       	#bf616a
-
-! green
-#define DEF_color2       	#a3be8c
-#define DEF_color10      	#a3be8c
-
-! yellow
-#define DEF_color3       	#ebcb8b
-#define DEF_color11      	#ebcb8b
-
-! blue
-#define DEF_color4       	#8fa1b3
-#define DEF_color12      	#8fa1b3
-
-! magenta
-#define DEF_color5       	#b48ead
-#define DEF_color13      	#b48ead
-
-! cyan
-#define DEF_color6       	#96b5b4
-#define DEF_color14      	#96b5b4
-
-! white
-#define DEF_color7       	#c0c5ce
-#define DEF_color15      	#eff1f5
+#define bordef #5a5a5a
+#define bornef #1a1a1a
+#define poly00 #151515
 
 !---------------------------!
 ! Settings for Rofi colors  !
 !---------------------------!
 ! State:           'bg',		'fg',		'bgalt',	'hlbg',		'hlfg'
-rofi.color-normal: DEF_background,  	DEF_color6,	DEF_background,	DEF_background,	DEF_color5
-rofi.color-urgent: DEF_background,  	DEF_color2,	DEF_background,	DEF_background,	DEF_color3
-rofi.color-active: DEF_background,  	DEF_color5,	DEF_background,	DEF_background,	DEF_color4
+rofi.color-normal: base00,		base06,		base00,		base01,		base05
+rofi.color-urgent: base00,		base02,		base00,		base01,		base03
+rofi.color-active: base00,		base05,		base00,		base01,		base04
 ! Window:         'background',		'border',	'separator'
-rofi.color-window: DEF_background,	DEF_BORDER,	DEF_background
+rofi.color-window: base00,		bordef,		base00
 ! HiDPI
 rofi.dpi: 220
 
@@ -98,8 +79,6 @@ URxvt.scrollBar:            false
 ! Perl extension settings for Rxvt !
 !----------------------------------!
 URxvt.perl-ext-common:      default,selection-to-clipboard,matcher
-URxvt.keysym.C-S-C: perl:clipboard:copy
-URxvt.keysym.C-S-V: perl:clipboard:paste
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          google-chrome-stable
 
@@ -114,47 +93,52 @@ URxvt.cursorUnderline:      false
 !----------------------------!
 URxvt.pointerBlank:         true
 
+!-----------------------!
+! Cursor settings for X !
+!-----------------------!
+Xcursor.size: 40
+Xcursor.dpi: 220
+
 !----------------------------------------!
 !    Color scheme in Xresources format   !
 !----------------------------------------!
 
-! border
-*.border:	DEF_BORDER
-*.bordernorm:	DEF_BORDERNORM
+! border & polybar background
+*border:	bordef
+*bornor:	bornef
+*polyback:	poly00
 
-! special
-*.foreground:	DEF_foreground
-*.background:	DEF_background
-*.cursorColor:  DEF_cursorColor
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
 
-! black
-*.color0:       DEF_color0
-*.color8:       DEF_color8
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
 
-! red
-*.color1:       DEF_color1
-*.color9:       DEF_color9
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
 
-! green
-*.color2:       DEF_color2
-*.color10:      DEF_color10
-
-! yellow
-*.color3:       DEF_color3
-*.color11:      DEF_color11
-
-! blue
-*.color4:       DEF_color4
-*.color12:      DEF_color12
-
-! magenta
-*.color5:       DEF_color5
-*.color13:      DEF_color13
-
-! cyan
-*.color6:       DEF_color6
-*.color14:      DEF_color14
-
-! white
-*.color7:       DEF_color7
-*.color15:      DEF_color15
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06

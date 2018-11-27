@@ -48,8 +48,8 @@ export LESS_TERMCAP_ue=$default
 export LESS_TERMCAP_us=$green
 
 # Set ls_extended as the ls command
-alias ls='ls_extended -s'
-alias l='ls -lAh'
+alias ls='exa -s name -F'
+alias l='ls -la'
 
 # Set rsync as the copy command
 alias cp='rsync -ah --info=progress2'
@@ -62,6 +62,9 @@ alias vim="/usr/bin/nvim"
 # Go lang settings
 export GOPATH="${HOME}/.go"
 export PATH="${PATH}:${GOPATH}/bin"
+
+# Rust lang settings
+export PATH="${PATH}:${HOME}/.cargo/bin"
 
 # Copy & Paste
 alias copy="xclip -sel clipboard"
@@ -99,4 +102,4 @@ echo ''
 neofetch
 
 echo ''
-task next
+tdo

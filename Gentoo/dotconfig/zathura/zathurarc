@@ -6,35 +6,38 @@ set selection-clipboard		"clipboard"
 
 set font			"Source Code Pro for Powerline 10"
 
-set default-bg                  "#2b303b"
-set default-fg                  "#343d46"
+# Base16 Chalk
+# Author: Chris Kempson (http://chriskempson.com)
 
-set statusbar-fg                "#a7adba"
-set statusbar-bg                "#4f5b66"
+set default-bg                  "#151515"
+set default-fg                  "#202020"
 
-set inputbar-bg                 "#2b303b"
-set inputbar-fg                 "#eff1f5"
+set statusbar-fg                "#b0b0b0"
+set statusbar-bg                "#303030"
 
-set notification-bg             "#2b303b"
-set notification-fg             "#eff1f5"
+set inputbar-bg                 "#151515"
+set inputbar-fg                 "#f5f5f5"
 
-set notification-error-bg       "#2b303b"
-set notification-error-fg       "#bf616a"
+set notification-bg             "#151515"
+set notification-fg             "#f5f5f5"
 
-set notification-warning-bg     "#2b303b"
-set notification-warning-fg     "#bf616a"
+set notification-error-bg       "#151515"
+set notification-error-fg       "#fb9fb1"
 
-set highlight-color             "#ebcb8b"
-set highlight-active-color      "#8fa1b3"
+set notification-warning-bg     "#151515"
+set notification-warning-fg     "#fb9fb1"
 
-set completion-bg               "#343d46"
-set completion-fg               "#8fa1b3"
+set highlight-color             "#ddb26f"
+set highlight-active-color      "#6fc2ef"
 
-set completion-highlight-fg     "#eff1f5"
-set completion-highlight-bg     "#8fa1b3"
+set completion-bg               "#202020"
+set completion-fg               "#6fc2ef"
 
-set recolor-lightcolor          "#2b303b"
-set recolor-darkcolor           "#dfe1e8"
+set completion-highlight-fg     "#f5f5f5"
+set completion-highlight-bg     "#6fc2ef"
+
+set recolor-lightcolor          "#151515"
+set recolor-darkcolor           "#e0e0e0"
 
 set recolor                     "true"
 set recolor-keephue             "false"

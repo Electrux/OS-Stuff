@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # Wallpaper file
-set $wallpaper ~/Pictures/Wallpapers/sideways-scifi-city.jpg
+set $wallpaper ~/Pictures/Wallpapers/Gorgeous-Palace-Fireworks.jpg
 
 # Set workspace names by roles
 set $ws1 "1:Main"
@@ -17,27 +17,38 @@ set $ws9 "9:Android Studio"
 set $ws10 "10:VirtualBox"
 
 # Set various colors for i3 and i3status/i3blocks
-set $bg-focused		#AADDDD
-set $col-indicate	#C7AE95
-set $bg-unfocused	#1C2023
-set $bg-urgent		#C7AE95
-set $text-focused 	#C795AE
-set $text-unfocused 	#C7CCD1
-set $client-backgr	#F3F4F5
-# i3status
-set $status-backgr 	#1C2023
-set $status-line 	#000000
-set $status-separator 	#FFCCCC
-set $bg-bind 		#00DDDD
-set $col-backgr 	#005588
+
+set_from_resource $border 	border		#000000
+set_from_resource $bornor	bornor		#000000
+set_from_resource $foreground	foreground 	#000000
+set_from_resource $background 	background 	#000000
+
+set_from_resource $darkblack	color0 		#000000
+set_from_resource $black	color8 		#000000
+set_from_resource $darkred     	color1  	#000000
+set_from_resource $red         	color9  	#000000
+set_from_resource $darkgreen   	color2  	#000000
+set_from_resource $green       	color10 	#000000
+set_from_resource $darkyellow  	color3  	#000000
+set_from_resource $yellow      	color11 	#000000
+set_from_resource $darkblue   	color4  	#000000
+set_from_resource $blue        	color12 	#000000
+set_from_resource $darkmagenta 	color5  	#000000
+set_from_resource $magenta     	color13		#000000
+set_from_resource $darkcyan    	color6  	#000000
+set_from_resource $cyan        	color14 	#000000
+set_from_resource $darkwhite   	color7  	#000000
+set_from_resource $white       	color15 	#000000
+
+set $indicator #FFFFFF
 
 # Class				border		backgr		text		indicator	child_border
-client.focused 			$bg-focused 	#FFFFFF		$text-focused	$col-indicate	$bg-focused
-client.unfocused 		$bg-unfocused 	#FFFFFF		$text-unfocused	$col-indicate	$bg-unfocused
-client.focused_inactive 	$bg-unfocused 	#FFFFFF		$text-unfocused	$col-indicate	$bg-unfocused
-client.urgent			$bg-urgent 	#FFFFFF		$text-focused	$col-indicate	$bg-urgent
-client.placeholder		#000000		#FFFFFF		$text-focused	#000000		#0c0c0c
-client.background		$client-backgr
+client.focused 			$border 	$background	$foreground	$indicator	$border
+client.unfocused 		$bornor 	$background	$foreground	$black		$bornor
+client.focused_inactive 	$bornor 	$background	$foreground	$black		$bornor
+client.urgent			$red 		$background	$foreground	$black		$red
+client.placeholder		$background	$background	$foreground	$background	$background
+client.background		$background
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -179,16 +190,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 1 px or 1 ppt
-        bindsym j resize grow height 1 px or 1 ppt
-        bindsym k resize shrink height 1 px or 1 ppt
-        bindsym l resize grow width 1 px or 1 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 1 px or 1 ppt
-        bindsym Down resize grow height 1 px or 1 ppt
-        bindsym Up resize shrink height 1 px or 1 ppt
-        bindsym Right resize grow width 1 px or 1 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
