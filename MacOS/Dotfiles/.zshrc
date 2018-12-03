@@ -213,3 +213,7 @@ run() {
 # Neofetch at beginning
 echo ''
 neofetch
+
+# followed by todo list
+echo ''
+tdo

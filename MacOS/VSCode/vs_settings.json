@@ -2,7 +2,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Ocean Dark Extended",
     "editor.fontSize": 13,
-    "editor.fontFamily": "'FuraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Source Code Pro Nerd Font Mono', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": false,
     "editor.tabSize": 8,
     "editor.insertSpaces": false,
