@@ -196,7 +196,7 @@ run() {
 	filename="${1%%.*}"
 	ext="${1#*.}"
 	if [[ "$ext" == "c" ]]; then
-	        $(echo "clang $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
+	        $(echo "clang -std=c11 $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
 	elif [[ "$ext" == "cpp" ]]; then
 	        $(echo "clang++ -std=c++17 $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
 	elif [[ "$ext" == "rs" ]]; then
@@ -209,6 +209,8 @@ run() {
 	        javac $@ && echo "Executing ${filename}" && java ${filename}
 	fi
 }
+
+export DEBUG_MODE="true"
 
 # Neofetch at beginning
 echo ''
