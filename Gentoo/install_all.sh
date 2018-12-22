@@ -57,7 +57,7 @@ sudo cp ${script_dir}/var/lib/alsa/* /var/lib/alsa/
 
 ## Core
 ln -sf ${script_dir}/dotncmpcpp ~/.ncmpcpp
-ln -sf ${script_dir}/dotconfig/{alacritty,i3,compton,dunst,mpd,polybar,ranger,zathura,libinput-gestures.conf} ~/.config/
+ln -sf ${script_dir}/dotconfig/{alacritty,i3,compton,dunst,mpd,mpv,polybar,ranger,zathura,libinput-gestures.conf} ~/.config/
 
 ## Others
 ln -sf ${script_dir}/.{asoundrc,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
