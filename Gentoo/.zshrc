@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/electrux/.oh-my-zsh
 
-ZSH_THEME="lambda-mod"
+ZSH_THEME="lambda-mod-zsh-theme/lambda-mod"
 
 plugins=(git zsh-completions)
 

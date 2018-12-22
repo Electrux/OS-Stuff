@@ -96,6 +96,7 @@ URxvt.pointerBlank:         true
 !-----------------------!
 ! Cursor settings for X !
 !-----------------------!
+Xcursor.theme: gentoo
 Xcursor.size: 40
 Xcursor.dpi: 220
 

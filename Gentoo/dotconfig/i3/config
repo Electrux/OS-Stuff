@@ -92,7 +92,7 @@ bindsym $mod+space exec rofi -font "Source Code Pro for Powerline 9" -separator-
 
 # Single and multi monitor
 bindsym $mod+Shift+s exec xrandr --output HDMI3 --off
-bindsym $mod+Shift+m exec xrandr --output HDMI3 --auto --mode 1920x1080 --right-of eDP1
+bindsym $mod+Shift+m exec xrandr --output HDMI3 --auto --mode 1920x1080 --right-of eDP-1
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -224,15 +224,17 @@ mode "$mode_system" {
 bindsym $mod+Ctrl+q mode "$mode_system"
 
 # Per application settings for workspaces and styles
-assign [class="VirtualBox"] $ws10
+assign [class="VirtualBox"] $ws6
 
-assign [class="jetbrains-studio"] $ws9
-assign [title="Android Emulator"] $ws9
+assign [class="jetbrains-studio"] $ws7
+assign [title="Android Emulator"] $ws7
 
-assign [class="jetbrains-idea"] $ws8
+assign [class="jetbrains-idea"] $ws7
 
-assign [class="TelegramDesktop"] $ws7
-assign [class="discord"] $ws7
+assign [class="TelegramDesktop"] $ws9
+assign [class="discord"] $ws9
+
+assign [class="qBittorrent"] $ws10
 
 for_window [title="Floating"] floating enable
 for_window [class="VirtualBox"] layout tabbed
@@ -253,5 +255,6 @@ exec --no-startup-id dunst
 #exec --no-startup-id conky -c ~/.config/i3/conkyrc
 exec --no-startup-id discord
 exec --no-startup-id telegram-desktop
+exec --no-startup-id qbittorrent
 
 exec --no-startup-id ~/.config/i3/i3exit lock

@@ -57,10 +57,10 @@ sudo cp ${script_dir}/var/lib/alsa/* /var/lib/alsa/
 
 ## Core
 ln -sf ${script_dir}/dotncmpcpp ~/.ncmpcpp
-ln -sf ${script_dir}/dotconfig/{alacritty,i3,compton,dunst,mpd,mpv,polybar,ranger,zathura,libinput-gestures.conf} ~/.config/
+ln -sf ${script_dir}/dotconfig/{alacritty,i3,compton,dunst,gtk-3.0,mpd,mpv,polybar,ranger,zathura,libinput-gestures.conf} ~/.config/
 
 ## Others
-ln -sf ${script_dir}/.{asoundrc,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
+ln -sf ${script_dir}/.{asoundrc,gtkrc-2.0,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
 
 ## For neovim
 mkdir -p ~/.config/nvim/
