@@ -72,13 +72,17 @@ let g:livepreview_previewer = 'zathura'
 let g:livepreview_engine = 'xelatex' . ' '
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'deus'
+let g:airline_theme = 'base16'
 
 let g:rainbow_active = 1
 
 " set ViM color scheme
-set termguicolors
-colorscheme base16-ocean
+if has("termguicolors")     " set true colors
+    set termguicolors
+endif
+colorscheme base16-chalk
+" For transparency
+"hi Normal ctermbg=NONE guibg=NONE
 
 autocmd Filetype tex setl updatetime=1
 

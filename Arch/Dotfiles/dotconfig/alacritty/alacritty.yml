@@ -26,12 +26,12 @@ window:
   # Units are physical pixels; this is not DPI aware.
   # (change requires restart)
   padding:
-    x: 10
-    y: 10
+    x: 4
+    y: 4
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: true
+  decorations: full
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
@@ -61,19 +61,19 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: FuraCode Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: Source Code Pro for Powerline # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    style: Retina
+    style: Medium
 
   # The bold font face
   bold:
-    family: FuraCode Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: Source Code Pro for Powerline # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: FuraCode Nerd Font Mono # should be "Menlo" or something on macOS.
+    family: Source Code Pro for Powerline # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     style: Italic
 
@@ -93,12 +93,6 @@ font:
     x: 0
     y: 0
 
-  # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
-  # screens and make reading text a little easier.
-  # On X11 it is possible to change the DPI for each instance of alacritty by using
-  # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
-  scale_with_dpi: true
-
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
@@ -107,44 +101,41 @@ font:
 # Should display the render timer
 render_timer: false
 
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
-
-# Base16 Ocean 256 - alacritty color config
+# Base16 Chalk 256 - alacritty color config
 # Chris Kempson (http://chriskempson.com)
 colors:
   # Default colors
   primary:
-    background: '0x2b303b'
-    foreground: '0xc0c5ce'
+    background: '0x151515'
+    foreground: '0xd0d0d0'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x2b303b'
-    cursor: '0xc0c5ce'
+    text: '0x151515'
+    style: 'underline'
+    cursor: '0xd0d0d0'
 
   # Normal colors
   normal:
-    black:   '0x2b303b'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xc0c5ce'
+    black:   '0x151515'
+    red:     '0xfb9fb1'
+    green:   '0xacc267'
+    yellow:  '0xddb26f'
+    blue:    '0x6fc2ef'
+    magenta: '0xe1a3ee'
+    cyan:    '0x12cfc0'
+    white:   '0xd0d0d0'
 
   # Bright colors
   bright:
-    black:   '0x65737e'
-    red:     '0xbf616a'
-    green:   '0xa3be8c'
-    yellow:  '0xebcb8b'
-    blue:    '0x8fa1b3'
-    magenta: '0xb48ead'
-    cyan:    '0x96b5b4'
-    white:   '0xc0c5ce'
+    black:   '0x505050'
+    red:     '0xfb9fb1'
+    green:   '0xacc267'
+    yellow:  '0xddb26f'
+    blue:    '0x6fc2ef'
+    magenta: '0xe1a3ee'
+    cyan:    '0x12cfc0'
+    white:   '0xf5f5f5'
 
 # Visual Bell
 #
@@ -173,7 +164,7 @@ visual_bell:
   duration: 0
 
 # Background opacity
-background_opacity: 0.8
+background_opacity: 1.0
 
 # Mouse bindings
 #
@@ -210,22 +201,14 @@ mouse:
   # scrolling for applications like `man`.
   #
   # To disable this completely, set `faux_scrollback_lines` to 0.
-  faux_scrollback_lines: 1
+  faux_scrolling_lines: 1
+
+  hide_when_typing: false
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
 dynamic_title: true
-
-hide_cursor_when_typing: false
-
-# Style of the cursor
-#
-# Values for 'cursor_style':
-# - Block
-# - Underline
-# - Beam
-cursor_style: Block
 
 # Live config reload (changes require restart)
 live_config_reload: true
