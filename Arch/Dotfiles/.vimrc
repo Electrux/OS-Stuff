@@ -14,7 +14,7 @@ set backspace=indent,eol,start
 let g:ycm_global_ycm_extra_conf = '/home/electrux/Git/Electrux/OS-Stuff/Arch/Dotfiles/.ycm_extra_conf.py'
 
 " Remove cursor change in nvim.
-"set guicursor=
+set guicursor=
 
 " Enable python3 support ( for YCM ) in nvim.
 let g:python3_host_prog = '/usr/bin/python3'

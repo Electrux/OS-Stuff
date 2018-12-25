@@ -19,7 +19,7 @@ rustup default nightly && rustup update
 source ~/.cargo/env
 
 ## Install other software
-sudo pacman -S --noconfirm --needed zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi bspwm sxhkd networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh
+sudo pacman -S --noconfirm --needed lvm2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi i3-gaps networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh ttf-font-awesome noto-fonts-emoji alacritty
 
 # Clone git repositories
 
@@ -41,6 +41,8 @@ sudo cp ${script_dir}/etc/sysctl.d/*.conf /etc/sysctl.d/
 sudo cp ${script_dir}/etc/udev/rules.d/*.rules /etc/udev/rules.d/
 sudo cp ${script_dir}/etc/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/
 sudo cp ${script_dir}/etc/makepkg.conf /etc/
+sudo cp ${script_dir}/etc/mkinitcpio.conf /etc/
+sudo ln -sf ${script_dir}/etc/fonts/conf.d/99-noto-emoji.conf /etc/fonts/conf.d/
 
 ### Auto-login and sleep on flap down
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
@@ -61,7 +63,7 @@ sudo cp ${script_dir}/var/lib/alsa/* /var/lib/alsa/
 
 ## Core
 ln -sf ${script_dir}/dotncmpcpp ~/.ncmpcpp
-ln -sf ${script_dir}/dotconfig/{alacritty,bspwm,compton,dunst,mpd,polybar,ranger,sxhkd,zathura,libinput-gestures.conf} ~/.config/
+ln -sf ${script_dir}/dotconfig/{alacritty,compton,dunst,i3,mpd,polybar,ranger,zathura,libinput-gestures.conf} ~/.config/
 
 ## Others
 ln -sf ${script_dir}/.{asoundrc,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshrc} ~/
@@ -69,20 +71,6 @@ ln -sf ${script_dir}/.{asoundrc,spacemacs,vimrc,xinitrc,Xresources,zprofile,zshr
 ## For neovim
 mkdir -p ~/.config/nvim/
 ln -sf ${script_dir}/.vimrc ~/.config/nvim/init.vim
-
-## Install Fira code nerd fonts
-curl -fLo ~/.local/share/fonts/Fura\ Code\ Regular\ Nerd\ Font\ Complete\ Mono.otf \
-	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Regular/complete/Fura%20Code%20Regular%20Nerd%20Font%20Complete%20Mono.otf
-curl -fLo ~/.local/share/fonts/Fura\ Code\ Bold\ Nerd\ Font\ Complete\ Mono.otf \
-	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Bold/complete/Fura%20Code%20Bold%20Nerd%20Font%20Complete%20Mono.otf
-curl -fLo ~/.local/share/fonts/Fura\ Code\ Light\ Nerd\ Font\ Complete\ Mono.otf \
-	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Light/complete/Fura%20Code%20Light%20Nerd%20Font%20Complete%20Mono.otf
-curl -fLo ~/.local/share/fonts/Fura\ Code\ Medium\ Nerd\ Font\ Complete\ Mono.otf \
-	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Medium/complete/Fura%20Code%20Medium%20Nerd%20Font%20Complete%20Mono.otf
-curl -fLo ~/.local/share/fonts/Fura\ Code\ Retina\ Nerd\ Font\ Complete\ Mono.otf \
-	https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/FiraCode/Retina/complete/Fura%20Code%20Retina%20Nerd%20Font%20Complete%20Mono.otf
-
-fc-cache -f
 
 # Enable systemd services
 
@@ -116,7 +104,7 @@ sudo rm -rf /tmp/trizen
 
 # Install AUR packages
 
-trizen -S --noconfirm alacritty-git powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git ttf-twemoji-color bcwc-pcie-git
+trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git bcwc-pcie-git
 
 # Install (Neo)Vim Plug
 

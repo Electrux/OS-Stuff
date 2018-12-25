@@ -33,7 +33,11 @@ window:
   # Setting this to false will result in window without borders and title bar.
   decorations: full
 
-# Display tabs using this many cells (changes require restart)
+# Cursor style
+cursor:
+  style: Underline
+
+  # Display tabs using this many cells (changes require restart)
 tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
@@ -112,7 +116,6 @@ colors:
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0x151515'
-    style: 'underline'
     cursor: '0xd0d0d0'
 
   # Normal colors
