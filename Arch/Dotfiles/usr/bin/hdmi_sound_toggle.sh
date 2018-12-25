@@ -33,4 +33,5 @@ for OUTPUT in $(cd "$CARD_PATH" && echo card*); do
 done
 echo selecting output $AUDIO_OUTPUT
 sudo -u "$USER_NAME" pactl --server "$PULSE_SERVER" set-card-profile 0 output:"$AUDIO_OUTPUT"
+echo setting sink $DEFAULT_SINK
 sudo -u "$USER_NAME" pactl --server "$PULSE_SERVER" set-default-sink "$DEFAULT_SINK"
