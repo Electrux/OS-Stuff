@@ -82,7 +82,7 @@ bindsym XF86KbdBrightnessUp exec --no-startup-id xbacklight -ctrl smc::kbd_backl
 bindsym XF86KbdBrightnessDown exec --no-startup-id xbacklight -ctrl smc::kbd_backlight -dec 20
 
 # fancy lock
-bindsym $mod+Ctrl+l exec --no-startup-id i3lock-fancy
+bindsym $mod+Ctrl+l exec --no-startup-id i3lock -g
 
 # start a terminal
 bindsym $mod+Return exec alacritty
@@ -246,10 +246,12 @@ exec_always --no-startup-id killall polybar; polybar example
 
 exec_always --no-startup-id feh --bg-scale $wallpaper
 
+exec --no-startup-id xset -dpms s off
+
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id nm-applet
-exec --no-startup-id xset -dpms s off
 exec --no-startup-id dunst
+exec --no-startup-id flameshot
 # mpd starts using systemctl --user enable mpd
 #exec --no-startup-id mpd
 #exec --no-startup-id conky -c ~/.config/i3/conkyrc

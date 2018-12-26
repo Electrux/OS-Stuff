@@ -19,7 +19,7 @@ rustup default nightly && rustup update
 source ~/.cargo/env
 
 ## Install other software
-sudo pacman -S --noconfirm --needed lvm2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi i3-gaps networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh ttf-font-awesome noto-fonts-emoji alacritty
+sudo pacman -S --noconfirm --needed lvm2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi i3-gaps networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh ttf-font-awesome noto-fonts-emoji alacritty flameshot
 
 # Clone git repositories
 
@@ -104,7 +104,7 @@ sudo rm -rf /tmp/trizen
 
 # Install AUR packages
 
-trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git bcwc-pcie-git
+trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git bcwc-pcie-git i3lock-shiver
 
 # Install (Neo)Vim Plug
 

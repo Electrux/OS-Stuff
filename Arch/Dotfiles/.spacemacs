@@ -333,12 +333,12 @@ you should place your code here."
   (setq-default helm-split-window-inside-p t)
   ;; Set cursor in all modes to be block. This will also provide easy customization
   ;; to change in the future
-  (setq-default evil-normal-state-cursor   '(box "#aadddd"))
-  (setq-default evil-insert-state-cursor   '(box "#aadddd"))
-  (setq-default evil-visual-state-cursor   '(box "#aadddd"))
-  (setq-default evil-motion-state-cursor   '(box "#aadddd"))
-  (setq-default evil-replace-state-cursor  '(box "#aadddd"))
-  (setq-default evil-operator-state-cursor '(box "#aadddd"))
+  (setq-default evil-normal-state-cursor   '(hbar "#aadddd"))
+  (setq-default evil-insert-state-cursor   '(hbar "#aadddd"))
+  (setq-default evil-visual-state-cursor   '(hbar "#aadddd"))
+  (setq-default evil-motion-state-cursor   '(hbar "#aadddd"))
+  (setq-default evil-replace-state-cursor  '(hbar "#aadddd"))
+  (setq-default evil-operator-state-cursor '(hbar "#aadddd"))
   ;; Set indentation mode for C-esque languages.
   (setq-default
    c-default-style "stroustrup"
