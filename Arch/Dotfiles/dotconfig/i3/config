@@ -251,7 +251,8 @@ exec --no-startup-id xset -dpms s off
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id nm-applet
 exec --no-startup-id dunst
-exec --no-startup-id flameshot
+# not working for some reason (starts, not shown in notification bar)
+#exec --no-startup-id flameshot
 # mpd starts using systemctl --user enable mpd
 #exec --no-startup-id mpd
 #exec --no-startup-id conky -c ~/.config/i3/conkyrc
