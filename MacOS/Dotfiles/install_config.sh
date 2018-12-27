@@ -22,4 +22,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 git clone https://github.com/denysdovhan/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt
 git clone https://github.com/rupa/z.git ~/Git/z
+
+brew install jq fzf peco
 git clone https://github.com/b4b4r07/emoji-cli.git ~/Git/emoji-cli
