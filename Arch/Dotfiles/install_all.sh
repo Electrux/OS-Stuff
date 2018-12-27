@@ -106,7 +106,7 @@ sudo rm -rf /tmp/trizen
 
 sudo pacman -R xorg-xbacklight # For acpilight
 sudo pacman -S optipng # For nordic-theme-git
-trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git bcwc-pcie-git i3lock-shiver bibata-cursor-theme nordic-theme-git newaita-icons-git gotop-bin visual-studio-code-bin
+trizen -S --noconfirm powerline-fonts-git google-chrome acpilight emoji-cli-git polybar-git wd719x-firmware aic94xx-firmware libinput-gestures-git bcwc-pcie-git i3lock-shiver bibata-cursor-theme nordic-theme-git newaita-icons-git gotop-bin visual-studio-code-bin ttf-iosevka
 
 # Install (Neo)Vim Plug
 

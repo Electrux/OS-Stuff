@@ -52,7 +52,7 @@ client.background		$background
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:"Source Code Pro for Powerline" 8
+font xft:"Iosevka" 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -88,7 +88,7 @@ bindsym $mod+Ctrl+l exec --no-startup-id i3lock -g
 bindsym $mod+Return exec alacritty
 
 # start rofi (a program launcher)
-bindsym $mod+space exec rofi -font "Source Code Pro for Powerline 9" -separator-style "solid" -hide-scrollbar -lines 10 -width 30 -padding 10 -show run
+bindsym $mod+space exec rofi -font "Iosevka 9" -separator-style "solid" -hide-scrollbar -lines 10 -width 30 -padding 10 -show run
 
 # Single and multi monitor
 bindsym $mod+Shift+s exec xrandr --output HDMI3 --off
