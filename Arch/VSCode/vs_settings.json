@@ -1,8 +1,9 @@
 {
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Ocean Dark Extended",
-    "editor.fontSize": 13,
-    "editor.fontFamily": "'FuraCode Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "workbench.colorTheme": "Palenight Operator",
+    "editor.cursorStyle": "underline",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Iosevka Medium', 'Source Code Pro for Powerline', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": false,
     "editor.tabSize": 8,
     "editor.insertSpaces": false,
@@ -13,11 +14,6 @@
     "ycmd.global_extra_config": "/home/electrux/Git/Electrux/OS-Stuff/Arch/Dotfiles/.ycm_extra_conf.py",
     "ycmd.path": "/home/electrux/Git/ycmd",
     "ycmd.python": "/usr/bin/python3",
-    "rust.rustup": {
-        "toolchain": "stable-x86_64-gnu-linux"
-    },
-    "rust.mode": "legacy",
-    "rust.rustLangSrcPath": "/home/electrux/.rustup/toolchains/stable-x86_64-gnu-linux/lib/rustlib/src/rust/src",
 
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
