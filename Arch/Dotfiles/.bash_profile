@@ -1,6 +1,3 @@
-# Set bigger font
-setfont sun12x22
-
 # Qt HiDPI scaling
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 
