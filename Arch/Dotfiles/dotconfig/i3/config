@@ -256,7 +256,7 @@ exec --no-startup-id dunst
 # mpd starts using systemctl --user enable mpd
 #exec --no-startup-id mpd
 #exec --no-startup-id conky -c ~/.config/i3/conkyrc
-exec --no-startup-id discord
+exec --no-startup-id discord-canary
 exec --no-startup-id telegram-desktop
 exec --no-startup-id qbittorrent
 

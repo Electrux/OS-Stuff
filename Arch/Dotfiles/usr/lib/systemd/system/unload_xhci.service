@@ -1,0 +1,12 @@
+# Solves (Device usb2 failed to suspend async: error -16) on suspend
+[Unit]
+Description=Script upon suspend/resume
+Before=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/unload_xhci
+StandardOutput=syslog
+
+[Install]
+WantedBy=sleep.target suspend.target
