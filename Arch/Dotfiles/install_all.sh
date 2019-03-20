@@ -19,7 +19,7 @@ rustup default nightly && rustup update
 source ~/.cargo/env
 
 ## Install other software
-sudo pacman -S --noconfirm --needed lvm2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi i3-gaps networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh ttf-font-awesome noto-fonts-emoji alacritty flameshot exa lxappearance qbittorrent python-pip python2-pip lsof strace htop neovim rsync
+sudo pacman -S --noconfirm --needed lvm2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi i3-gaps networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh ttf-font-awesome noto-fonts-emoji alacritty flameshot exa lxappearance qbittorrent python-pip python2-pip lsof strace htop neovim rsync bash-completion tlp
 
 # Clone git repositories
 
@@ -78,7 +78,9 @@ ln -sf ${script_dir}/.vimrc ~/.config/nvim/init.vim
 sudo systemctl enable NetworkManager
 #sudo systemctl enable bluetooth
 sudo systemctl enable disable_gpe
-sudo systemctl enable hdmi_sound_toggle
+# hdmi_sound_toggle shoudn't be enabled as a service i think
+#sudo systemctl enable hdmi_sound_toggle
+sudo systemctl enable tlp
 #sudo systemctl start NetworkManager
 #sudo systemctl start bluetooth
 #sudo systemctl start disable_gpe
@@ -122,9 +124,10 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # Finally, install oh my zsh and its theme
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g')"
-git clone https://github.com/denysdovhan/spaceship-prompt.git "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt"
-rm -rf ~/.zshrc
-mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sed 's:env zsh::g')"
+#git clone https://github.com/denysdovhan/spaceship-prompt.git "${HOME}/.oh-my-zsh/custom/themes/spaceship-prompt"
+#rm -rf ~/.zshrc
+#mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
+(cd /tmp && git clone --depth 1 --config core.autocrlf=false https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
 
 sudo mkinitcpio -p linux
