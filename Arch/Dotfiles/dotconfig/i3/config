@@ -231,7 +231,7 @@ assign [title="Android Emulator"] $ws7
 
 assign [class="jetbrains-idea"] $ws7
 
-assign [class="TelegramDesktop"] $ws9
+assign [class="TelegramDesktop"] $ws8
 assign [class="discord"] $ws9
 
 assign [class="qBittorrent"] $ws10

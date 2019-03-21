@@ -52,20 +52,29 @@ export PATH="${PATH}:${HOME}/.cargo/bin"
 alias copy="xclip -sel clipboard"
 alias paste="xclip -sel clipboard -o 2>/dev/null"
 
+# Git shortcuts
+alias gd="git diff"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gpl="git pull"
+alias gcl="git clone"
+
 # Compile + Run a source file
 run() {
 	filename="${1%%.*}"
 	ext="${1#*.}"
 	if [[ "$ext" == "c" ]]; then
-	        $(echo "gcc $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
+		$(echo "gcc $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
 	elif [[ "$ext" == "cpp" ]]; then
-	        $(echo "g++ -std=c++17 $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
+		$(echo "g++ -std=c++17 $@ -o ${filename} ${CPPFLAGS} ${LDFLAGS}") && echo "Executing ${filename}" && ./${filename}
 	elif [[ "$ext" == "rs" ]]; then
-                rustc $@ && ./${filename}
-        elif [[ "$ext" == "d" ]]; then
-                dmd $@ && ./${filename}
+		rustc $@ && ./${filename}
+	elif [[ "$ext" == "d" ]]; then
+		dmd $@ && ./${filename}
 	elif [[ "$ext" == "py" ]]; then
-	        python3 $@
+		python3 $@
 	elif [[ "$ext" == "java" ]]; then
 		javac $@ && echo "Executing ${filename}" && java ${filename}
 	fi
