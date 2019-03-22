@@ -39,7 +39,7 @@ sudo cp ${script_dir}/etc/modprobe.d/*.conf /etc/modprobe.d/
 sudo cp ${script_dir}/etc/pulse/*.pa /etc/pulse/
 sudo cp ${script_dir}/etc/sysctl.d/*.conf /etc/sysctl.d/
 sudo cp ${script_dir}/etc/udev/rules.d/*.rules /etc/udev/rules.d/
-sudo cp ${script_dir}/etc/X11/xorg.conf.d/{10-mouse.conf,40-libinput.conf} /etc/X11/xorg.conf.d/
+sudo cp ${script_dir}/etc/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/
 sudo cp ${script_dir}/etc/makepkg.conf /etc/
 sudo cp ${script_dir}/etc/mkinitcpio.conf /etc/
 sudo ln -sf ${script_dir}/etc/fonts/conf.d/99-noto-emoji.conf /etc/fonts/conf.d/
