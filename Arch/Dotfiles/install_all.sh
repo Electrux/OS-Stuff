@@ -19,7 +19,7 @@ rustup default nightly && rustup update
 source ~/.cargo/env
 
 ## Install other software
-sudo pacman -S --noconfirm --needed lvm2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi i3-gaps networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh ttf-font-awesome noto-fonts-emoji alacritty flameshot exa lxappearance qbittorrent python-pip python2-pip lsof strace htop neovim rsync bash-completion tlp
+sudo pacman -S --noconfirm --needed lvm2 zsh zsh-completions zsh-syntax-highlighting zsh-autosuggestions syncthing mpd ncmpcpp ranger neofetch mpv wget curl git dunst rofi i3-gaps networkmanager pulseaudio pulseaudio-bluetooth pulseaudio-alsa alsa-lib alsa-utils bluez blueman pavucontrol bluez-utils network-manager-applet acpi youtube-dl openssh thefuck bc compton emacs feh ttf-font-awesome noto-fonts-emoji alacritty flameshot exa lxappearance qbittorrent python-pip python2-pip lsof strace htop neovim rsync bash-completion tlp xf86-input-evdev w3m tree
 
 # Clone git repositories
 
@@ -39,7 +39,7 @@ sudo cp ${script_dir}/etc/modprobe.d/*.conf /etc/modprobe.d/
 sudo cp ${script_dir}/etc/pulse/*.pa /etc/pulse/
 sudo cp ${script_dir}/etc/sysctl.d/*.conf /etc/sysctl.d/
 sudo cp ${script_dir}/etc/udev/rules.d/*.rules /etc/udev/rules.d/
-sudo cp ${script_dir}/etc/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/
+sudo cp ${script_dir}/etc/X11/xorg.conf.d/{10-mouse.conf,40-libinput.conf} /etc/X11/xorg.conf.d/
 sudo cp ${script_dir}/etc/makepkg.conf /etc/
 sudo cp ${script_dir}/etc/mkinitcpio.conf /etc/
 sudo ln -sf ${script_dir}/etc/fonts/conf.d/99-noto-emoji.conf /etc/fonts/conf.d/

@@ -9,6 +9,6 @@ if [[ $bat_status == "Discharging" ]]; then
 	elif [[ ${bat_percent} -lt 5 ]]; then
 		/bin/systemctl suspend
 	fi
-elif [[ $bat_percent -ge 98 ]]; then
+elif [[ $bat_percent -ge 100 ]]; then
 	/usr/bin/notify-send -a "Power script" "Battery is full"
 fi
