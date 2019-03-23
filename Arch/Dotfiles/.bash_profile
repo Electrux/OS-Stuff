@@ -11,7 +11,7 @@ export GTK_OVERLAY_SCROLLING=0
 export EDITOR="/usr/bin/nvim"
 export TERMINAL="/usr/bin/alacritty"
 export BROWSER="/usr/bin/google-chrome-stable"
-export WALLPAPER="${HOME}/Pictures/Wallpapers/Gorgeous-Palace-Fireworks.jpg"
+export WALLPAPER="${HOME}/Pictures/Wallpapers/Anime-Guy-Girl-Opposite-Blue.jpg"
 
 # TODO: Having autologin screws up with eval/source.
 
