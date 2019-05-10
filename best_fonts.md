@@ -1,5 +1,6 @@
 # Here are some of the best monospace fonts that you can find for programming and terminal
 
+* Curie (Bold)
 * BigBlue_TerminalPlus Nerd Font Mono
 * Fantasque Sans Mono
 * Fira Code ( and its Nerd Font Mono variant )
