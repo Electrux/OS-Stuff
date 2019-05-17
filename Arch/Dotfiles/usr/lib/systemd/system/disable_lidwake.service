@@ -1,0 +1,8 @@
+[Unit]
+Description=Disable LID0 wakeup
+
+[Service]
+ExecStart=/bin/bash -c "echo LID0 >> /proc/acpi/wakeup"
+
+[Install]
+WantedBy=multi-user.target

@@ -1,2 +1,2 @@
-# disable wake from S3 on XHC1
+# disable wake from S3 on XHC1 and LID0
 SUBSYSTEM=="pci", KERNEL=="0000:00:14.0", ATTR{power/wakeup}="disabled"

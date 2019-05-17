@@ -76,13 +76,14 @@ ln -sf ${script_dir}/.vimrc ~/.config/nvim/init.vim
 
 ## System services
 sudo systemctl enable NetworkManager
-#sudo systemctl enable bluetooth
+sudo systemctl enable bluetooth
 sudo systemctl enable disable_gpe
 # hdmi_sound_toggle shoudn't be enabled as a service i think
 #sudo systemctl enable hdmi_sound_toggle
 sudo systemctl enable tlp
-sudo systemctl enable unload_xhci.service
-sudo systemctl enable load_xhci.service
+#sudo systemctl enable unload_xhci.service
+#sudo systemctl enable load_xhci.service
+sudo systemctl enable disable_lidwake.service
 #sudo systemctl start NetworkManager
 #sudo systemctl start bluetooth
 #sudo systemctl start disable_gpe
@@ -96,6 +97,7 @@ systemctl --user enable syncthing
 systemctl --user enable mpd
 #systemctl --user start syncthing
 #systemctl --user start mpd
+systemctl --user enable pulseaudio.service
 
 # Install trizen
 

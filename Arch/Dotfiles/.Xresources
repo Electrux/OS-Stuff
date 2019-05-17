@@ -2,26 +2,26 @@
 !     Color Definitions     !
 !---------------------------!
 
-#define base00 #151515
-#define base01 #202020
-#define base02 #303030
-#define base03 #505050
-#define base04 #b0b0b0
-#define base05 #d0d0d0
-#define base06 #e0e0e0
-#define base07 #f5f5f5
-#define base08 #fb9fb1
-#define base09 #eda987
-#define base0A #ddb26f
-#define base0B #acc267
-#define base0C #12cfc0
-#define base0D #6fc2ef
-#define base0E #e1a3ee
-#define base0F #deaf8f
+#define base00 #2E3440
+#define base01 #3B4252
+#define base02 #434C5E
+#define base03 #4C566A
+#define base04 #D8DEE9
+#define base05 #E5E9F0
+#define base06 #ECEFF4
+#define base07 #8FBCBB
+#define base08 #88C0D0
+#define base09 #81A1C1
+#define base0A #5E81AC
+#define base0B #BF616A
+#define base0C #D08770
+#define base0D #EBCB8B
+#define base0E #A3BE8C
+#define base0F #B48EAD
 
-#define bordef #5a5a5a
-#define bornef #1a1a1a
-#define poly00 #151515
+#define bordef #5E3440
+#define bornef #3A3744
+#define poly00 base00
 
 !---------------------------!
 ! Settings for Rofi colors  !
