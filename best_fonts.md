@@ -2,6 +2,9 @@
 
 * IBM Plex Mono
 * Curie (Bold)
+
+**Note** all the following fonts are powerline compatible and look pretty good with it.
+
 * BigBlue_TerminalPlus Nerd Font Mono
 * Fantasque Sans Mono
 * Fira Code ( and its Nerd Font Mono variant )
@@ -19,5 +22,3 @@
 * ProFontllx Nerd Font Mono ( Try to find regular variant instead of book )
 * ShureTechMono Nerd Font Mono ( Try to find the bold variant as well )
 * Source Code Pro for Powerline
-
-**Note** all these fonts are powerline compatible and look pretty good with it.
